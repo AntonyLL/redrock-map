@@ -1,6 +1,6 @@
 /* Offline support: app files are served from cache and refreshed in the background;
    map tiles and photos are served from the data cache filled by the in-page downloader. */
-const SHELL = 'rr-shell-v1';
+const SHELL = 'rr-shell-v2';
 const DATA = 'rr-data-v1';
 const FILES = ['./', 'index.html', 'style.css', 'app.js', 'data.js', 'manifest.json', 'icon-180.png', 'icon-512.png', 'vendor/maplibre-gl.js', 'vendor/maplibre-gl.css'];
 const DATA_HOSTS = ['server.arcgisonline.com', 'basemap.nationalmap.gov', 's3.amazonaws.com', 'mountainproject.com'];

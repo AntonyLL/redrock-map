@@ -489,8 +489,20 @@ $('#btn3d').onclick = () => {
   S.d3 = !S.d3;
   $('#btn3d').textContent = S.d3 ? '2D' : '3D';
   $('#btn3d').classList.toggle('on', S.d3);
-  if (S.d3) { map.setTerrain({ source: 'dem', exaggeration: 1 }); map.easeTo({ pitch: 62, duration: 800 }); toast('三维：两指上下拖改变俯仰，两指旋转换方向'); }
-  else { map.easeTo({ pitch: 0, bearing: 0, duration: 600 }); map.once('moveend', () => { if (!S.d3) map.setTerrain(null); }); }
+  if (S.d3) {
+    // Tilt only after the elevation tiles for this view have arrived; tilting earlier leaves the camera
+    // at sea level under the terrain and the map goes blank.
+    $('#btn3d').classList.add('busy');
+    map.setTerrain({ source: 'dem', exaggeration: 1 });
+    let done = false;
+    const go = () => { if (done || !S.d3) return; done = true; $('#btn3d').classList.remove('busy'); map.easeTo({ pitch: 60, duration: 800 }); };
+    map.once('idle', go); setTimeout(go, 4000);
+    toast('三维：两指上下拖改变俯仰，两指旋转换方向');
+  } else {
+    $('#btn3d').classList.remove('busy');
+    map.easeTo({ pitch: 0, bearing: 0, duration: 600 });
+    map.once('moveend', () => { if (!S.d3) map.setTerrain(null); });
+  }
 };
 $('#btnBase').onclick = () => {
   S.base = S.base === 'sat' ? 'topo' : 'sat';
