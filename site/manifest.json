@@ -1,0 +1,14 @@
+{
+  "name": "Red Rock 攀岩地图",
+  "short_name": "Red Rock",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fffaf2",
+  "theme_color": "#fffaf2",
+  "icons": [
+    { "src": "icon-180.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

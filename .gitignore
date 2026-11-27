@@ -1,0 +1,7 @@
+data-src/cache/
+data-src/*.html
+data-src/*.jpg
+data-src/*.png
+data-src/s.json
+data-src/mp_stone.csv
+__pycache__/

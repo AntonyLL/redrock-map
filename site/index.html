@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="robots" content="noindex,nofollow">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Red Rock">
+<meta name="theme-color" content="#fffaf2">
+<title>Red Rock 攀岩地图</title>
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="stylesheet" href="vendor/maplibre-gl.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="map"></div>
+
+<header id="top">
+  <nav id="tabs" role="tablist">
+    <button data-view="drive" class="on">开车进园</button>
+    <button data-view="p1">第一停车点</button>
+    <button data-view="p2">第二停车点</button>
+  </nav>
+  <div id="chips"></div>
+</header>
+
+<div id="tools">
+  <button id="btn3d" aria-label="切换二维和三维">3D</button>
+  <button id="btnBase" aria-label="切换卫星图和地形图">地形</button>
+  <button id="btnLook" aria-label="跟随手机朝向" hidden>朝向</button>
+  <button id="btnMe" aria-label="定位到我">定位</button>
+</div>
+
+<section id="card" hidden></section>
+
+<section id="panel" hidden>
+  <div id="panelHead">
+    <button id="panelBack">‹ 地图</button>
+    <h2 id="panelTitle"></h2>
+  </div>
+  <div id="panelBody"></div>
+</section>
+
+<section id="info" hidden>
+  <div id="infoHead"><button id="infoBack">‹ 地图</button><h2>进园须知与离线</h2></div>
+  <div id="infoBody"></div>
+</section>
+
+<div id="light" hidden><img alt=""><p></p><button id="lightClose">关闭</button></div>
+<div id="toast" hidden></div>
+
+<script src="vendor/maplibre-gl.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,3703 @@
+{
+ "stone-wall": {
+  "area_name": "Stone Wall",
+  "uuid": "72fe4e8c-9fe5-5203-868a-b980a244e3f6",
+  "totalClimbs": 8,
+  "metadata": {
+   "lat": 36.1558,
+   "lng": -115.437,
+   "mp_id": "105820170",
+   "leftRightIndex": -1
+  },
+  "content": {
+   "description": ""
+  },
+  "climbs": [
+   {
+    "name": "Nirvana",
+    "uuid": "25c50e83-3e0b-5d70-a010-fa77ac62c876",
+    "grades": {
+     "yds": "5.11a/b"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Don Burroughs & Alan Busby - '93",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.1558,
+     "lng": -115.437,
+     "leftRightIndex": 3,
+     "mp_id": "105927469"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "April Fools",
+    "uuid": "2c8a3522-d890-518c-ad64-93f8ae46b595",
+    "grades": {
+     "yds": "5.10b"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Don Burroughs, Alan Busby 1993",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.1558,
+     "lng": -115.437,
+     "leftRightIndex": 7,
+     "mp_id": "105820181"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Birthstone",
+    "uuid": "2eeedcb6-9935-5829-b922-a41590d4180c",
+    "grades": {
+     "yds": "5.10d"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Leo Henson, Karin Henson - '93",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.1558,
+     "lng": -115.437,
+     "leftRightIndex": 6,
+     "mp_id": "105927485"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Stone Hammer II",
+    "uuid": "cc3dca02-c964-5212-926f-76855379ab98",
+    "grades": {
+     "yds": "5.10d"
+    },
+    "type": {
+     "sport": null,
+     "trad": true,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Mike Ward & Mike Clifford - '86",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.1558,
+     "lng": -115.437,
+     "leftRightIndex": 5,
+     "mp_id": "105927480"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Stonehenge",
+    "uuid": "ceacd2a5-3b24-57e1-93ff-bc5c5f9ffdc2",
+    "grades": {
+     "yds": "5.11"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Don Burroughs, Mike Ward & Alan Busby - '93",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.1558,
+     "lng": -115.437,
+     "leftRightIndex": 4,
+     "mp_id": "105927474"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Roto Hammer",
+    "uuid": "e04dc993-6eee-5dc6-9d8a-f67a7bda0082",
+    "grades": {
+     "yds": "5.10c"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Daryl Ellis 1992",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.1558,
+     "lng": -115.437,
+     "leftRightIndex": 2,
+     "mp_id": "105820177"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Haunted Hooks",
+    "uuid": "eb3dc106-50bd-534c-8dc9-7f388b362bed",
+    "grades": {
+     "yds": "5.10c"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Don Burroughs, Alan Busby 1993",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.1558,
+     "lng": -115.437,
+     "leftRightIndex": 1,
+     "mp_id": "105820173"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Purple Haze I",
+    "uuid": "f6bbedde-3840-5dc8-acf5-e241418e0680",
+    "grades": {
+     "yds": "5.10d"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Don Burroughs, Alan Busby '93",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.1558,
+     "lng": -115.437,
+     "leftRightIndex": 0,
+     "mp_id": "105927464"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   }
+  ],
+  "children": []
+ },
+ "great-red-book": {
+  "area_name": "Great Red Book Area, The",
+  "uuid": "c86cccb3-6b80-5830-8ad4-a0f044db26be",
+  "totalClimbs": 21,
+  "metadata": {
+   "lat": 36.15544,
+   "lng": -115.43461,
+   "mp_id": "105732120",
+   "leftRightIndex": -1
+  },
+  "content": {
+   "description": ""
+  },
+  "climbs": [
+   {
+    "name": "See Spot Run",
+    "uuid": "0623ed7a-548e-5587-9509-0a533ccb86a2",
+    "grades": {
+     "yds": "5.6"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Mark Limage",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.15544,
+     "lng": -115.43461,
+     "leftRightIndex": 12,
+     "mp_id": "106073286"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Stone Hammer",
+    "uuid": "0da66a6f-1d94-5e52-8b52-3cabc49ddd4f",
+    "grades": {
+     "yds": "5.8"
+    },
+    "type": {
+     "sport": null,
+     "trad": true,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Alan Barlett & Eliza Moran, 1984",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.15544,
+     "lng": -115.43461,
+     "leftRightIndex": 14,
+     "mp_id": "106738092"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Cognitive Overload",
+    "uuid": "1061e719-1c4c-5423-b3a2-367d9a984ad0",
+    "grades": {
+     "yds": "5.10a/b"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Kris G, Rosie F",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.15544,
+     "lng": -115.43461,
+     "leftRightIndex": 6,
+     "mp_id": "120354298"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Chips ahoy",
+    "uuid": "15d55a16-0e96-5611-87ee-3c9c3c6f4970",
+    "grades": {
+     "yds": "5.9"
+    },
+    "type": {
+     "sport": null,
+     "trad": true,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Nick nordblom, jenni stone 1986",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.15544,
+     "lng": -115.43461,
+     "leftRightIndex": 17,
+     "mp_id": "107055103"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Michi\u2019s Fear",
+    "uuid": "1938f7ff-7b86-53da-8c96-570fd8c738dc",
+    "grades": {
+     "yds": "5.8"
+    },
+    "type": {
+     "sport": null,
+     "trad": true,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Bryan Meneses & Omar Gonzalez - October, 2019",
+    "safety": "PG",
+    "metadata": {
+     "lat": 36.15544,
+     "lng": -115.43461,
+     "leftRightIndex": 15,
+     "mp_id": "117902326"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "The Front Matter",
+    "uuid": "2787c6f6-1e42-5e64-aaf0-bd1e9641dea8",
+    "grades": {
+     "yds": "5.9+"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Kris G, Rosie F",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.15544,
+     "lng": -115.43461,
+     "leftRightIndex": 8,
+     "mp_id": "120350660"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Bury the Hatchet",
+    "uuid": "35bd37a5-c73a-5d53-ba97-8a4389669988",
+    "grades": {
+     "yds": "5.12a"
+    },
+    "type": {
+     "sport": null,
+     "trad": true,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "FFA: Joshua Janes & Andy Hansen - November 2011FA: Josh Thompson, Joanne & Danny Urioste - September 2011",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.15544,
+     "lng": -115.43461,
+     "leftRightIndex": 10,
+     "mp_id": "107369291"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "G. Dog",
+    "uuid": "5da762cf-378e-585e-ae27-b754a13dd1f6",
+    "grades": {
+     "yds": "5.5"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Gary Sanders, Mark Limage. 2000",
+    "safety": "PG",
+    "metadata": {
+     "lat": 36.15544,
+     "lng": -115.43461,
+     "leftRightIndex": 4,
+     "mp_id": "119985507"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Collaborative Overlap",
+    "uuid": "5e7caec8-a2d3-5c0f-b5b1-58da5372d38f",
+    "grades": {
+     "yds": "5.10-"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Kris G, Rosie F",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.15544,
+     "lng": -115.43461,
+     "leftRightIndex": 5,
+     "mp_id": "120354177"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Reservations Required",
+    "uuid": "79ced890-4d47-5657-adda-8ae185ad7e42",
+    "grades": {
+     "yds": "5.10a"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "KrisG, RosieF",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.15544,
+     "lng": -115.43461,
+     "leftRightIndex": 7,
+     "mp_id": "119858268"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Great Red Book",
+    "uuid": "81a1552b-1d6d-546d-933c-7c52be9a46cb",
+    "grades": {
+     "yds": "5.8"
+    },
+    "type": {
+     "sport": null,
+     "trad": true,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Logerquist, Williamson, 1971",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.15544,
+     "lng": -115.43461,
+     "leftRightIndex": 9,
+     "mp_id": "105732647"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Elementary Primer",
+    "uuid": "a402a043-0b9f-5a4d-bca8-82fd9da0f75c",
+    "grades": {
+     "yds": "5.7+"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Mark Limage",
+    "safety": "PG",
+    "metadata": {
+     "lat": 36.15544,
+     "lng": -115.43461,
+     "leftRightIndex": 13,
+     "mp_id": "106971196"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Cromulent Crack",
+    "uuid": "a7c1d17d-e37f-5e8b-a292-2aa19c1dbf93",
+    "grades": {
+     "yds": "5.8"
+    },
+    "type": {
+     "sport": null,
+     "trad": true,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "unknown",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.15544,
+     "lng": -115.43461,
+     "leftRightIndex": 0,
+     "mp_id": "120582476"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Ground up Vocabulary",
+    "uuid": "ad0f419f-6a36-5590-9145-27ec56a70103",
+    "grades": {
+     "yds": "5.8+"
+    },
+    "type": {
+     "sport": null,
+     "trad": true,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Mark Limmage 1997",
+    "safety": "R",
+    "metadata": {
+     "lat": 36.15544,
+     "lng": -115.43461,
+     "leftRightIndex": 18,
+     "mp_id": "106340312"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Too School 4 Cool",
+    "uuid": "d24029c2-a400-5620-b751-2bdb832a6dd8",
+    "grades": {
+     "yds": "5.8"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "unknown",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.15544,
+     "lng": -115.43461,
+     "leftRightIndex": 1,
+     "mp_id": "120582630"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Subject-Verb Agreement",
+    "uuid": "d2ca3ea6-6bb6-5455-87f8-594f0b9c7b59",
+    "grades": {
+     "yds": "5.8"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Mark Limage, Gary Sanders, 2000",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.15544,
+     "lng": -115.43461,
+     "leftRightIndex": 20,
+     "mp_id": "105819155"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Dangling Participles",
+    "uuid": "d2d954ba-219f-5830-a97a-d11dcd663738",
+    "grades": {
+     "yds": "5.8"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Mark Limage",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.15544,
+     "lng": -115.43461,
+     "leftRightIndex": 19,
+     "mp_id": "105823943"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "The Curver",
+    "uuid": "d7085833-9c2c-5825-a21c-01d9e90268bf",
+    "grades": {
+     "yds": "5.8"
+    },
+    "type": {
+     "sport": null,
+     "trad": true,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "unknown",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.15544,
+     "lng": -115.43461,
+     "leftRightIndex": 2,
+     "mp_id": "121410167"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Tomato Amnesia",
+    "uuid": "dc65537b-9c90-5540-b909-a70e49bf329e",
+    "grades": {
+     "yds": "5.9"
+    },
+    "type": {
+     "sport": null,
+     "trad": true,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Don Wilson, Karen Wilson, Jack Marshall",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.15544,
+     "lng": -115.43461,
+     "leftRightIndex": 11,
+     "mp_id": "106339705"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Seams Novel",
+    "uuid": "dcca4393-1ebf-523e-a537-eef5c9a7250f",
+    "grades": {
+     "yds": "5.8"
+    },
+    "type": {
+     "sport": null,
+     "trad": true,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "unknown",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.15544,
+     "lng": -115.43461,
+     "leftRightIndex": 16,
+     "mp_id": "107100581"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "The Liner",
+    "uuid": "f3ada488-a43d-548d-9dab-fe13581a8e67",
+    "grades": {
+     "yds": "5.5"
+    },
+    "type": {
+     "sport": null,
+     "trad": true,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "unknown",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.15544,
+     "lng": -115.43461,
+     "leftRightIndex": 3,
+     "mp_id": "107444508"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   }
+  ],
+  "children": []
+ },
+ "black-corridor": {
+  "area_name": "Black Corridor, The",
+  "uuid": "bd1a36f9-fcb9-5d2c-8c45-acfd8dcc6428",
+  "totalClimbs": 38,
+  "metadata": {
+   "lat": 36.1555975,
+   "lng": -115.43615249999999,
+   "mp_id": "",
+   "leftRightIndex": -1
+  },
+  "content": {
+   "description": ""
+  },
+  "climbs": [],
+  "children": [
+   {
+    "area_name": "Upper Level",
+    "uuid": "0df653cb-78d1-539f-a341-5550937306b8",
+    "totalClimbs": 15,
+    "metadata": {
+     "lat": 36.15582,
+     "lng": -115.43621,
+     "mp_id": "",
+     "leftRightIndex": -1
+    },
+    "content": {
+     "description": ""
+    },
+    "climbs": [],
+    "children": [
+     {
+      "area_name": "Upper Level - Right",
+      "uuid": "453ea56d-7bb0-5d31-8315-859ab832c21c",
+      "totalClimbs": 7,
+      "metadata": {
+       "lat": 36.15582,
+       "lng": -115.43621,
+       "mp_id": "112893972",
+       "leftRightIndex": -1
+      },
+      "content": {
+       "description": ""
+      },
+      "climbs": [
+       {
+        "name": "Livin' on Borrowed Time",
+        "uuid": "1314330b-da3c-5f8a-bbc1-c353a04727e6",
+        "grades": {
+         "yds": "5.11c"
+        },
+        "type": {
+         "sport": true,
+         "trad": null,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "Steagall, Sandefur, Werner, & Sobocan - 1990",
+        "safety": "UNSPECIFIED",
+        "metadata": {
+         "lat": 36.15582,
+         "lng": -115.43621,
+         "leftRightIndex": 9,
+         "mp_id": "105732533"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       },
+       {
+        "name": "Lewd, Crude, and Misconstrued",
+        "uuid": "2864ff22-73a5-5c7a-9981-e4c4d1829a7f",
+        "grades": {
+         "yds": "5.9+"
+        },
+        "type": {
+         "sport": true,
+         "trad": null,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "Steagall, Sandefur, Werner, & Sobocan - 1990",
+        "safety": "UNSPECIFIED",
+        "metadata": {
+         "lat": 36.15582,
+         "lng": -115.43621,
+         "leftRightIndex": 11,
+         "mp_id": "105732536"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       },
+       {
+        "name": "Oils Well that Ends Well",
+        "uuid": "3561ee1c-55f5-5649-88fb-db1ce226ed2d",
+        "grades": {
+         "yds": "5.11a"
+        },
+        "type": {
+         "sport": true,
+         "trad": null,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "Jim Steagall  Kevin Sandefur  Chris Werner  Dave Sobocan",
+        "safety": "UNSPECIFIED",
+        "metadata": {
+         "lat": 36.15582,
+         "lng": -115.43621,
+         "leftRightIndex": 13,
+         "mp_id": "105849805"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       },
+       {
+        "name": "Rebel Without a Pause",
+        "uuid": "5614987d-578d-5389-bda7-5453363361ff",
+        "grades": {
+         "yds": "5.11a"
+        },
+        "type": {
+         "sport": true,
+         "trad": null,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "Steagall, Sandefur, Werner, & Sobocan - 1990",
+        "safety": "UNSPECIFIED",
+        "metadata": {
+         "lat": 36.15582,
+         "lng": -115.43621,
+         "leftRightIndex": 8,
+         "mp_id": "105732527"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       },
+       {
+        "name": "Sandstone Enema",
+        "uuid": "9a1e803e-07fe-5fb5-982e-8ca1cf00811c",
+        "grades": {
+         "yds": "5.11b"
+        },
+        "type": {
+         "sport": true,
+         "trad": null,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "Steagall, Sandefur, Werner, Sobocan ('90)",
+        "safety": "UNSPECIFIED",
+        "metadata": {
+         "lat": 36.15582,
+         "lng": -115.43621,
+         "leftRightIndex": 12,
+         "mp_id": "105918917"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       },
+       {
+        "name": "757 2x4",
+        "uuid": "b9ce09d4-6338-5ece-ba12-174aa73907b7",
+        "grades": {
+         "yds": "5.7"
+        },
+        "type": {
+         "sport": true,
+         "trad": null,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "Todd Lane",
+        "safety": "UNSPECIFIED",
+        "metadata": {
+         "lat": 36.15582,
+         "lng": -115.43621,
+         "leftRightIndex": 14,
+         "mp_id": "105826075"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       },
+       {
+        "name": "Texas Lite Sweet",
+        "uuid": "dd68e348-3317-59f1-8dec-9e5f8aab2308",
+        "grades": {
+         "yds": "5.11a/b"
+        },
+        "type": {
+         "sport": true,
+         "trad": null,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "unknown",
+        "safety": "UNSPECIFIED",
+        "metadata": {
+         "lat": 36.15582,
+         "lng": -115.43621,
+         "leftRightIndex": 10,
+         "mp_id": "105800028"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       }
+      ],
+      "children": []
+     },
+     {
+      "area_name": "Upper Level - Left",
+      "uuid": "c10476bd-ca34-5161-b2b5-3e5b79c19229",
+      "totalClimbs": 8,
+      "metadata": {
+       "lat": 36.15582,
+       "lng": -115.43621,
+       "mp_id": "112893966",
+       "leftRightIndex": -1
+      },
+      "content": {
+       "description": ""
+      },
+      "climbs": [
+       {
+        "name": "Dancin' with a God",
+        "uuid": "3cc6666e-3f8e-522e-832f-ca5cf8103de9",
+        "grades": {
+         "yds": "5.10a"
+        },
+        "type": {
+         "sport": true,
+         "trad": null,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "Steagall, Sandefur, Werner, & Sobocan - 1990",
+        "safety": "UNSPECIFIED",
+        "metadata": {
+         "lat": 36.15582,
+         "lng": -115.43621,
+         "leftRightIndex": 3,
+         "mp_id": "105732545"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       },
+       {
+        "name": "Black Gold",
+        "uuid": "4d1135a9-8fd4-53d0-98ff-01d7730ffd10",
+        "grades": {
+         "yds": "5.10b"
+        },
+        "type": {
+         "sport": true,
+         "trad": null,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "Jim Steagall  Kevin Sandefur  Chris Werner  Dave Sobocan",
+        "safety": "UNSPECIFIED",
+        "metadata": {
+         "lat": 36.15582,
+         "lng": -115.43621,
+         "leftRightIndex": 5,
+         "mp_id": "105849782"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       },
+       {
+        "name": "Fools Gold",
+        "uuid": "620b9217-96fd-5c31-861f-41de3d713907",
+        "grades": {
+         "yds": "5.10a/b"
+        },
+        "type": {
+         "sport": true,
+         "trad": null,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "Jim Steagall  Kevin Sandefur  Chris Werner  Dave Sobocan",
+        "safety": "UNSPECIFIED",
+        "metadata": {
+         "lat": 36.15582,
+         "lng": -115.43621,
+         "leftRightIndex": 7,
+         "mp_id": "105849794"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       },
+       {
+        "name": "Live Fast, Die Young",
+        "uuid": "853dd5cf-c1dd-537a-bf65-19966c813bf5",
+        "grades": {
+         "yds": "5.10d"
+        },
+        "type": {
+         "sport": true,
+         "trad": null,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "Jim Steagall  Kevin Sandefur  Chris Werner  Dave Sobocan",
+        "safety": "UNSPECIFIED",
+        "metadata": {
+         "lat": 36.15582,
+         "lng": -115.43621,
+         "leftRightIndex": 4,
+         "mp_id": "105849261"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       },
+       {
+        "name": "Thermal Breakdown",
+        "uuid": "ba9954d1-95c3-56bc-a22c-8a0544bbacda",
+        "grades": {
+         "yds": "5.9+"
+        },
+        "type": {
+         "sport": true,
+         "trad": null,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "Jim Steagall  Kevin Sandefur  Chris Werner  Dave Sobocan",
+        "safety": "UNSPECIFIED",
+        "metadata": {
+         "lat": 36.15582,
+         "lng": -115.43621,
+         "leftRightIndex": 0,
+         "mp_id": "105849180"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       },
+       {
+        "name": "Texas Tea",
+        "uuid": "dc9d0593-ae6e-56ac-b2d4-b10d2e25d1d3",
+        "grades": {
+         "yds": "5.10a"
+        },
+        "type": {
+         "sport": true,
+         "trad": null,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "Jim Steagall  Kevin Sandefur  Chris Werner  Dave Sobocan",
+        "safety": "UNSPECIFIED",
+        "metadata": {
+         "lat": 36.15582,
+         "lng": -115.43621,
+         "leftRightIndex": 6,
+         "mp_id": "105849787"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       },
+       {
+        "name": "Crude Street Blues",
+        "uuid": "e4fe902d-1ccf-52f4-ad90-812e5f97c30c",
+        "grades": {
+         "yds": "5.9"
+        },
+        "type": {
+         "sport": true,
+         "trad": null,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "Steagall, Sandefur, Werner, & Sobocan - 1990",
+        "safety": "UNSPECIFIED",
+        "metadata": {
+         "lat": 36.15582,
+         "lng": -115.43621,
+         "leftRightIndex": 1,
+         "mp_id": "105732539"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       },
+       {
+        "name": "Crude Behavior",
+        "uuid": "f7d45354-a315-5499-a43d-44c04a316c5f",
+        "grades": {
+         "yds": "5.9"
+        },
+        "type": {
+         "sport": true,
+         "trad": null,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "Steagall, Sandefur, Werner, & Sobocan - 1990",
+        "safety": "UNSPECIFIED",
+        "metadata": {
+         "lat": 36.15582,
+         "lng": -115.43621,
+         "leftRightIndex": 2,
+         "mp_id": "105732542"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       }
+      ],
+      "children": []
+     }
+    ]
+   },
+   {
+    "area_name": "Lower Level",
+    "uuid": "6bd746ee-5b5f-5311-a7be-58cb0cf5677a",
+    "totalClimbs": 23,
+    "metadata": {
+     "lat": 36.155375,
+     "lng": -115.436095,
+     "mp_id": "",
+     "leftRightIndex": -1
+    },
+    "content": {
+     "description": ""
+    },
+    "climbs": [],
+    "children": [
+     {
+      "area_name": "Lower Level - Right",
+      "uuid": "30221eb9-d3ac-5e38-b438-4235d3722363",
+      "totalClimbs": 13,
+      "metadata": {
+       "lat": 36.15539,
+       "lng": -115.4361,
+       "mp_id": "112893605",
+       "leftRightIndex": -1
+      },
+      "content": {
+       "description": ""
+      },
+      "climbs": [
+       {
+        "name": "Psychobilly",
+        "uuid": "2d584956-baa9-5f49-ab1d-18958b8bebb3",
+        "grades": {
+         "yds": "5.11a/b"
+        },
+        "type": {
+         "sport": true,
+         "trad": null,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "Richard Harrison, Lisa Harrison and Michelle Locatelli",
+        "safety": "UNSPECIFIED",
+        "metadata": {
+         "lat": 36.15539,
+         "lng": -115.4361,
+         "leftRightIndex": 19,
+         "mp_id": "105826090"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       },
+       {
+        "name": "Friend",
+        "uuid": "2f370e35-67ef-53e8-b6c7-20e864a68ae1",
+        "grades": {
+         "yds": "5.10d"
+        },
+        "type": {
+         "sport": true,
+         "trad": null,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "Richard Harrison, Lisa Harrison, and Michelle Locatelli, May 06",
+        "safety": "UNSPECIFIED",
+        "metadata": {
+         "lat": 36.15539,
+         "lng": -115.4361,
+         "leftRightIndex": 11,
+         "mp_id": "106076229"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       },
+       {
+        "name": "Hips Don't Lie (aka Punch Drunk)",
+        "uuid": "4dba3f0f-e40a-51ef-b8ca-d85b9d9cd0df",
+        "grades": {
+         "yds": "5.11b/c"
+        },
+        "type": {
+         "sport": true,
+         "trad": null,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "Mike Moore",
+        "safety": "UNSPECIFIED",
+        "metadata": {
+         "lat": 36.15539,
+         "lng": -115.4361,
+         "leftRightIndex": 14,
+         "mp_id": "106082248"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       },
+       {
+        "name": "Burros Don't Gamble",
+        "uuid": "55ed16ed-afb2-503f-b0df-91feb0010b07",
+        "grades": {
+         "yds": "5.10c"
+        },
+        "type": {
+         "sport": true,
+         "trad": null,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "Shull, Hewitt '94",
+        "safety": "UNSPECIFIED",
+        "metadata": {
+         "lat": 36.15539,
+         "lng": -115.4361,
+         "leftRightIndex": 21,
+         "mp_id": "105732518"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       },
+       {
+        "name": "M & M",
+        "uuid": "62cba074-5b71-54ab-97d2-9cf66c07eb58",
+        "grades": {
+         "yds": "5.11-"
+        },
+        "type": {
+         "sport": true,
+         "trad": null,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "02-18-2007 Dan Meyers & Rob Mansfield",
+        "safety": "UNSPECIFIED",
+        "metadata": {
+         "lat": 36.15539,
+         "lng": -115.4361,
+         "leftRightIndex": 17,
+         "mp_id": "105932137"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       },
+       {
+        "name": "Adoption",
+        "uuid": "6b750633-c96f-51a8-8a65-92a5b99ad3a8",
+        "grades": {
+         "yds": "5.11b"
+        },
+        "type": {
+         "sport": true,
+         "trad": null,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "Leo and Karen Henson, Nov 1991",
+        "safety": "UNSPECIFIED",
+        "metadata": {
+         "lat": 36.15539,
+         "lng": -115.4361,
+         "leftRightIndex": 22,
+         "mp_id": "106934998"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       },
+       {
+        "name": "Idiot Parade (aka Need to Rest)",
+        "uuid": "7288aeb1-f967-5cf3-add9-d1c5a6596c1a",
+        "grades": {
+         "yds": "5.10c"
+        },
+        "type": {
+         "sport": true,
+         "trad": null,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "Mike Moore",
+        "safety": "UNSPECIFIED",
+        "metadata": {
+         "lat": 36.15539,
+         "lng": -115.4361,
+         "leftRightIndex": 10,
+         "mp_id": "105826602"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       },
+       {
+        "name": "Nightmare on Crude Street",
+        "uuid": "785f8d74-ea82-5908-b739-2bf50c499e65",
+        "grades": {
+         "yds": "5.10d"
+        },
+        "type": {
+         "sport": true,
+         "trad": null,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "Steagall, Sandefur, Werner, & Sobocan - 1990",
+        "safety": "UNSPECIFIED",
+        "metadata": {
+         "lat": 36.15539,
+         "lng": -115.4361,
+         "leftRightIndex": 13,
+         "mp_id": "105732548"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       },
+       {
+        "name": "Burros Might Fly",
+        "uuid": "969ad69b-a474-53c2-b724-392ee424641f",
+        "grades": {
+         "yds": "5.10b"
+        },
+        "type": {
+         "sport": true,
+         "trad": null,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "Harrison Shull, Todd Hewitt, Dane Cox ('94)",
+        "safety": "PG",
+        "metadata": {
+         "lat": 36.15539,
+         "lng": -115.4361,
+         "leftRightIndex": 20,
+         "mp_id": "105918869"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       },
+       {
+        "name": "She's Deadly",
+        "uuid": "b1442911-6169-5587-b0fc-e934b638606c",
+        "grades": {
+         "yds": "5.11+"
+        },
+        "type": {
+         "sport": true,
+         "trad": null,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "Richard Harrison, Lisa Harrison, and Michelle Locatelli, October 2007",
+        "safety": "UNSPECIFIED",
+        "metadata": {
+         "lat": 36.15539,
+         "lng": -115.4361,
+         "leftRightIndex": 16,
+         "mp_id": "106038110"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       },
+       {
+        "name": "Michael Angelo",
+        "uuid": "ce77bafb-8fad-5ed7-8153-06beb7f43b99",
+        "grades": {
+         "yds": "5.11a"
+        },
+        "type": {
+         "sport": true,
+         "trad": null,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "Michelle Locatelli",
+        "safety": "UNSPECIFIED",
+        "metadata": {
+         "lat": 36.15539,
+         "lng": -115.4361,
+         "leftRightIndex": 18,
+         "mp_id": "106019787"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       },
+       {
+        "name": "Foe",
+        "uuid": "ef536ea1-74dd-5657-8fe8-b4d36c05ea5e",
+        "grades": {
+         "yds": "5.11a"
+        },
+        "type": {
+         "sport": true,
+         "trad": null,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "Richard Harrison, Lisa Harrison, and Michelle Locatelli, May 06",
+        "safety": "UNSPECIFIED",
+        "metadata": {
+         "lat": 36.15539,
+         "lng": -115.4361,
+         "leftRightIndex": 12,
+         "mp_id": "106076218"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       },
+       {
+        "name": "The Heavy Hitter",
+        "uuid": "eff1cddd-b402-52bc-b313-a5a45f955dd2",
+        "grades": {
+         "yds": "5.10+"
+        },
+        "type": {
+         "sport": true,
+         "trad": null,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "Mike Moore",
+        "safety": "UNSPECIFIED",
+        "metadata": {
+         "lat": 36.15539,
+         "lng": -115.4361,
+         "leftRightIndex": 15,
+         "mp_id": "105826098"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       }
+      ],
+      "children": []
+     },
+     {
+      "area_name": "Lower Level - Left",
+      "uuid": "700de710-047b-5e65-aad5-e49bde3ac884",
+      "totalClimbs": 10,
+      "metadata": {
+       "lat": 36.15536,
+       "lng": -115.43609,
+       "mp_id": "112893593",
+       "leftRightIndex": -1
+      },
+      "content": {
+       "description": ""
+      },
+      "climbs": [
+       {
+        "name": "Bon Ez",
+        "uuid": "070d169c-7514-5de0-a92d-ce4e37a26c09",
+        "grades": {
+         "yds": "5.9+"
+        },
+        "type": {
+         "sport": true,
+         "trad": null,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "Steagall, Sandefur, Werner, Sobocan '90",
+        "safety": "UNSPECIFIED",
+        "metadata": {
+         "lat": 36.15536,
+         "lng": -115.43609,
+         "leftRightIndex": 4,
+         "mp_id": "105732512"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       },
+       {
+        "name": "Vagabonds",
+        "uuid": "14efb237-c38b-5755-a478-850e239c1491",
+        "grades": {
+         "yds": "5.10a"
+        },
+        "type": {
+         "sport": true,
+         "trad": null,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "Steagall, Sandefur, Werner, Sobocan; Fall 1990",
+        "safety": "UNSPECIFIED",
+        "metadata": {
+         "lat": 36.15536,
+         "lng": -115.43609,
+         "leftRightIndex": 8,
+         "mp_id": "105733016"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       },
+       {
+        "name": "The CEL",
+        "uuid": "40e8a73b-ab50-55a3-aaed-11bad9d5c3ac",
+        "grades": {
+         "yds": "5.9"
+        },
+        "type": {
+         "sport": true,
+         "trad": null,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "Todd Lane",
+        "safety": "UNSPECIFIED",
+        "metadata": {
+         "lat": 36.15536,
+         "lng": -115.43609,
+         "leftRightIndex": 0,
+         "mp_id": "105826083"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       },
+       {
+        "name": "Unknown 5.9 (AKA L3)",
+        "uuid": "42e4da26-1785-5c84-99ed-abe55eabc406",
+        "grades": {
+         "yds": "5.9+"
+        },
+        "type": {
+         "sport": true,
+         "trad": null,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "unknown",
+        "safety": "PG",
+        "metadata": {
+         "lat": 36.15536,
+         "lng": -115.43609,
+         "leftRightIndex": 2,
+         "mp_id": "106876316"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       },
+       {
+        "name": "Unknown 5.10d (AKA Black Corridor Route  5)",
+        "uuid": "447768a1-5a30-5b70-b31e-3295e843ab2b",
+        "grades": {
+         "yds": "5.10d"
+        },
+        "type": {
+         "sport": null,
+         "trad": true,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "Steagall, Sandefur, Werner, Sobocan  1990",
+        "safety": "UNSPECIFIED",
+        "metadata": {
+         "lat": 36.15536,
+         "lng": -115.43609,
+         "leftRightIndex": 7,
+         "mp_id": "105733052"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       },
+       {
+        "name": "Unknown 5.9 (AKA L2)",
+        "uuid": "9b31f81e-2878-51cc-927f-b45a9702cd6a",
+        "grades": {
+         "yds": "5.9"
+        },
+        "type": {
+         "sport": true,
+         "trad": null,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "Michelle Locatelli/Lisa Harrison",
+        "safety": "UNSPECIFIED",
+        "metadata": {
+         "lat": 36.15536,
+         "lng": -115.43609,
+         "leftRightIndex": 1,
+         "mp_id": "106755212"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       },
+       {
+        "name": "Bonaire",
+        "uuid": "b80ab2dd-9327-59c4-a048-e39b832acdde",
+        "grades": {
+         "yds": "5.9"
+        },
+        "type": {
+         "sport": true,
+         "trad": null,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "Steagall, Sandefur, Werner, Sobocan '90",
+        "safety": "UNSPECIFIED",
+        "metadata": {
+         "lat": 36.15536,
+         "lng": -115.43609,
+         "leftRightIndex": 3,
+         "mp_id": "105732515"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       },
+       {
+        "name": "Crude Boys",
+        "uuid": "d0a8a384-b539-51bb-8801-a9564872575c",
+        "grades": {
+         "yds": "5.10d"
+        },
+        "type": {
+         "sport": true,
+         "trad": null,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "Steagall, Sandefur, Werner, & Sobocan - 1990",
+        "safety": "UNSPECIFIED",
+        "metadata": {
+         "lat": 36.15536,
+         "lng": -115.43609,
+         "leftRightIndex": 5,
+         "mp_id": "105732551"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       },
+       {
+        "name": "Unknown 5.11a (AKA Black Corridor Route  4)",
+        "uuid": "de216688-771b-56a7-9175-cc7d96ba65b6",
+        "grades": {
+         "yds": "5.11a"
+        },
+        "type": {
+         "sport": true,
+         "trad": null,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "1991 or later",
+        "safety": "UNSPECIFIED",
+        "metadata": {
+         "lat": 36.15536,
+         "lng": -115.43609,
+         "leftRightIndex": 6,
+         "mp_id": "105799989"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       },
+       {
+        "name": "Crude Control",
+        "uuid": "fe4777eb-5cab-55ef-a0f9-398a589debef",
+        "grades": {
+         "yds": "5.11d"
+        },
+        "type": {
+         "sport": true,
+         "trad": null,
+         "tr": null,
+         "bouldering": null,
+         "aid": null
+        },
+        "length": -1,
+        "boltsCount": -1,
+        "fa": "Steagall et al",
+        "safety": "UNSPECIFIED",
+        "metadata": {
+         "lat": 36.15536,
+         "lng": -115.43609,
+         "leftRightIndex": 9,
+         "mp_id": "105800006"
+        },
+        "content": {
+         "description": "",
+         "location": "",
+         "protection": ""
+        }
+       }
+      ],
+      "children": []
+     }
+    ]
+   }
+  ]
+ },
+ "dantes-wall": {
+  "area_name": "Dante's Wall",
+  "uuid": "b47c9ab5-f947-51a1-9511-da0dca07d9fa",
+  "totalClimbs": 10,
+  "metadata": {
+   "lat": 36.14497,
+   "lng": -115.42471,
+   "mp_id": "109868589",
+   "leftRightIndex": -1
+  },
+  "content": {
+   "description": ""
+  },
+  "climbs": [
+   {
+    "name": "Virgil and Beatrice",
+    "uuid": "1be82c45-a65a-5321-bef5-d7d1b11c85e6",
+    "grades": {
+     "yds": "5.9"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Michael Kimm, Fall 2014",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14497,
+     "lng": -115.42471,
+     "leftRightIndex": 8,
+     "mp_id": "109868751"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "One Hundred Cantos",
+    "uuid": "302fb3c7-bb29-5a1b-940d-739f59e4f3e0",
+    "grades": {
+     "yds": "5.10b"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Michael Kimm, Fall 2014",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14497,
+     "lng": -115.42471,
+     "leftRightIndex": 4,
+     "mp_id": "109868730"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "The Right Road Lost",
+    "uuid": "648c3ba9-c054-596d-8ba8-474d0a7366e8",
+    "grades": {
+     "yds": "5.10a"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Michael Kimm, Fall 2014",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14497,
+     "lng": -115.42471,
+     "leftRightIndex": 9,
+     "mp_id": "109868754"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Three Mouths, Three Faces",
+    "uuid": "a50aad13-2bea-5a53-8c83-d59d8d0be0e8",
+    "grades": {
+     "yds": "5.10a"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Michael Kimm, Fall 2014",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14497,
+     "lng": -115.42471,
+     "leftRightIndex": 2,
+     "mp_id": "109868720"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Inferno",
+    "uuid": "ad7acc5f-519a-5b9a-bd19-a1893dd07f4c",
+    "grades": {
+     "yds": "5.12a"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Michael Kimm, Fall 2014",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14497,
+     "lng": -115.42471,
+     "leftRightIndex": 1,
+     "mp_id": "109868711"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Abandon all Hope",
+    "uuid": "b249d4b1-908d-570e-92ef-86a8da83d7db",
+    "grades": {
+     "yds": "5.6"
+    },
+    "type": {
+     "sport": null,
+     "trad": true,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Michael Kimm, Fall 2014",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14497,
+     "lng": -115.42471,
+     "leftRightIndex": 3,
+     "mp_id": "109868725"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Divine Comedy",
+    "uuid": "b46220ff-9e58-5f4d-8df7-5712edf24433",
+    "grades": {
+     "yds": "5.10a"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Michael Kimm, Fall 2014",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14497,
+     "lng": -115.42471,
+     "leftRightIndex": 5,
+     "mp_id": "109868733"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Virtuous Pagans",
+    "uuid": "c955bb34-b17e-51ef-975f-c9fa5703a311",
+    "grades": {
+     "yds": "5.10c"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Michael Kimm, Fall 2014",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14497,
+     "lng": -115.42471,
+     "leftRightIndex": 7,
+     "mp_id": "109868744"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Dis",
+    "uuid": "ebfdf225-d029-5fee-9fdf-23433950dd22",
+    "grades": {
+     "yds": "5.10"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Michael Kimm, Fall 2014",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14497,
+     "lng": -115.42471,
+     "leftRightIndex": 0,
+     "mp_id": "109868708"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Celestial Spheres",
+    "uuid": "ecb2e4b4-7bf9-5ac9-9555-0107cd22f47a",
+    "grades": {
+     "yds": "5.10b"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Michael Kimm, Fall 2014",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14497,
+     "lng": -115.42471,
+     "leftRightIndex": 6,
+     "mp_id": "109868739"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   }
+  ],
+  "children": []
+ },
+ "civilization-crag": {
+  "area_name": "Civilization Crag",
+  "uuid": "bf52d6e0-8d43-5b18-a3d3-bb0cc6ebc916",
+  "totalClimbs": 20,
+  "metadata": {
+   "lat": 36.14543,
+   "lng": -115.42639,
+   "mp_id": "106686385",
+   "leftRightIndex": -1
+  },
+  "content": {
+   "description": "Easy to see from the parking lot, the Civilization Crag is marked by a huge northwest-facing varnished corner. Routes range from jugs on a slab to slightly overhanging, and the rock quality is excellent, comprising mostly of the beautiful brown varnish usually associated with canyon routes. Looking for a run of moderate climbs a step up from the crowds at the Panty Wall and Magic Bus? This is the crag for you."
+  },
+  "climbs": [
+   {
+    "name": "Super Tsardom",
+    "uuid": "1720d2e1-436e-5982-9cd1-18476a3c0445",
+    "grades": {
+     "yds": "5.4"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Michael Kimm, Fall 2014",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14543,
+     "lng": -115.42639,
+     "leftRightIndex": 15,
+     "mp_id": "109545760"
+    },
+    "content": {
+     "description": "Start on the very blunt arete and follow the boltline up the mellow slab on large holds. Super chill.",
+     "location": "On the arete separating the southwest and southeast faces of the formation.",
+     "protection": "Six bolts to chains."
+    }
+   },
+   {
+    "name": "The Hot Gates",
+    "uuid": "1b1c2b8a-8fd7-57d3-87de-8218d776e2b1",
+    "grades": {
+     "yds": "5.6"
+    },
+    "type": {
+     "sport": null,
+     "trad": null,
+     "tr": true,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Andrew Tomko",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14543,
+     "lng": -115.42639,
+     "leftRightIndex": 19,
+     "mp_id": "113887730"
+    },
+    "content": {
+     "description": "Squeeze chimney.  Climbs gets a little narrow at the top but the crack can be exited from side nearest to the Umayyad Caliphate climb.",
+     "location": "Right behind Umayyad Caliphate.",
+     "protection": "Wide crack no pro, but can be TR'd."
+    }
+   },
+   {
+    "name": "Sultans and Viziers",
+    "uuid": "23849586-03ec-589a-97ee-e179c03ba1b1",
+    "grades": {
+     "yds": "5.8"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Michael Kimm, Fall 2014",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14543,
+     "lng": -115.42639,
+     "leftRightIndex": 17,
+     "mp_id": "109545922"
+    },
+    "content": {
+     "description": "Climb the near vertical wall and through an overhang on massive jugs to the shared anchor with Five Charter Oath. Climbs like a gym climb",
+     "location": "Middle route on the southeast face of the formation.",
+     "protection": "Six bolts to chains."
+    }
+   },
+   {
+    "name": "Umayyad Caliphate",
+    "uuid": "28633f47-69b6-5db1-9b37-001717ab2209",
+    "grades": {
+     "yds": "5.9+"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Michael Kimm, Fall 2014",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14543,
+     "lng": -115.42639,
+     "leftRightIndex": 18,
+     "mp_id": "109545942"
+    },
+    "content": {
+     "description": "Climb the vertical plated wall for three bolts and a big no hands rest, then work up the steepness. After a few moves the angle eases and the chains are nigh.",
+     "location": "Route furthest right on the southeast side of the formation.",
+     "protection": "Seven bolts to anchors."
+    }
+   },
+   {
+    "name": "The Sun Never Sets",
+    "uuid": "2c8d7415-a09c-50e4-a92c-921c395ca68b",
+    "grades": {
+     "yds": "5.7"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Michael Kimm, April 2010",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14543,
+     "lng": -115.42639,
+     "leftRightIndex": 0,
+     "mp_id": "106718682"
+    },
+    "content": {
+     "description": "This route starts on the left arete on the prow of rock to the left of the main wall. Climbs the interesting varnished face to the last bolt, then work up about 12' of fun slabby finger crack to anchors.",
+     "location": "",
+     "protection": "6 bolts to chains."
+    }
+   },
+   {
+    "name": "Evil Empire",
+    "uuid": "2e75c121-d0de-55c1-99c4-4d16bb850a10",
+    "grades": {
+     "yds": "5.11a"
+    },
+    "type": {
+     "sport": null,
+     "trad": true,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Killis Howard",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14543,
+     "lng": -115.42639,
+     "leftRightIndex": 8,
+     "mp_id": "107155992"
+    },
+    "content": {
+     "description": "Splitter at a sport crag. Reminiscent of Yin+Yang but thinner, more smearing, and much smaller pro. A good excuse to visit Civilization Crags and the best rock on the cliff. Not much real crack climbing on this one, more of a V3/4 boulder problem with good gear, but it's an exciting line that will reward those that are adept at placing pro quickly from smears. Worthwhile.",
+     "location": "The arching thin splitter above an offwidth flare sandwiched between Babylon 5.8 and Conquistador on the right side of the main wall. Shares anchor with Conquistador.",
+     "protection": "Cams tiny to #4, exact beta would kinda ruin the fun. Bringing 2 #00 TCUs is a good idea, I used a #9 nut but it's very optional. No long slings or trickery, just a few cams added to your sport kit."
+    }
+   },
+   {
+    "name": "The Three Kingdoms",
+    "uuid": "39b07dc8-7007-5301-ae11-874c511e4078",
+    "grades": {
+     "yds": "5.7"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Michael Kimm, Fall 2014",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14543,
+     "lng": -115.42639,
+     "leftRightIndex": 13,
+     "mp_id": "109545754"
+    },
+    "content": {
+     "description": "Climbs to the highest point on the southwest face via some slab, some near vertical climbing on large varnish plates and jugs, with a large break about halfway up. Climbs like a gym climb.",
+     "location": "Starts about 10 feet right of an obvious crack and flake system; the middle bolted line on the southwest face of the formation.",
+     "protection": "Eight bolts to chains."
+    }
+   },
+   {
+    "name": "Silk Road",
+    "uuid": "3fd90932-ab7f-501b-ac20-a55665ffc097",
+    "grades": {
+     "yds": "5.6"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "A lizard",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14543,
+     "lng": -115.42639,
+     "leftRightIndex": 14,
+     "mp_id": "121951230"
+    },
+    "content": {
+     "description": "Silk Road offers fewer\u00a0big holds and more slab climbing than the rest of the routes in the area. Good for footwork. Well protected down low and where it's harder, and just a bit spacier when the climbing is easy - good for your mental game.Don't top-rope or lower through the fixed anchors if someone else is climbing it, just the last person!Give your rope a good pull from the right to avoid getting caught in the giant flake.",
+     "location": "Second route from the right on the south face. Just left of Super Tsardom. Currently (2/2022) the only route with glue-in bolts.",
+     "protection": "7 bolts + 2 bolt anchor with mussy hooks = 9 bolts total."
+    }
+   },
+   {
+    "name": "East India Trading Co.",
+    "uuid": "42a14411-cb9a-5b3f-a754-0adf15e117b1",
+    "grades": {
+     "yds": "5.6"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Michael Kimm, Fall 2014",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14543,
+     "lng": -115.42639,
+     "leftRightIndex": 11,
+     "mp_id": "109545737"
+    },
+    "content": {
+     "description": "Starts 40 feet right of the arete separating the main northwest face of Civ from the southwest face. Climb the slab to a break where a few steeper moves on huge jugs take you back to slab climbing up and left to anchors.   The inconsistent face directly below the anchor can be climbed at a mellow 5.3, save for 10 feet of steep 5.8 terrain.",
+     "location": "On the southwest face, the furthest left bolted line.",
+     "protection": "Five bolts to chains."
+    }
+   },
+   {
+    "name": "Babylon 5.8",
+    "uuid": "4fcb4b32-d176-579d-8261-ee3a4ba47578",
+    "grades": {
+     "yds": "5.8"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Michael Kimm, May 2010",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14543,
+     "lng": -115.42639,
+     "leftRightIndex": 7,
+     "mp_id": "106757206"
+    },
+    "content": {
+     "description": "The most center route on the main wall. Pull up onto the face to the right of the chimney, and work up past bolts to a big break with a massive horn of rock. Step above this and head to the anchors.",
+     "location": "",
+     "protection": "Four bolts to chins."
+    }
+   },
+   {
+    "name": "This is Sparta",
+    "uuid": "572eb587-9389-5316-8a56-f5fd78adb915",
+    "grades": {
+     "yds": "5.9"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Michael Kimm, May 2010",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14543,
+     "lng": -115.42639,
+     "leftRightIndex": 6,
+     "mp_id": "106757203"
+    },
+    "content": {
+     "description": "The right route on the tall part of the main wall. Step across into the chimney and work it for a bolt, then pull left onto the face and up past a small bulge and four more bolts to anchors.",
+     "location": "",
+     "protection": "5 bolts to chains."
+    }
+   },
+   {
+    "name": "Byzantium",
+    "uuid": "74d82864-39bb-5e4c-9832-6abdaea689e3",
+    "grades": {
+     "yds": "5.10b"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Michael Kimm, February 2010",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14543,
+     "lng": -115.42639,
+     "leftRightIndex": 1,
+     "mp_id": "106686416"
+    },
+    "content": {
+     "description": "This route is located on the south facing wall in the slot to the left of the main crag. The leftmost line; climb the varnish slab to a small break, then work the thin vertical section past the last bolt to the anchors.",
+     "location": "",
+     "protection": "6 bolts to anchors."
+    }
+   },
+   {
+    "name": "Ming Dynasty",
+    "uuid": "970f1a3c-b0f4-5e62-aa29-87e3decd732f",
+    "grades": {
+     "yds": "5.9+"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Michael Kimm, February 2010",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14543,
+     "lng": -115.42639,
+     "leftRightIndex": 3,
+     "mp_id": "106686441"
+    },
+    "content": {
+     "description": "This route is located on the south facing wall in the slot to the left of the main crag. The rightmost line; reach across to two huecos and climb over a little roof up the varnish slab to two juggy flakes. Use these to pull the overhang and arrive at the anchors.",
+     "location": "",
+     "protection": "4 bolts to anchors."
+    }
+   },
+   {
+    "name": "The Fall of Rome",
+    "uuid": "a6900476-8ba3-5423-936b-ce32ca2d0117",
+    "grades": {
+     "yds": "5.10b"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Michael Kimm, April 2010",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14543,
+     "lng": -115.42639,
+     "leftRightIndex": 4,
+     "mp_id": "106718692"
+    },
+    "content": {
+     "description": "The route climbs the left hand line on the tallest part of the main wall. Work the arete and the face  barely right on small crimps up the vertical wall for three bolts, and then enjoy the near vertical 5.8 face to anchors.",
+     "location": "",
+     "protection": "6 bolts to chains."
+    }
+   },
+   {
+    "name": "Conquistador",
+    "uuid": "ae0d627f-efb5-5135-8981-a2928b21d959",
+    "grades": {
+     "yds": "5.10d"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Michael Kimm, May 2010",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14543,
+     "lng": -115.42639,
+     "leftRightIndex": 9,
+     "mp_id": "106757210"
+    },
+    "content": {
+     "description": "Climbs the blank looking far right face of the main wall. Pull up through underclings and sparse feet to the first bolt, then crimp up to another undercling. Work the crimps to the right of the prominant flake to the last bolt, then traverse left into the flake. A few moves and the chains are yours.",
+     "location": "",
+     "protection": "Four bolts to chains."
+    }
+   },
+   {
+    "name": "Meerkat Manor",
+    "uuid": "b2dc21bd-bd03-5a9c-a0cf-c173f832cc4a",
+    "grades": {
+     "yds": "5.7"
+    },
+    "type": {
+     "sport": null,
+     "trad": true,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "unknown",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14543,
+     "lng": -115.42639,
+     "leftRightIndex": 10,
+     "mp_id": "108511095"
+    },
+    "content": {
+     "description": "Fun little route that follows up the back side of Civilization.  Can face climb with ample protectability, or slot yourself into a series of three chimney/small hands cracks.  Not worth a hike in for, but if in the area and itching for a lil crack action, may be worth hitting up.  Definitely must have been others who have done it before, but adding it because it's such a perfect moderate route with already placed chains for easy rap. \n\nNOTE*  This route needs quite a bit of TLC and cleaning.  Lots of fragile rock, be careful and mindful of rock quality for protection.",
+     "location": "From civilization wall, walk around right of the prominent ar\u00eate.  Follow the first moderate crack on the left that starts in a small chimney or follow up the cruiser seam on the slab on the right to enter the crack above the chimney.",
+     "protection": "Standard rack to #4 C4.  End at a juicy belay ledge that eats up small cams for anchor.  The belay ledge sits directly above Conquistador, so can easily rap off of those rings which are within arms reach from belay ledge."
+    }
+   },
+   {
+    "name": "The Mayan Pass",
+    "uuid": "c38ece37-d1e2-5c68-9069-f0c522ef383e",
+    "grades": {
+     "yds": "5.6"
+    },
+    "type": {
+     "sport": null,
+     "trad": true,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "FRA: Dustin Wilson",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14543,
+     "lng": -115.42639,
+     "leftRightIndex": 12,
+     "mp_id": "113624137"
+    },
+    "content": {
+     "description": "This route starts ten feet to the left of The Three Kingdoms at an obvious (mediocre) hand crack. Follow this crack until it ends at a mantle. Traverse right and finish The Three Kingdoms (3b's).",
+     "location": "10 feet to the left of The Three Kingdoms at an obvious hand crack.",
+     "protection": "single rack to 1'"
+    }
+   },
+   {
+    "name": "Manifest Destiny",
+    "uuid": "d8056314-bf72-5505-b04f-f1cc13a799db",
+    "grades": {
+     "yds": "5.9+"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Michael Kimm, April 2010",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14543,
+     "lng": -115.42639,
+     "leftRightIndex": 5,
+     "mp_id": "106718688"
+    },
+    "content": {
+     "description": "Climbs the center line on the tallest part of the main wall. Step across to two good crimps, then work straight up the vertical varnish face along a series of breaks. Work through the break and onto the high angle slab above, and work this to the anchor.",
+     "location": "",
+     "protection": "6 bolts to chains."
+    }
+   },
+   {
+    "name": "Mongol Hoarde",
+    "uuid": "ee633ff2-86b4-58ba-ad10-103dc6b8119e",
+    "grades": {
+     "yds": "5.10a"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Michael Kimm, February 2010",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14543,
+     "lng": -115.42639,
+     "leftRightIndex": 2,
+     "mp_id": "106686396"
+    },
+    "content": {
+     "description": "This route is on the south facing wall in the slot to the left of the main crag. The center line; climb the varnish slab to the last bolt, and then pull the overhang on huge jugs to the anchor.",
+     "location": "",
+     "protection": "5 bolts to anchors."
+    }
+   },
+   {
+    "name": "Five Charter Oath",
+    "uuid": "f763a66c-f919-5608-bcdf-a759d9de834b",
+    "grades": {
+     "yds": "5.8-"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Michael Kimm, Fall 2014",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14543,
+     "lng": -115.42639,
+     "leftRightIndex": 16,
+     "mp_id": "109545907"
+    },
+    "content": {
+     "description": "Climb the near vertical wall on a ton of huge jugs. The crux comes pulling over a small overhang. Climbs like a gym route.",
+     "location": "Route furthest left on the southeast face of the formation.",
+     "protection": "Seven bolts to chains."
+    }
+   }
+  ],
+  "children": []
+ },
+ "cactus-massacre": {
+  "area_name": "Cactus Massacre",
+  "uuid": "eb2f0ff1-da5e-52da-b53e-e2f336f14194",
+  "totalClimbs": 16,
+  "metadata": {
+   "lat": 36.14687,
+   "lng": -115.42762,
+   "mp_id": "114114376",
+   "leftRightIndex": -1
+  },
+  "content": {
+   "description": "This is one of the best walls for colder months.  The wall gets sun from mid-morning on. There are several high quality bolted climbs in the 10s and 11s than presented in guidebooks.  The neighbor, Cactus Corridor, offers a handful of fun 5.9s.  If you enjoy [Cannibal crag](https://openbeta.io/area/4a219dd8-546d-5d1c-9445-643703914ee9/cannibal-crag), definitely check out this wall.\n\n### Getting here\n\nCactus and [Civilization](https://openbeta.io/area/bf52d6e0-8d43-5b18-a3d3-bb0cc6ebc916/civilization-crag) (both visible from the parking lot) share the same approach trail.  Follow the right trail down to the wash then climb up trending right (10 minutes)."
+  },
+  "climbs": [
+   {
+    "name": "Fractured Cactus",
+    "uuid": "0c8c7fb9-6c85-5460-9f64-e7963d1e4911",
+    "grades": {
+     "yds": "5.11d"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Gary Savage",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14687,
+     "lng": -115.42762,
+     "leftRightIndex": 7,
+     "mp_id": "116759441"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Never Kiss a Cactus",
+    "uuid": "16c4be85-0038-52c2-99f6-75743d562de5",
+    "grades": {
+     "yds": "5.8"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Dave Quinn",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14687,
+     "lng": -115.42762,
+     "leftRightIndex": 14,
+     "mp_id": "116694502"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Cactus Head",
+    "uuid": "23a88e41-ce59-5673-9694-cbe3a5f55845",
+    "grades": {
+     "yds": "5.9"
+    },
+    "type": {
+     "sport": null,
+     "trad": true,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Paul Van Betten, Don Welsh",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14687,
+     "lng": -115.42762,
+     "leftRightIndex": 11,
+     "mp_id": "116697590"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Cholla",
+    "uuid": "3d604c9e-f175-5b04-b284-3b0a0da14266",
+    "grades": {
+     "yds": "5.8"
+    },
+    "type": {
+     "sport": null,
+     "trad": true,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Dave Quinn",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14687,
+     "lng": -115.42762,
+     "leftRightIndex": 0,
+     "mp_id": "121863071"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Saguaro",
+    "uuid": "42e3b49e-ae84-5e9f-b8a5-af2495328943",
+    "grades": {
+     "yds": "5.11a"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Dave Quinn",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14687,
+     "lng": -115.42762,
+     "leftRightIndex": 9,
+     "mp_id": "116697646"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Peyote and the magic stairs",
+    "uuid": "4c77f3bb-318a-5975-aa57-f8436be8c0f4",
+    "grades": {
+     "yds": "5.4"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Dave Quinn",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14687,
+     "lng": -115.42762,
+     "leftRightIndex": 2,
+     "mp_id": "121862974"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Cactus Juice",
+    "uuid": "58c0894f-2365-51a3-a42c-2700cd16af2b",
+    "grades": {
+     "yds": "5.9"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Dave Quinn",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14687,
+     "lng": -115.42762,
+     "leftRightIndex": 1,
+     "mp_id": "121862988"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Over a Barrel",
+    "uuid": "8d81dde7-7766-54a2-94f9-f97e2336276a",
+    "grades": {
+     "yds": "5.10d"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Dave Quinn",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14687,
+     "lng": -115.42762,
+     "leftRightIndex": 12,
+     "mp_id": "116697487"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Cactus Massacre",
+    "uuid": "adf2231a-2367-5000-b43e-436cd479a10d",
+    "grades": {
+     "yds": "5.11c"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Paul Van Belten, Mike Ward, & Sal Mamusia",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14687,
+     "lng": -115.42762,
+     "leftRightIndex": 6,
+     "mp_id": "114115286"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Cactus Hugger",
+    "uuid": "af48d389-0097-57e6-b456-c01144a4c8cf",
+    "grades": {
+     "yds": "5.10c/d"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Dave Qunn",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14687,
+     "lng": -115.42762,
+     "leftRightIndex": 3,
+     "mp_id": "116697730"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "End of the Cactus",
+    "uuid": "ceb63d84-7224-57ab-9278-10caef43aea3",
+    "grades": {
+     "yds": "5.5"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Dave Quinn",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14687,
+     "lng": -115.42762,
+     "leftRightIndex": 15,
+     "mp_id": "114114380"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Cactus Pete",
+    "uuid": "d9682e04-d439-5afa-8cd1-3a6d653415ca",
+    "grades": {
+     "yds": "5.10a"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Chris \"Smitty\" Smith",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14687,
+     "lng": -115.42762,
+     "leftRightIndex": 4,
+     "mp_id": "116697801"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Cactus Killa",
+    "uuid": "e6faebd5-3e4c-5109-a86a-eec41938b1b9",
+    "grades": {
+     "yds": "5.11-"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Dave Quinn",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14687,
+     "lng": -115.42762,
+     "leftRightIndex": 10,
+     "mp_id": "116697532"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "One Flew Over a Cactus Nest",
+    "uuid": "e7bb2804-758d-5c40-8cc8-ff5ca30f1e7c",
+    "grades": {
+     "yds": "5.10b"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Chloe Quinn",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14687,
+     "lng": -115.42762,
+     "leftRightIndex": 13,
+     "mp_id": "116697386"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Cactus Root",
+    "uuid": "ec4cec01-02be-5a13-82b7-1ac2f5ade0ec",
+    "grades": {
+     "yds": "5.11d"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Paul Van Betten, Sal Mamusia, Jim Olsen",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14687,
+     "lng": -115.42762,
+     "leftRightIndex": 8,
+     "mp_id": "116697604"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Straight to the Point",
+    "uuid": "ee53cadb-ddb1-5bad-bb56-593d5aab4118",
+    "grades": {
+     "yds": "5.10d"
+    },
+    "type": {
+     "sport": true,
+     "trad": null,
+     "tr": null,
+     "bouldering": null,
+     "aid": null
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Dave Quinn",
+    "safety": "UNSPECIFIED",
+    "metadata": {
+     "lat": 36.14687,
+     "lng": -115.42762,
+     "leftRightIndex": 5,
+     "mp_id": "116697694"
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   }
+  ],
+  "children": []
+ },
+ "classic-rock-wall": {
+  "area_name": "Classic Rock Wall",
+  "uuid": "f48459bb-9213-50df-a221-d6750bbb6cbb",
+  "totalClimbs": 7,
+  "metadata": {
+   "lat": 36.145792,
+   "lng": -115.428268,
+   "mp_id": "",
+   "leftRightIndex": -1
+  },
+  "content": {
+   "description": "Classic Rock features a good collection of moderate sport routes ranging from 5.8 to 5.10s. Despite its proximity and visibility from the First Pullout parking lot, it was only recently developed in 2022. Being a new crag, wearing a helmet is advisable as some of the holds are fragile."
+  },
+  "climbs": [
+   {
+    "name": "Climbing on Broken Choss",
+    "uuid": "06577731-3915-43fb-a764-693f1ef7cf85",
+    "grades": {
+     "yds": "5.10b"
+    },
+    "type": {
+     "sport": true,
+     "trad": false,
+     "tr": false,
+     "bouldering": false,
+     "aid": false
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": null,
+    "safety": null,
+    "metadata": {
+     "lat": 36.145792,
+     "lng": -115.428268,
+     "leftRightIndex": 0,
+     "mp_id": null
+    },
+    "content": {
+     "description": "Low crux through the first two bolts, then this eases up significantly with many opportunities for resting throughout the route. ",
+     "location": "Roughly in the middle of the wall with a distinct small hueco below a short left-leaning crack at the beginning of the route.",
+     "protection": "9 bolts to mussy hooks."
+    }
+   },
+   {
+    "name": "Pretty High For A Climb Guy",
+    "uuid": "2443d675-ca75-4f10-a112-78ba33a702f2",
+    "grades": {
+     "yds": "5.8"
+    },
+    "type": {
+     "sport": true,
+     "trad": false,
+     "tr": false,
+     "bouldering": false,
+     "aid": false
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": null,
+    "safety": null,
+    "metadata": {
+     "lat": 36.145792,
+     "lng": -115.428268,
+     "leftRightIndex": null,
+     "mp_id": null
+    },
+    "content": {
+     "description": "A short offwidth crux can make this feel hard for the grade. Besides the crack section, this is fairly straight forward with fun exposure on the arete. Very well bolted. ",
+     "location": "Furthest climb down the canyon. Right around the corner on the left wall and hard to miss because of the obvious large crack on the route.",
+     "protection": "11 bolts to mussy hook anchor. Unlike most routes at Classic Rock Wall, a 40M rope will not be long enough for this route!"
+    }
+   },
+   {
+    "name": "Hanging Fifty",
+    "uuid": "67ef27c8-aa1f-435a-a1b6-d1dd2620010d",
+    "grades": {
+     "yds": "5.11b"
+    },
+    "type": {
+     "sport": true,
+     "trad": false,
+     "tr": false,
+     "bouldering": false,
+     "aid": false
+    },
+    "length": 15,
+    "boltsCount": -1,
+    "fa": "Jay Foley, Donna Longo, Milan Foley, 2015",
+    "safety": null,
+    "metadata": {
+     "lat": 36.145792,
+     "lng": -115.428268,
+     "leftRightIndex": null,
+     "mp_id": null
+    },
+    "content": {
+     "description": "An interesting route worth doing. It starts off on small but good crimps, then the climb eases once you get to the lieback crack (there's a knee bar opportunity if you can find it!). Continue up the off-vertical slab to the anchor.",
+     "location": "Between a large crack and water streaks at the end of the corridor, away from the parking lot.",
+     "protection": "6 bolts"
+    }
+   },
+   {
+    "name": "Wanna Be My Belayer",
+    "uuid": "6fcafa19-e510-4182-ad6a-85e149d7fbc2",
+    "grades": {
+     "yds": "5.8"
+    },
+    "type": {
+     "sport": true,
+     "trad": false,
+     "tr": false,
+     "bouldering": false,
+     "aid": false
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": "Aaron Geistfeld, Aaron Delaundreau, February 2022",
+    "safety": null,
+    "metadata": {
+     "lat": 36.145792,
+     "lng": -115.428268,
+     "leftRightIndex": 4,
+     "mp_id": null
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Don't Stop Belaying",
+    "uuid": "a7376674-be96-4a7b-a531-e65cd441b2b9",
+    "grades": {
+     "yds": "5.9"
+    },
+    "type": {
+     "sport": true,
+     "trad": false,
+     "tr": false,
+     "bouldering": false,
+     "aid": false
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": null,
+    "safety": null,
+    "metadata": {
+     "lat": 36.145792,
+     "lng": -115.428268,
+     "leftRightIndex": 3,
+     "mp_id": null
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Unbreak My Hold",
+    "uuid": "d3f33c33-442f-4495-b6e6-1538eb91f86a",
+    "grades": {
+     "yds": "5.10d"
+    },
+    "type": {
+     "sport": true,
+     "trad": false,
+     "tr": false,
+     "bouldering": false,
+     "aid": false
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": null,
+    "safety": null,
+    "metadata": {
+     "lat": 36.145792,
+     "lng": -115.428268,
+     "leftRightIndex": 1,
+     "mp_id": null
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   },
+   {
+    "name": "Pour Some Beta On Me",
+    "uuid": "f6ab434b-3a5f-4308-ab61-874a54ce85f8",
+    "grades": {
+     "yds": "5.11b"
+    },
+    "type": {
+     "sport": true,
+     "trad": false,
+     "tr": false,
+     "bouldering": false,
+     "aid": false
+    },
+    "length": -1,
+    "boltsCount": -1,
+    "fa": null,
+    "safety": null,
+    "metadata": {
+     "lat": 36.145792,
+     "lng": -115.428268,
+     "leftRightIndex": 2,
+     "mp_id": null
+    },
+    "content": {
+     "description": "",
+     "location": "",
+     "protection": ""
+    }
+   }
+  ],
+  "children": []
+ }
+}
