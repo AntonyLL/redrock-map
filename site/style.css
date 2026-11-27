@@ -132,3 +132,11 @@ body.far .mk.ref{display:none}
 .arrow{width:0;height:0;border-left:9px solid transparent;border-right:9px solid transparent;border-bottom:18px solid #111;filter:drop-shadow(0 0 2px #fff)}
 .maplibregl-ctrl-bottom-right{bottom:calc(var(--safe-b) + 2px)}
 .maplibregl-ctrl-attrib{font-size:10px}
+
+/* approach time */
+.eta{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:4px 0 8px}
+.eta b{font-size:19px;background:var(--ink);color:#fff;border-radius:10px;padding:3px 10px}
+.eta span{font-size:14px;color:var(--mute)}
+.etaS{font-weight:700;font-size:14px;background:var(--ink);color:#fff;border-radius:8px;padding:1px 8px;margin-left:4px}
+.chip .t{font-weight:600;font-size:13px;opacity:.7}
+.mk .t{font-weight:600;font-size:11px;opacity:.75;margin-left:2px}

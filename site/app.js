@@ -7,6 +7,8 @@ const el = (tag, cls, html) => { const e = document.createElement(tag); if (cls)
 const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const PULL = Object.fromEntries(D.pullouts.map(p => [p.key, p]));
 const CRAG = Object.fromEntries(D.crags.map(c => [c.key, c]));
+const walkMin = c => { const m = (c.walk.match(/\d+/g) || []).map(Number); return m.length ? Math.max(...m.filter(n => n < 90)) : null; };
+const walkShort = c => c.walk.replace(/^约\s*/, '').replace(/（.*$/, '').replace(/\s*分钟/, ' 分钟');
 const TIER = { pick: '首选', good: '同级可刷', warm: '热身', out: '不在范围' };
 
 /* ---------------- tiles ---------------- */
@@ -103,7 +105,7 @@ function mk(cls, text, lngLat, onClick) {
   return new maplibregl.Marker({ element: e, anchor: 'bottom' }).setLngLat(lngLat).addTo(map);
 }
 D.marks.forEach(m => mk(m.k === 'wc' ? 'wc ref' : 'ref', m.n, [m.lng, m.lat]));
-D.crags.forEach(c => { cragMarkers[c.key] = mk('', c.zh, [c.lng, c.lat], () => selectCrag(c.key)); });
+D.crags.forEach(c => { cragMarkers[c.key] = mk('', c.zh, [c.lng, c.lat], () => selectCrag(c.key)); cragMarkers[c.key].getElement().innerHTML = `${esc(c.zh)} <span class="t">${esc(walkShort(c))}</span>`; });
 D.pullouts.forEach(p => mk('pull', 'P ' + p.short, [p.lng, p.lat], () => setView(p.key)));
 if (D.drive.entrance) mk('gate', '入口 / 收费站方向', D.drive.entrance, () => setView('drive'));
 // one-way arrows along the way in
@@ -190,7 +192,7 @@ function renderChips() {
     return;
   }
   D.crags.filter(c => c.pull === S.view).forEach(c => {
-    const b = el('button', 'chip' + (c.key === S.crag ? ' on' : ''), `${esc(c.zh)} <small>★${c.count.pick}</small>`);
+    const b = el('button', 'chip' + (c.key === S.crag ? ' on' : ''), `${esc(c.zh)} <span class="t">${esc(walkShort(c))}</span> <small>★${c.count.pick}</small>`);
     b.onclick = () => selectCrag(c.key); box.appendChild(b);
   });
   const on = $('#chips .on'); if (on) on.scrollIntoView({ inline: 'center', block: 'nearest' });
@@ -201,7 +203,9 @@ function gpsLine(c) {
   if (!S.me) return '<div class="gps">点右边“定位”显示你离岩壁多远</div>';
   const d = dist(S.me, [c.lng, c.lat]), br = bearing(S.me, [c.lng, c.lat]);
   if (d < 40) return '<div class="gps near">你已在岩壁附近（定位误差内）· 点“找线”</div>';
-  return `<div class="gps">岩壁在你的${compass(br)}方向，直线 ${fmtM(d)}</div>`;
+  const total = c.approach.trail_m + c.approach.off_m, wm = walkMin(c);
+  const left = wm && d < total * 1.3 ? `，大约还要 ${Math.max(1, Math.round(wm * Math.min(1, d / total)))} 分钟` : '';
+  return `<div class="gps">岩壁在你的${compass(br)}方向，直线 ${fmtM(d)}${left}</div>`;
 }
 function renderCard() {
   const card = $('#card'); card.hidden = false;
@@ -217,14 +221,14 @@ function renderCard() {
   if (!S.crag) {
     const p = PULL[S.view];
     card.innerHTML = `<h3>${esc(p.name)}</h3><div class="sub">点岩壁名字看走法和线路</div><ul class="list">` +
-      D.crags.filter(c => c.pull === S.view).map(c => `<li data-k="${c.key}"><b>${esc(c.zh)}</b> · 步行${esc(c.walk)}<br><span class="badge pick">★ 首选 ${c.count.pick}</span> <span class="badge good">同级 ${c.count.good}</span> <span class="badge warm">热身 ${c.count.warm}</span></li>`).join('') + '</ul>';
+      D.crags.filter(c => c.pull === S.view).map(c => `<li data-k="${c.key}"><b>${esc(c.zh)}</b> <span class="etaS">步行 ${esc(walkShort(c))}</span><br><span class="badge pick">★ 首选 ${c.count.pick}</span> <span class="badge good">同级 ${c.count.good}</span> <span class="badge warm">热身 ${c.count.warm}</span></li>`).join('') + '</ul>';
     card.querySelectorAll('li').forEach(li => li.onclick = () => selectCrag(li.dataset.k));
     return;
   }
   const c = CRAG[S.crag];
   const offNote = c.approach.off_m > 60 ? `<div class="warn">青色实线是地图上有记录的小路（${fmtM(c.approach.trail_m)}）；最后约 ${fmtM(c.approach.off_m)} 的粉色虚线没有现成小路，只表示方向，要按上面的文字走。</div>` : '';
   card.innerHTML = `<h3>${esc(c.zh)}</h3>
-    <div class="sub">从${esc(PULL[c.pull].short)}步行${esc(c.walk)} · 路程约 ${fmtM(c.approach.trail_m + c.approach.off_m)}</div>
+    <div class="eta"><b>步行 ${esc(walkShort(c))}</b><span>从${esc(PULL[c.pull].short)}出发 · 路程约 ${fmtM(c.approach.trail_m + c.approach.off_m)}</span></div>
     <div class="badges"><span class="badge pick">★ 首选 ${c.count.pick}</span><span class="badge good">同级可刷 ${c.count.good}</span><span class="badge warm">热身 ${c.count.warm}</span><span class="badge out">不在范围 ${c.count.out}</span></div>
     ${gpsLine(c)}
     <div class="row"><button class="btn" id="cFind">找线 ›</button><button class="btn ghost" id="cWay">走法</button></div>
