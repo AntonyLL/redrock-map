@@ -260,7 +260,7 @@ function tiltUp(retried) {
       setTimeout(() => {
         if (seq !== tiltSeq || !S.d3) return;
         const el = map.transform.elevation || 0;
-        if (map.getPitch() >= 50 && el > 300) { [300, 1200, 2600].forEach(ms => setTimeout(() => { if (seq === tiltSeq) redrawTerrain(); }, ms)); return; }
+        if (map.getPitch() >= 50 && el > 300) { setTimeout(() => { if (seq === tiltSeq) reloadBase(); }, 900); setTimeout(() => { if (seq === tiltSeq) redrawTerrain(); }, 3000); return; }
         errs.push('tilt-failed p=' + map.getPitch().toFixed(1) + ' z=' + map.getZoom().toFixed(2) + ' el=' + Math.round(el) + (retried ? ' (retry)' : ''));
         if (retried) { flat3dOff('这里的三维地形没有显示出来，已切回二维'); return; }
         map.stop(); map._elevationFreeze = false; map.setTerrain(null);
@@ -281,6 +281,17 @@ function redrawTerrain() {
   if (!S.d3 || !map.terrain) return;
   try { map.terrain.tileManager.freeRtt(); } catch (e) {}
   map.triggerRepaint();
+}
+/* The flat-then-tilt jumps cancel satellite tiles that are still downloading, and the library does not ask
+   for them again until the view changes: blank patches next to the crag. Ask again once the tilt is done. */
+function reloadBase() {
+  if (!S.d3) return;
+  const id = S.base === 'sat' ? 'sat' : 'topo';
+  try {
+    const tm = map.style.tileManagers && map.style.tileManagers[id];
+    if (tm && tm.reload) tm.reload(); else map.getSource(id).setTiles([SRC[id]('{z}', '{x}', '{y}')]);
+  } catch (e) { errs.push('reload: ' + e.message); }
+  setTimeout(redrawTerrain, 800);
 }
 map.on('movestart', () => { rttFresh = false; });
 map.on('idle', () => { if (S.d3 && !rttFresh) { rttFresh = true; redrawTerrain(); } });
