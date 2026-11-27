@@ -19,15 +19,14 @@ const SRC = {
 };
 const BOX = { // [south, west, north, east]
   big: [36.08, -115.52, 36.19, -115.38],
-  mid: [36.126, -115.447, 36.161, -115.413],
-  calico: [36.1395, -115.4445, 36.1610, -115.4170],
+  mid: [36.128, -115.447, 36.166, -115.414],
   c1: [36.1432, -115.4330, 36.1485, -115.4225],
   c2: [36.1508, -115.4392, 36.1580, -115.4332],
 };
 const PLAN = [
-  ['sat', 'big', 10, 13], ['sat', 'mid', 14, 16], ['sat', 'calico', 17, 18], ['sat', 'c1', 19, 19], ['sat', 'c2', 19, 19],
-  ['topo', 'big', 10, 13], ['topo', 'mid', 14, 16],
-  ['dem', 'big', 10, 12], ['dem', 'mid', 13, 15],
+  ['sat', 'big', 10, 15], ['sat', 'mid', 16, 18], ['sat', 'c1', 19, 19], ['sat', 'c2', 19, 19],
+  ['topo', 'big', 10, 14], ['topo', 'mid', 15, 16],
+  ['dem', 'big', 10, 14],
 ];
 const lon2x = (lon, z) => Math.floor((lon + 180) / 360 * 2 ** z);
 const lat2y = (lat, z) => { const r = lat * Math.PI / 180; return Math.floor((1 - Math.asinh(Math.tan(r)) / Math.PI) / 2 * 2 ** z); };
@@ -67,7 +66,7 @@ const map = new maplibregl.Map({
     sources: {
       sat: { type: 'raster', tiles: [SRC.sat('{z}', '{x}', '{y}')], tileSize: 256, minzoom: 10, maxzoom: 19, attribution: '影像 © Esri, Maxar, Earthstar Geographics' },
       topo: { type: 'raster', tiles: [SRC.topo('{z}', '{x}', '{y}')], tileSize: 256, minzoom: 10, maxzoom: 16, attribution: '地形图 USGS' },
-      dem: { type: 'raster-dem', tiles: [SRC.dem('{z}', '{x}', '{y}')], tileSize: 256, minzoom: 10, maxzoom: 15, encoding: 'terrarium', attribution: '高程 USGS 3DEP / Mapzen' },
+      dem: { type: 'raster-dem', tiles: [SRC.dem('{z}', '{x}', '{y}')], tileSize: 256, minzoom: 10, maxzoom: 14, encoding: 'terrarium', attribution: '高程 USGS 3DEP / Mapzen' },
       roads: { type: 'geojson', data: D.roads },
       trails: { type: 'geojson', data: D.trails, attribution: '道路与小路 © OpenStreetMap' },
       drive: { type: 'geojson', data: driveFC },
@@ -90,7 +89,7 @@ const map = new maplibregl.Map({
       { id: 'acc', type: 'fill', source: 'acc', paint: { 'fill-color': '#1f6fff', 'fill-opacity': 0.15 } },
     ],
   },
-  center: [-115.431, 36.142], zoom: 13.2, minZoom: 10, maxZoom: 20.5, maxPitch: 78,
+  center: [-115.431, 36.142], zoom: 13.2, minZoom: 10, maxZoom: 20.5, maxPitch: 70, maxTileCacheSize: 120,
   maxBounds: [[BOX.big[1], BOX.big[0]], [BOX.big[3], BOX.big[2]]],
   attributionControl: { compact: true }, dragRotate: true, pitchWithRotate: true,
 });
@@ -105,7 +104,7 @@ function mk(cls, text, lngLat, onClick) {
   return new maplibregl.Marker({ element: e, anchor: 'bottom' }).setLngLat(lngLat).addTo(map);
 }
 D.marks.forEach(m => mk(m.k === 'wc' ? 'wc ref' : 'ref', m.n, [m.lng, m.lat]));
-D.crags.forEach(c => { cragMarkers[c.key] = mk('', c.zh, [c.lng, c.lat], () => selectCrag(c.key)); cragMarkers[c.key].getElement().innerHTML = `${esc(c.zh)} <span class="t">${esc(walkShort(c))}</span>`; });
+D.crags.forEach(c => { cragMarkers[c.key] = mk('', c.zh, [c.lng, c.lat], () => selectCrag(c.key)); });
 D.pullouts.forEach(p => mk('pull', 'P ' + p.short, [p.lng, p.lat], () => setView(p.key)));
 if (D.drive.entrance) mk('gate', '入口 / 收费站方向', D.drive.entrance, () => setView('drive'));
 // one-way arrows along the way in
@@ -120,7 +119,7 @@ if (D.drive.entrance) mk('gate', '入口 / 收费站方向', D.drive.entrance, (
     }
   }
 })();
-map.on('zoom', () => document.body.classList.toggle('far', map.getZoom() < 15.6));
+map.on('zoom', () => document.body.classList.toggle('far', map.getZoom() < 16.6));
 document.body.classList.add('far');
 
 /* ---------------- geo helpers ---------------- */
@@ -220,8 +219,8 @@ function renderCard() {
   }
   if (!S.crag) {
     const p = PULL[S.view];
-    card.innerHTML = `<h3>${esc(p.name)}</h3><div class="sub">点岩壁名字看走法和线路</div><ul class="list">` +
-      D.crags.filter(c => c.pull === S.view).map(c => `<li data-k="${c.key}"><b>${esc(c.zh)}</b> <span class="etaS">步行 ${esc(walkShort(c))}</span><br><span class="badge pick">★ 首选 ${c.count.pick}</span> <span class="badge good">同级 ${c.count.good}</span> <span class="badge warm">热身 ${c.count.warm}</span></li>`).join('') + '</ul>';
+    card.innerHTML = `<h3>${esc(p.name)}</h3><div class="sub">点岩壁看走法和线路 · 黑底数字是步行时间</div><ul class="list">` +
+      D.crags.filter(c => c.pull === S.view).map(c => `<li data-k="${c.key}"><b>${esc(c.zh)}</b><span class="etaS">${esc(walkShort(c))}</span><span class="badge pick">★${c.count.pick}</span><span class="badge good">同级 ${c.count.good}</span></li>`).join('') + '</ul>';
     card.querySelectorAll('li').forEach(li => li.onclick = () => selectCrag(li.dataset.k));
     return;
   }
@@ -357,7 +356,7 @@ function openInfo(focus) {
     <p id="offState">正在检查…</p>
     <div class="bar"><i id="offBar"></i></div>
     <div class="row"><button class="btn" id="offGo">下载离线数据</button></div>
-    <p class="src">包含卫星图、地形图、三维地形和岩壁照片，约 60–80 MB，请在 Wi-Fi 下进行。下完后开飞行模式再打开一次，确认地图和照片都在。</p>
+    <p class="src">包含卫星图、地形图、三维地形和岩壁照片，约 80–100 MB，请在 Wi-Fi 下进行。下完后开飞行模式再打开一次，确认地图和照片都在。</p>
   </div>
   <div class="box"><h3 style="margin-top:0">进园</h3><ul>
     <li><b>10 月到次年 5 月，8:00–17:00 之间入园要在 recreation.gov 预约时段</b>；8:00 前入园不用预约。Scenic Drive 早上 6:00 开门。</li>
@@ -503,9 +502,11 @@ $('#btnBase').onclick = () => {
 document.querySelectorAll('#tabs button').forEach(b => b.onclick = () => setView(b.dataset.view));
 
 map.on('load', () => { setView('drive'); });
-map.on('error', () => {});
+const errs = [];
+map.on('error', e => { if (errs.length < 60) errs.push(String((e && e.error && e.error.message) || e)); });
+map.getCanvas().addEventListener('webglcontextlost', () => { errs.push('webglcontextlost'); toast('地图画面丢失，正在恢复…'); setTimeout(() => location.reload(), 1200); });
 
 /* ---------------- service worker ---------------- */
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').catch(() => {});
-window.__rr = { map, S, tileUrls, photoUrls, selectCrag, openPanel, setView };
+window.__rr = { errs, map, S, tileUrls, photoUrls, selectCrag, openPanel, setView };
 })();
