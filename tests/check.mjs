@@ -14,6 +14,7 @@ let total = 0;
 for (const c of D.crags) {
   assert.ok(['p1', 'p2'].includes(c.pull), c.key + ' 没有停车点');
   assert.ok(c.way && c.sun && c.walk, c.key + ' 缺中文走法');
+  assert.ok(/^(约 )?\d+(–\d+)? 分钟/.test(c.walk), c.key + ' 的步行时间要以“约 N 分钟”或“N–M 分钟”开头，页面靠它显示和估算');
   assert.ok(c.approach.trail.length >= 2, c.key + ' 缺进山路线');
   assert.ok(c.lat > 36.14 && c.lat < 36.16 && c.lng < -115.42 && c.lng > -115.44, c.key + ' 坐标不在 Calico 范围');
   for (const s of c.sectors) for (const r of s.routes) {

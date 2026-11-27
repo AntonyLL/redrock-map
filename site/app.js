@@ -7,8 +7,8 @@ const el = (tag, cls, html) => { const e = document.createElement(tag); if (cls)
 const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const PULL = Object.fromEntries(D.pullouts.map(p => [p.key, p]));
 const CRAG = Object.fromEntries(D.crags.map(c => [c.key, c]));
-const walkMin = c => { const m = (c.walk.match(/\d+/g) || []).map(Number); return m.length ? Math.max(...m.filter(n => n < 90)) : null; };
 const walkShort = c => c.walk.replace(/^约\s*/, '').replace(/（.*$/, '').replace(/\s*分钟/, ' 分钟');
+const walkMin = c => { const m = (walkShort(c).match(/\d+/g) || []).map(Number); return m.length ? Math.max(...m) : null; };
 const TIER = { pick: '首选', good: '同级可刷', warm: '热身', out: '不在范围' };
 
 /* ---------------- tiles ---------------- */
