@@ -130,6 +130,8 @@ const map = new maplibregl.Map({
 map.addControl(new maplibregl.NavigationControl({ showZoom: false, visualizePitch: true }), 'bottom-right');
 map.addControl(new maplibregl.ScaleControl({ unit: 'metric' }), 'bottom-left');
 
+const errs = [];
+window.addEventListener('error', e => { if (errs.length < 60) errs.push('js: ' + e.message); });
 /* markers */
 const cragMarkers = {};
 function mk(cls, text, lngLat, onClick, anchor) {
@@ -201,32 +203,56 @@ function pad() { return { top: 150, bottom: Math.min(innerHeight * 0.46, 330), l
 function fit(pts, maxZoom, focus) {
   const b = new maplibregl.LngLatBounds(pts[0], pts[0]); pts.forEach(p => b.extend(p));
   if (!S.d3) { map.fitBounds(b, { padding: pad(), maxZoom: maxZoom || 18, pitch: 0, bearing: 0, duration: 700 }); return; }
-  // In 3D, never animate into a place whose elevation tiles are not loaded yet: the camera ends up under
-  // the terrain and the map turns to stripes or goes blank. Jump there flat, then tilt once elevation is in.
-  const bearing = map.getBearing();
-  map.stop(); map.setTerrain(null);
-  const cam = map.cameraForBounds(b, { padding: pad(), maxZoom: maxZoom || 18, bearing });
-  map.jumpTo({ center: cam.center, zoom: cam.zoom, bearing, pitch: 0 });
-  tiltUp(focus);
+  const cam = map.cameraForBounds(b, { padding: pad(), maxZoom: maxZoom || 18 });
+  const c = b.getCenter();
+  flatThenTilt(focus || (cam ? cam.center : [c.lng, c.lat]), focus ? 16.6 : (cam ? cam.zoom : 15));
 }
 function goTo(center, zoom) {
   if (!S.d3) { map.easeTo({ center, zoom }); return; }
-  const bearing = map.getBearing();
-  map.stop(); map.setTerrain(null); map.jumpTo({ center, zoom, bearing, pitch: 0 }); tiltUp(center);
+  flatThenTilt(center, zoom);
 }
+/* 3D camera moves. Animating with terrain on into a place whose elevation tiles are not loaded leaves the
+   camera under the ground (blank map or stripes). So: terrain off, jump there flat, terrain on, wait until
+   the elevation under the centre is really known, and only then tilt. */
 let tiltSeq = 0;
-function tiltUp(focus) {
-  const seq = ++tiltSeq, btn = $('#btn3d');
+function flatThenTilt(center, zoom) {
+  const bearing = map.getBearing();
+  map.stop(); map.setTerrain(null);
+  map.jumpTo({ center, zoom, bearing, pitch: 0 });
+  tiltUp();
+}
+function groundKnown() {
+  try {
+    if (!map.isSourceLoaded('dem')) return false;
+    const t = map.terrain, c = map.getCenter();
+    const h = t && t.getElevationForLngLatZoom ? t.getElevationForLngLatZoom(c, map.transform.tileZoom) : 1000;
+    return h > 300; // the whole area lies above 1000 m; 0 means "not loaded yet"
+  } catch (e) { return map.isSourceLoaded('dem'); }
+}
+function tiltUp() {
+  const seq = ++tiltSeq, btn = $('#btn3d'), t0 = Date.now();
   btn.classList.add('busy');
   map.setTerrain({ source: 'dem', exaggeration: 1 });
-  let done = false;
-  const go = () => {
-    if (done || seq !== tiltSeq || !S.d3) return; done = true; btn.classList.remove('busy');
-    const o = { pitch: 60, duration: 800 };
-    if (focus) { o.center = focus; o.zoom = Math.max(map.getZoom(), 16.6); o.padding = { top: 120, bottom: Math.min(innerHeight * 0.4, 300), left: 0, right: 0 }; }
-    map.easeTo(o);
+  const tick = () => {
+    if (seq !== tiltSeq || !S.d3) return;
+    if (groundKnown()) {
+      btn.classList.remove('busy');
+      map.easeTo({ pitch: 60, duration: 800 });
+      map.once('moveend', () => setTimeout(() => {
+        if (seq !== tiltSeq || !S.d3 || map.isMoving()) return;
+        if (map.getPitch() < 50) { errs.push('tilt-failed p=' + map.getPitch().toFixed(1)); flat3dOff('这里的三维地形没有显示出来，已切回二维'); }
+      }, 400));
+    } else if (Date.now() - t0 > 9000) {
+      errs.push('dem-timeout'); flat3dOff('地形数据没有加载到，先用二维（联网或下载离线数据后再试）');
+    } else setTimeout(tick, 200);
   };
-  map.once('idle', go); setTimeout(go, 4000);
+  setTimeout(tick, 200);
+}
+function flat3dOff(msg) {
+  tiltSeq++; S.d3 = false;
+  const btn = $('#btn3d'); btn.classList.remove('busy', 'on'); btn.textContent = '3D';
+  map.stop(); map.setTerrain(null); map.jumpTo({ pitch: 0, bearing: 0 });
+  if (msg) toast(msg);
 }
 function selectCrag(key) {
   const c = CRAG[key];
@@ -575,11 +601,12 @@ $('#btn3d').onclick = () => {
   $('#btn3d').textContent = S.d3 ? '2D' : '3D';
   $('#btn3d').classList.toggle('on', S.d3);
   if (S.d3) {
-    tiltUp(S.crag ? [CRAG[S.crag].lng, CRAG[S.crag].lat] : null);
+    const c = S.crag ? [CRAG[S.crag].lng, CRAG[S.crag].lat] : map.getCenter().toArray();
+    flatThenTilt(c, S.crag ? Math.max(map.getZoom(), 16.6) : map.getZoom());
     toast('三维：两指上下拖改变俯仰，两指旋转换方向');
   } else {
     tiltSeq++; $('#btn3d').classList.remove('busy');
-    map.easeTo({ pitch: 0, bearing: 0, padding: { top: 0, bottom: 0, left: 0, right: 0 }, duration: 600 });
+    map.stop(); map.easeTo({ pitch: 0, bearing: 0, duration: 600 });
     map.once('moveend', () => { if (!S.d3) map.setTerrain(null); });
   }
 };
@@ -593,7 +620,6 @@ $('#btnBase').onclick = () => {
 document.querySelectorAll('#tabs button').forEach(b => b.onclick = () => setView(b.dataset.view));
 
 map.on('load', () => { setView('drive'); });
-const errs = [];
 map.on('error', e => { if (errs.length < 60) errs.push(String((e && e.error && e.error.message) || e)); });
 map.getCanvas().addEventListener('webglcontextlost', () => { errs.push('webglcontextlost'); toast('地图画面丢失，正在恢复…'); setTimeout(() => location.reload(), 1200); });
 
