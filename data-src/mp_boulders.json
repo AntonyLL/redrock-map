@@ -1,0 +1,2310 @@
+{
+ "sorange": {
+  "id": "114000100",
+  "name": "Sorange Boulder",
+  "lat": 36.16095,
+  "lng": -115.42416,
+  "sections": {
+   "Description": "Home to one of the great moderate problems of Kraft Boulders - Sorange (V3 in the book). Sun in the morning.",
+   "Getting There": "Between the parking lot and The Cube, find a trail heading left (west) and follow it until you find the obvious southeast-facing chalked line on the clean face. You've found the Sorange boulder."
+  },
+  "photos": [],
+  "routes": [
+   {
+    "lr": 0,
+    "id": "120222717",
+    "url": "https://www.mountainproject.com/route/120222717/cocaine-triceps",
+    "name": "Cocaine Triceps",
+    "cls": "Boulder",
+    "grade": "V4-5",
+    "gradeline": "V4-5",
+    "sections": {
+     "Description": "Commonly mistaken as Cocaine Biceps, this route climbs about 10 feet left of the actual route featured in the guidebook and is extremely similar in description. However, this route is not present in a scoopy dihedral and is on more of a flat face/crack.\nStart in an undercling/sidepull with good feet and slap up for the lip. Mantle with difficulty.\nThe feet, and therefore first move, are easier than the first move of cocaine biceps, however the mantle is much harder (hence the name). Difficulty feels comparable.\nIf anyone has more feedback or the true name of this route please comment, otherwise good luck!",
+     "Location": "See photo. Around to climbers left of the actual route described in the guidebook, cocaine biceps, directly behind Sorange",
+     "Protection": "Pad"
+    },
+    "stars": 2.0,
+    "votes": 66,
+    "type": "Boulder, 10 ft (3 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 1,
+    "id": "116562024",
+    "url": "https://www.mountainproject.com/route/116562024/cocaine-biceps",
+    "name": "Cocaine Biceps",
+    "cls": "Boulder",
+    "grade": "V5-",
+    "gradeline": "V5-",
+    "sections": {
+     "Description": "From the 2nd edition Southern Nevada Bouldering guidebook: \nCrouch start in a scoopy dihedal with an undercling / sidepull; climb the short overhang up and left.",
+     "Location": "See Picture"
+    },
+    "stars": 2.3,
+    "votes": 75,
+    "type": "Boulder, 10 ft (3 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 2,
+    "id": "125764377",
+    "url": "https://www.mountainproject.com/route/125764377/the-underworld",
+    "name": "Underworld, The",
+    "cls": "Boulder",
+    "grade": "V2",
+    "gradeline": "V2",
+    "sections": {
+     "Description": "Start on incut underclings left of Welcome to Detroit. Make a move up to a slope jug and then left under the bulge to a crimp seam and top out. Great movement on great holds. Really fun lowball.  Might go harder than V1+ if you don’t have a wingspan.",
+     "Location": "West Kraft. Left of Welcome to Detroit on Sorange Boulder.",
+     "Protection": "Two crash pads cover it."
+    },
+    "stars": 2.3,
+    "votes": 7,
+    "type": "Boulder",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 3,
+    "id": "119981322",
+    "url": "https://www.mountainproject.com/route/119981322/booger-sugar",
+    "name": "Booger Sugar",
+    "cls": "Boulder",
+    "grade": "V3",
+    "gradeline": "V3",
+    "sections": {
+     "Description": "Start low on sandy, gaston sloper with a right heel hook. Move up into better sandy holds and eventually right onto the face. Not great, but worth doing if you have done everything else in the area.\n*Not claiming first ascent or route name. Hit me up with proper details.",
+     "Location": "Immediately to the left of \"Welcome to Detroit\""
+    },
+    "stars": 2.1,
+    "votes": 19,
+    "type": "Boulder, 15 ft (5 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 5,
+    "id": "116190245",
+    "url": "https://www.mountainproject.com/route/116190245/welcome-to-detroit",
+    "name": "Welcome to Detroit",
+    "cls": "Boulder",
+    "grade": "V4",
+    "gradeline": "V4",
+    "sections": {
+     "Description": "Start on Jug, pull right to slots around corner, hand heel match, big throw left, pull to mantle",
+     "Location": "Left corner of boulder next to sorange"
+    },
+    "stars": 2.7,
+    "votes": 257,
+    "type": "Boulder",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 6,
+    "id": "120119479",
+    "url": "https://www.mountainproject.com/route/120119479/left-arete",
+    "name": "Left Arête",
+    "cls": "Boulder",
+    "grade": "V2",
+    "gradeline": "V2",
+    "sections": {
+     "Description": "A balancey stand start climbs the left arete. A variation (same difficulty) starts in the small left-facing dihedral and climbs up to the same finish.",
+     "Location": "Right of Welcome to Detroit."
+    },
+    "stars": 1.6,
+    "votes": 23,
+    "type": "Boulder, 12 ft (4 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 7,
+    "id": "114000113",
+    "url": "https://www.mountainproject.com/route/114000113/sorange",
+    "name": "Sorange",
+    "cls": "Boulder",
+    "grade": "V3",
+    "gradeline": "V3",
+    "sections": {
+     "Description": "Start on the two obvious chalked scoopy/pinchy holds. Figure out your feet, move through the edges and rails, then either step up or huck to the jug on the lip.",
+     "Location": "The obvious chalked line on the southeast face of the Sorange boulder.",
+     "Protection": "A pad (great falls)."
+    },
+    "stars": 3.4,
+    "votes": 399,
+    "type": "Boulder",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 8,
+    "id": "114126089",
+    "url": "https://www.mountainproject.com/route/114126089/sorange-traverse",
+    "name": "Sorange Traverse",
+    "cls": "Boulder",
+    "grade": "V3+",
+    "gradeline": "V3+",
+    "sections": {
+     "Description": "Start with the same two holds as Sorange, work right along the obvious rail with limited feet to an engaging topout.",
+     "Location": "Same start as Sorange.",
+     "Protection": "Pads"
+    },
+    "stars": 2.5,
+    "votes": 70,
+    "type": "Boulder, 10 ft (3 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 9,
+    "id": "120119519",
+    "url": "https://www.mountainproject.com/route/120119519/arete",
+    "name": "Arête",
+    "cls": "Boulder",
+    "grade": "V1",
+    "gradeline": "V1",
+    "sections": {
+     "Description": "Stand start and climb the right arete.",
+     "Location": "Right arete of Sorange boulder."
+    },
+    "stars": 2.3,
+    "votes": 53,
+    "type": "Boulder, 12 ft (4 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 10,
+    "id": "122130476",
+    "url": "https://www.mountainproject.com/route/122130476/pocks",
+    "name": "Pocks",
+    "cls": "Boulder",
+    "grade": "V1",
+    "gradeline": "V1",
+    "sections": {
+     "Description": "A balancy start to thin divots,  and then up to better edges.",
+     "Location": "In the wash,  just west of the Sorange Boulder.  This problem ascends the left side of the boulders’ East face."
+    },
+    "stars": 2.3,
+    "votes": 6,
+    "type": "Boulder, 10 ft (3 m)",
+    "fa": "Early 90’s, D. Rider, J. Pinjuv",
+    "photos": [],
+    "comments": []
+   }
+  ],
+  "children": []
+ },
+ "monkey-bar": {
+  "id": "105937674",
+  "name": "Monkey Bar Boulder",
+  "lat": 36.16154,
+  "lng": -115.41099,
+  "sections": {
+   "Description": "This is probably the most famous boulder at Kraft. There are usually climbers on it, or nearby, if the weather permits climbing. There are numerous classic problems on this one boulder including Monkey Bars, Monkey Bar Right, and Monkey Bar Direct.",
+   "Getting There": "Head north out of the east (near) end of the parking lot along the main trail towards The Cube. Just before reaching that boulder, continue right (east) along the main Kraft Mountain Loop Trail for 15 minutes passing many clusters on your left . The trail splits just before reaching the boulder such that there a trail to both sides of the boulder.\n0.8 mi and 100ft elevation gain, 20 minutes."
+  },
+  "photos": [],
+  "routes": [
+   {
+    "lr": 0,
+    "id": "114126042",
+    "url": "https://www.mountainproject.com/route/114126042/left-left",
+    "name": "Left Left",
+    "cls": "Boulder",
+    "grade": "V0",
+    "gradeline": "V0",
+    "sections": {
+     "Description": "Start on the leftmost obvious undercling slot on the arete to the left of Monkey Crack, pull on and climb up and right following the weakness.",
+     "Location": "On the arete left of MOnkey Crack",
+     "Protection": "Pad"
+    },
+    "stars": 1.5,
+    "votes": 25,
+    "type": "Boulder, 12 ft (4 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 1,
+    "id": "114126051",
+    "url": "https://www.mountainproject.com/route/114126051/left",
+    "name": "Left",
+    "cls": "Boulder",
+    "grade": "V0",
+    "gradeline": "V0",
+    "sections": {
+     "Description": "Stand start on crimps 3 feet right of 'Left Left' below the obvious weakness.Pull on with high feet and climb the weakness.",
+     "Location": "3 feet left of the start of 'Left Left'",
+     "Protection": "Pad"
+    },
+    "stars": 1.7,
+    "votes": 40,
+    "type": "Boulder, 12 ft (4 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 2,
+    "id": "107849034",
+    "url": "https://www.mountainproject.com/route/107849034/monkey-crack",
+    "name": "Monkey Crack",
+    "cls": "Boulder",
+    "grade": "V1",
+    "gradeline": "V1",
+    "sections": {
+     "Description": "Obvious crack with face holds right next to the trail on the southeast side of Monkey Bar Boulder",
+     "Protection": "Crash Pad"
+    },
+    "stars": 2.5,
+    "votes": 256,
+    "type": "Boulder, 20 ft (6 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 3,
+    "id": "123510628",
+    "url": "https://www.mountainproject.com/route/123510628/the-rising-sun",
+    "name": "Rising Sun, The",
+    "cls": "Boulder",
+    "grade": "V2-3",
+    "gradeline": "V2-3",
+    "sections": {
+     "Description": "Start as Monkey Crack; traverse right, generally following the rail system. Finish as for Curious George.",
+     "Location": "Monkey Boulder",
+     "Protection": "move pads to the right as traversing."
+    },
+    "stars": 2.5,
+    "votes": 8,
+    "type": "Boulder",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 4,
+    "id": "108731202",
+    "url": "https://www.mountainproject.com/route/108731202/right-of-crack",
+    "name": "Right of Crack",
+    "cls": "Boulder",
+    "grade": "V2",
+    "gradeline": "V2",
+    "sections": {
+     "Description": "To the right of the crack, sit start on (likely) chalked crimps and climb up the crimpy face to better holds to top out.  A fun route with a few powerful pulls on smallish crimps.",
+     "Location": "To the right of Monkey Crack, to the left of \"Center Face\"",
+     "Protection": "Pad + Spotter"
+    },
+    "stars": 2.2,
+    "votes": 119,
+    "type": "Boulder, 20 ft (6 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 5,
+    "id": "114126068",
+    "url": "https://www.mountainproject.com/route/114126068/blunt-arete",
+    "name": "Blunt Arete",
+    "cls": "Boulder",
+    "grade": "V2",
+    "gradeline": "V2",
+    "sections": {
+     "Description": "Sit start on good incut crimps right on the blunt arete, use the variety of feet in the big heuco. Pull on and make a few powerful pulls on crimps to a casual top out.",
+     "Location": "The blunt arete to the right of Monkey Crack",
+     "Protection": "Pad"
+    },
+    "stars": 2.1,
+    "votes": 37,
+    "type": "Boulder, 12 ft (4 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 6,
+    "id": "108731189",
+    "url": "https://www.mountainproject.com/route/108731189/center-face",
+    "name": "Center Face",
+    "cls": "Boulder",
+    "grade": "V2-3",
+    "gradeline": "V2-3",
+    "sections": {
+     "Description": "Sit start on left-facing flake and go up.  Fun movement with a few powerful moves",
+     "Location": "This route is to the right of the Monkey Crack and left of the V2 seam",
+     "Protection": "Pad + Spotter"
+    },
+    "stars": 2.1,
+    "votes": 52,
+    "type": "Boulder, 20 ft (6 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 7,
+    "id": "121742287",
+    "url": "https://www.mountainproject.com/route/121742287/seam",
+    "name": "Seam",
+    "cls": "Boulder",
+    "grade": "V2",
+    "gradeline": "V2",
+    "sections": {
+     "Description": "Start with a crimp on each side of the seam and move up via another crimp, then top out on good patina.\nMay need to pad stack to reach the right hand hold.",
+     "Location": "A fairly obvious seam left of Curious George and right of Center Face.",
+     "Protection": "1-2 pads"
+    },
+    "stars": 2.0,
+    "votes": 9,
+    "type": "Boulder, 15 ft (5 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 8,
+    "id": "114000041",
+    "url": "https://www.mountainproject.com/route/114000041/curious-george",
+    "name": "Curious George",
+    "cls": "Boulder",
+    "grade": "V3-",
+    "gradeline": "V3-",
+    "sections": {
+     "Description": "Sit start with hands matched on a crimpy sidepull and make a big move to a large flat hold.",
+     "Location": "back corner of monkey bar boulder a few routes to the left of hyperglide.",
+     "Protection": "A pad"
+    },
+    "stars": 2.3,
+    "votes": 51,
+    "type": "Boulder",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 9,
+    "id": "113880181",
+    "url": "https://www.mountainproject.com/route/113880181/northeast-face-left",
+    "name": "Northeast Face Left",
+    "cls": "Boulder",
+    "grade": "V3",
+    "gradeline": "V3",
+    "sections": {
+     "Description": "Sit start at the left side of the northeast face; make crimpy moves to gain the break. Top out above.",
+     "Protection": "pads"
+    },
+    "stars": 2.0,
+    "votes": 18,
+    "type": "Boulder",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 10,
+    "id": "116621137",
+    "url": "https://www.mountainproject.com/route/116621137/peter-north-pump",
+    "name": "Peter North Pump",
+    "cls": "Boulder",
+    "grade": "V9",
+    "gradeline": "V9",
+    "sections": {
+     "Description": "Link-up traverse. Start on Northeast Face Left and traverse right around the boulder, eventually dropping down into the start of Monkey Bar Direct and climbing the entirety of that problem into the top.\nOther variations including finishing on Hyperglide (V6?) or finishing on Monkey Bar Right (\"12 Monkeys\", V8). The start can also be shortened by starting on Monkey Bars for a minor decrease in difficulty.",
+     "Location": "Start on Northeast Face Left and finish on Monkey Bar Direct or do one of the variations listed in the description.",
+     "Protection": "Pads for the direct. You can probably get away without padding the traverse section, but there will most likely be some on any given day."
+    },
+    "stars": 3.0,
+    "votes": 10,
+    "type": "Boulder",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 11,
+    "id": "113880208",
+    "url": "https://www.mountainproject.com/route/113880208/pockets",
+    "name": "Pockets",
+    "cls": "Boulder",
+    "grade": "V2+",
+    "gradeline": "V2+",
+    "sections": {
+     "Description": "Sit start with pockets, climb the face above.",
+     "Protection": "1 or 2 pads."
+    },
+    "stars": 2.4,
+    "votes": 26,
+    "type": "Boulder",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 12,
+    "id": "107074342",
+    "url": "https://www.mountainproject.com/route/107074342/hyperglide",
+    "name": "Hyperglide",
+    "cls": "Boulder",
+    "grade": "V5",
+    "gradeline": "V5",
+    "sections": {
+     "Description": "Originally named \"Monkey Pinch\" in the Las Vegas Bouldering guidebook, this problem is now listed as \"Hyperglide\" in Southern Nevada Bouldering II.\nMake your way up to the big undercling starting as low as you deem respectable. Once established under the roof, grab the right hand pinch/sidepull and use one of several left hand crimp options. Crank through the sidepull to a left-hand crimp that may seem miles away. A tall but easy topout follows.",
+     "Location": "Start as for Monkey Bars but continue up and left out of the cave instead of traversing right.",
+     "Protection": "2-4 pads"
+    },
+    "stars": 3.4,
+    "votes": 371,
+    "type": "Boulder",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 13,
+    "id": "106657521",
+    "url": "https://www.mountainproject.com/route/106657521/monkey-bars",
+    "name": "Monkey Bars",
+    "cls": "Boulder",
+    "grade": "V2",
+    "gradeline": "V2",
+    "sections": {
+     "Description": "Sit start on the left-most jug of the main juggy-cave-thing area. Traverse right on big happy jugs (yay!). At the corner, starting climbing up. Make a big throw from an undercling thingie to a big incut jug out on the arete. Alternately, try a scary feeling-cross off a shallow half-tips pocket. After attaining the incut jug, climb fairly directly up on big holds.",
+     "Location": "Start on the left side of the juggy cave and traverse right through the cave before busting up to the top.",
+     "Protection": "2-3 pads"
+    },
+    "stars": 3.6,
+    "votes": 955,
+    "type": "Boulder",
+    "fa": "Danny Rider, Dec 1989",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 14,
+    "id": "202093496",
+    "url": "https://www.mountainproject.com/route/202093496/prow-direct",
+    "name": "Prow Direct",
+    "cls": "Boulder",
+    "grade": "V2",
+    "gradeline": "V2",
+    "sections": {
+     "Description": "Start underneath the prow of the boulder on jugs (just before you head into Monkey Bar Traverse V6).\nClimb straight up on jugs before making a long move to crimps above using a decent undercling. Continue straight up on improving holds.\nBeta video: https://youtube.com/shorts/GEWq65KGO0w?si=W6wlyiNOs3wMTkce",
+     "Location": "Prow of the boulder, right side of the juggy overhang.",
+     "Protection": "3 Pads"
+    },
+    "stars": 2.5,
+    "votes": 2,
+    "type": "Boulder, 18 ft (5 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 15,
+    "id": "105937677",
+    "url": "https://www.mountainproject.com/route/105937677/monkey-bar-traverse",
+    "name": "Monkey Bar Traverse",
+    "cls": "Boulder",
+    "grade": "V6",
+    "gradeline": "V6",
+    "sections": {
+     "Description": "Link-up traverse. Start as for Monkey Bars, but stay a bit lower to reach the crimps of Monkey Bar Direct and finish as for that problem.",
+     "Location": "Down-climb the northwest side of the Monkey Bar boulder, and step down to the smaller boulders.",
+     "Protection": "Crash Pad is recommended for the finish."
+    },
+    "stars": 3.2,
+    "votes": 194,
+    "type": "Boulder, 20 ft (6 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 16,
+    "id": "117939655",
+    "url": "https://www.mountainproject.com/route/117939655/the-redirect",
+    "name": "Redirect, The",
+    "cls": "Boulder",
+    "grade": "V12",
+    "gradeline": "V12",
+    "sections": {
+     "Description": "Begin as for Monkey Bar Direct (V8), and then make a big cross move left to finish on the very end of Monkey Bar (V2). Beta video can be found here https://www.youtube.com/watch?v=8ZxNMx0zE90\nOne-move wonder and eliminate.",
+     "Location": "The start for Monkey Bar Direct",
+     "Protection": "Pads"
+    },
+    "stars": 3.0,
+    "votes": 2,
+    "type": "Boulder",
+    "fa": "Mark Heal, Apr 2012",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 17,
+    "id": "107378329",
+    "url": "https://www.mountainproject.com/route/107378329/monkey-bar-direct",
+    "name": "Monkey Bar Direct",
+    "cls": "Boulder",
+    "grade": "V8",
+    "gradeline": "V8",
+    "sections": {
+     "Description": "Classic moves on steep & solid stone.\nStart on the huge jug at the bottom of the roof on the uphill side of the boulder. Move out to the double pockets and then fire up through positive crimps to an easy topout.\nSome good deadpoint skills come in handy in the 2nd half of the problem, and the crux may feel significantly more difficult for shorter people due to a lack of positive footholds.\nIt is possible to finish left or right at a similar grade.",
+     "Location": "Uphill side of the Monkeybar boulder.",
+     "Protection": "2-3 pads."
+    },
+    "stars": 3.4,
+    "votes": 162,
+    "type": "Boulder",
+    "fa": "Mike Beck, 1992",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 18,
+    "id": "123281460",
+    "url": "https://www.mountainproject.com/route/123281460/monkeys-uncle",
+    "name": "Monkey's Uncle",
+    "cls": "Boulder",
+    "grade": "V8",
+    "gradeline": "V8",
+    "sections": {
+     "Description": "A worthwhile linkup on the boulder if you're starting to run out of things to do.\nSit start on the juggy shelf of Classic Monkey (Monkey Bar Right) and climb through its crux. Instead of finishing above, continue left by doing Monkey Bar Traverse backwards (although it is not necesary to stay low through the jugs) and then finish through Hyperglide. (There may be a kneebar)\nBeta video:  youtu.be/yKc8WSDJaM4?si=hN5…",
+     "Location": "Right side of the Monkey Bar boulder, same start as Monkey Bar Right",
+     "Protection": "Quite a few pads, and maybe some shufflers"
+    },
+    "stars": 2.0,
+    "votes": 2,
+    "type": "Boulder, 45 ft (14 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 19,
+    "id": "112381021",
+    "url": "https://www.mountainproject.com/route/112381021/monkey-bar-direct-right",
+    "name": "Monkey Bar Direct Right",
+    "cls": "Boulder",
+    "grade": "V9",
+    "gradeline": "V9",
+    "sections": {
+     "Description": "Sit down start off the low rail on the northwest side of the boulder. Move into the initial pocket followed by a big move into the dual pockets far left and finish direct.",
+     "Location": "Starts on classic monkey",
+     "Protection": "Pads"
+    },
+    "stars": 3.3,
+    "votes": 26,
+    "type": "Boulder, 15 ft (5 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 20,
+    "id": "106683440",
+    "url": "https://www.mountainproject.com/route/106683440/monkey-bar-right",
+    "name": "Monkey Bar Right",
+    "cls": "Boulder",
+    "grade": "V6",
+    "gradeline": "V6",
+    "sections": {
+     "Description": "Sit down start on the northwest side of the boulder. This is essentially the first problem you see as you get to the Monky Bars boulder. A few powerful moves will take you to a large sidepull jug, where you begin to trend left and up on small holds. The new bouldering guidebook gives this a V6, so that's what I'm going with.",
+     "Location": "On the northwest side of the monkey bars boulder at the far east end of the Kraft boulders.",
+     "Protection": "2-3 pads."
+    },
+    "stars": 3.4,
+    "votes": 363,
+    "type": "Boulder",
+    "fa": "Mike Beck, 1992",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 21,
+    "id": "121826536",
+    "url": "https://www.mountainproject.com/route/121826536/monkey-far",
+    "name": "Monkey Far",
+    "cls": "Boulder",
+    "grade": "V9-10",
+    "gradeline": "V9-10",
+    "sections": {
+     "Description": "Sds and climb through Classic Monkey until reaching the jug rail. Instead of traversing left, huck a large deadpoint or dyno to a good but somewhat precise jug, top out above. Originally proposed as V10, V9 seems more accurate but don't get caught up in the grade, this is a great climb either way.",
+     "Location": "This shares the same start as Classic Monkey",
+     "Protection": "Pads"
+    },
+    "stars": 3.5,
+    "votes": 6,
+    "type": "Boulder, 12 ft (4 m)",
+    "fa": "Mattias Braach-Maksvytis",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 22,
+    "id": "126614999",
+    "url": "https://www.mountainproject.com/route/126614999/monkey-near",
+    "name": "Monkey Near",
+    "cls": "Boulder",
+    "grade": "V5",
+    "gradeline": "V5",
+    "sections": {
+     "Description": "Same intro as Monkey Far but instead of doing the dyno, do a big move out right to a good edge. Lock off to a slot next to the jug of Monkey Far and top out on jugs. Dabby.",
+     "Location": "Monkey Bar Boulder",
+     "Protection": "Pads"
+    },
+    "stars": 2.0,
+    "votes": 1,
+    "type": "Boulder, 14 ft (4 m)",
+    "fa": "Matt Lutey",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 23,
+    "id": "107513950",
+    "url": "https://www.mountainproject.com/route/107513950/darwin-award",
+    "name": "Darwin Award",
+    "cls": "Boulder",
+    "grade": "V2",
+    "gradeline": "V2",
+    "sections": {
+     "Description": "Tired of falling on the third move of Monkey Bar Direct? Are the swarms of people getting to your head and harshing your mellow? Do you find yourself asking \"Is there more to my life?\"\n\nLuckily the answer is YES, and it all starts with an ascent of Darwin Award.\n\nSit start on the South/West side of the natural shelter. Traverse up and left using some decent holds and a few heel hooks. Eventually you reach a good sloper, which is about the same time you decide you'd rather be hanging upside-down. So stuff both your feet up inside the crack and just chill out man, you're stressin'. Do several traversing moves while inverted, eventually reaching an OK hand jam and transitioning back upright. Try not to cut feet and pull the finishing move which tops out the leaning slab that creates the shelter. If super psyched, continue up to the top of the Monkey Bar Boulder.\n\nSeveral variations of this problem exist changing the difficulty from V1 - V4 depending on how you choose to climb it.",
+     "Location": "In the natural shelter on the West side of the Monkey Bar Boulder.",
+     "Protection": "Yer not scared are you?"
+    },
+    "stars": 3.3,
+    "votes": 24,
+    "type": "Boulder, 10 ft (3 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 24,
+    "id": "107838637",
+    "url": "https://www.mountainproject.com/route/107838637/glory-hole",
+    "name": "Glory Hole",
+    "cls": "Boulder",
+    "grade": "V1",
+    "gradeline": "V1",
+    "sections": {
+     "Description": "Fun, easy route requiring you to squirm through a hole at the top of the tunnel.",
+     "Location": "Stand start by the bat-hang of Darwin Award in the center of the tunnel created by the flat boulder leaning on Monkey Bar Boulder.  Climb up and wriggle through the hole!  Weight dependent. You can also start using the same start as Darwin Award",
+     "Protection": "Crash Pad"
+    },
+    "stars": 2.8,
+    "votes": 28,
+    "type": "Boulder, 18 ft (5 m)",
+    "fa": "Aaron Scruggs",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 25,
+    "id": "108551582",
+    "url": "https://www.mountainproject.com/route/108551582/umpa-lumpa",
+    "name": "Umpa Lumpa",
+    "cls": "Boulder",
+    "grade": "V5",
+    "gradeline": "V5",
+    "sections": {
+     "Description": "V5 lowball. Cool Movement.",
+     "Location": "Small standalone boulder behind (west of) the west face of the Monkey Bar boulder.",
+     "Protection": "One pad"
+    },
+    "stars": 3.3,
+    "votes": 214,
+    "type": "Boulder, 8 ft (2 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   }
+  ],
+  "children": []
+ },
+ "angel-dyno": {
+  "id": "106378780",
+  "name": "Angel Dyno",
+  "lat": 36.15968,
+  "lng": -115.4161,
+  "sections": {
+   "Description": "Striking boulder with a smooth, angling slab on top.\nAll problems are on the south face and are in the sun until it dips behind the mountains in the late afternoon.",
+   "Getting There": "Towards the east end of Main Area. One of the last boulders in the cluster, but a little before Bubble Butt Boulder."
+  },
+  "photos": [],
+  "routes": [
+   {
+    "lr": 0,
+    "id": "123953521",
+    "url": "https://www.mountainproject.com/route/123953521/twinkle-toes",
+    "name": "Twinkle Toes",
+    "cls": "Boulder",
+    "grade": "V-easy",
+    "gradeline": "V-easy",
+    "sections": {
+     "Description": "Fun slab to fool around on while resting. For an added challenge, try with no hands. Channel your inner Aang!",
+     "Location": "Left of Earth Angel, on the obvious 45 degree slab face."
+    },
+    "stars": 2.0,
+    "votes": 4,
+    "type": "Boulder, 15 ft (5 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 1,
+    "id": "106705820",
+    "url": "https://www.mountainproject.com/route/106705820/earth-angel",
+    "name": "Earth Angel",
+    "cls": "Boulder",
+    "grade": "V2",
+    "gradeline": "V2",
+    "sections": {
+     "Description": "Sit-start the jug, hit the lip and mantle it out.  Good training for some of the harder presses on this boulder. \n\n If anyone knows the name and grade post it up.",
+     "Protection": "Crashpad."
+    },
+    "stars": 2.6,
+    "votes": 117,
+    "type": "Boulder, 8 ft (2 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 2,
+    "id": "124080785",
+    "url": "https://www.mountainproject.com/route/124080785/stoney-point-traverse",
+    "name": "Stoney Point Traverse",
+    "cls": "Boulder",
+    "grade": "V3-4",
+    "gradeline": "V3-4",
+    "sections": {
+     "Description": "Start as for Earth Angel; follow the lip up and right to the apex of the boulder and top out. Height dependent.",
+     "Location": "Angel Dyno Boulder",
+     "Protection": "A few pads"
+    },
+    "stars": 3.4,
+    "votes": 5,
+    "type": "Boulder, 15 ft (5 m)",
+    "fa": "Donny Hardin, 1990s",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 3,
+    "id": "106705830",
+    "url": "https://www.mountainproject.com/route/106705830/the-huck",
+    "name": "Huck, The",
+    "cls": "Boulder",
+    "grade": "V5-",
+    "gradeline": "V5-",
+    "sections": {
+     "Description": "Start as for the Angel Dyno but move more or less straight up to a small but positive right hand crimper. Find the foot beta and make a long reach to the lip.  Mantle it out and move along.  A great sequence. \n\n If anyone knows the name and grade post it up.",
+     "Protection": "Crashpad and a spotter feels good."
+    },
+    "stars": 3.1,
+    "votes": 129,
+    "type": "Boulder, 12 ft (4 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 4,
+    "id": "106378785",
+    "url": "https://www.mountainproject.com/route/106378785/angel-dyno",
+    "name": "Angel Dyno",
+    "cls": "Boulder",
+    "grade": "V7",
+    "gradeline": "V7",
+    "sections": {
+     "Description": "Highly aesthetic and (like all dynos) height dependent. Climb dwindling edges to a toss for a left facing hold. Hang on to it and top out casually. Good stuff. Also known as the John Long Dyno?",
+     "Location": "Dead center on the obvious, gently overhanging face of the boulder.",
+     "Protection": "Homies and foam"
+    },
+    "stars": 3.8,
+    "votes": 215,
+    "type": "Boulder, 12 ft (4 m)",
+    "fa": "John Long, Winter 1980",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 5,
+    "id": "120554237",
+    "url": "https://www.mountainproject.com/route/120554237/angel-dyno-sit",
+    "name": "Angel Dyno Sit",
+    "cls": "Boulder",
+    "grade": "V8",
+    "gradeline": "V8",
+    "sections": {
+     "Description": "Matched sit-start on the good, left-facing lower rail. Make the first move to the good right sidepull and re-position your feet before making a big move to the chalked-up starting jug rail of Angel Dyno and The Huck. Continue the problem by following the line of Angel Dyno. \nAn extension of the classic Angel Dyno problem. The additional dynamic start moves make the problem feel much more consistent as opposed to the one-move-wonder that is Angel Dyno. Lovers of heel hooks and big moves, this problem is for you. \nOriginally named “Angel Dynamo”, it has been given the more conventional name of “Angel Dyno Sit”.",
+     "Location": "The good starting rail can be found down and to the left of the original start hold of Angel Dyno and The Huck.",
+     "Protection": "Lots of pads, good spotters."
+    },
+    "stars": 2.5,
+    "votes": 6,
+    "type": "Boulder, 15 ft (5 m)",
+    "fa": "Steve Wong",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 6,
+    "id": "113907839",
+    "url": "https://www.mountainproject.com/route/113907839/progressive-guy",
+    "name": "Progressive Guy",
+    "cls": "Boulder",
+    "grade": "V10",
+    "gradeline": "V10",
+    "sections": {
+     "Description": "This line climbs the clean overhanging arete to the right of Angel Dyno. Sit start on the low rail and work up and left on a small left hand crimp and atrocious right hand sloper. Stay tight for the powerful crux move to the left hand rail and finish on glory holds. \n\n Tall people can span from a low right rail all the way to the high left hand, but thats just not that sick.",
+     "Location": "The right arete of the Angel Dyno boulder",
+     "Protection": "2 pads"
+    },
+    "stars": 3.2,
+    "votes": 6,
+    "type": "Boulder, 13 ft (4 m)",
+    "fa": "Jared McMillen, early 2000s",
+    "photos": [],
+    "comments": []
+   }
+  ],
+  "children": []
+ },
+ "potato-chip": {
+  "id": "105959400",
+  "name": "Potato Chip",
+  "lat": 36.15937,
+  "lng": -115.41662,
+  "sections": {
+   "Description": "Decently large boulder with a half-moon shaped and overhanging north face. There are a couple of popular problems on the front side and a few less popular problems around the back. Named for the potato chip flakes that traverse the lip.\nProblems on the north face are shaded all day, while the problems on the back side get sun until late afternoon.",
+   "Getting There": "Halfway through the Main Area close to the main trail (southern end of the cluster)."
+  },
+  "photos": [],
+  "routes": [
+   {
+    "lr": 0,
+    "id": "123736564",
+    "url": "https://www.mountainproject.com/route/123736564/cave-left",
+    "name": "Cave Left",
+    "cls": "Boulder",
+    "grade": "V5",
+    "gradeline": "V5",
+    "sections": {
+     "Description": "Stand start all the way in the dihedral matched on a decent crimp rail. Make a wide iron cross move to a decent Gaston, and then continue up and left through a medium difficulty topout.\nBeta video: https://youtu.be/ZLBCVLVXtjw",
+     "Location": "Back side of the boulder, on the left in the dihedral.",
+     "Protection": "2 pads"
+    },
+    "stars": 2.1,
+    "votes": 8,
+    "type": "Boulder, 10 ft (3 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 1,
+    "id": "121702822",
+    "url": "https://www.mountainproject.com/route/121702822/left-of-wald-face",
+    "name": "Left of Wald Face",
+    "cls": "Boulder",
+    "grade": "V5+",
+    "gradeline": "V5+",
+    "sections": {
+     "Description": "Line of chalked crimps left of Wald Face. Start with head height chalked crimps and make two savage moves to a good horn. Climbing eases significantly from there.",
+     "Protection": "Pad"
+    },
+    "stars": 1.5,
+    "votes": 10,
+    "type": "Boulder, 12 ft (4 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 2,
+    "id": "108731193",
+    "url": "https://www.mountainproject.com/route/108731193/wald-face",
+    "name": "Wald Face",
+    "cls": "Boulder",
+    "grade": "V2",
+    "gradeline": "V2",
+    "sections": {
+     "Description": "This route is located on the back side of the Poker Chip (Beth Wald boulder in the Southern Nevada Bouldering) guidebook.  Stand start on slabby face to small crimpy holds and make cool moves to progressively better holds",
+     "Location": "Back side of the Poker Chip Boulder, to the right of the V5 face and to the left of the very low angle slab",
+     "Protection": "Pad"
+    },
+    "stars": 2.5,
+    "votes": 113,
+    "type": "Boulder, 12 ft (4 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 3,
+    "id": "106650925",
+    "url": "https://www.mountainproject.com/route/106650925/poker-chips",
+    "name": "Poker Chips",
+    "cls": "Boulder",
+    "grade": "V0-1",
+    "gradeline": "V0-1",
+    "sections": {
+     "Description": "Start on the far left. Climb the flake, heel-hooking as you go, to the center high-point and top out.",
+     "Protection": "Crashpad"
+    },
+    "stars": 3.0,
+    "votes": 692,
+    "type": "Boulder",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 4,
+    "id": "106650933",
+    "url": "https://www.mountainproject.com/route/106650933/full-traverse",
+    "name": "Full Traverse",
+    "cls": "Boulder",
+    "grade": "V1-2",
+    "gradeline": "V1-2",
+    "sections": {
+     "Description": "Continuation of the traverse problem- keep going until you can step off on the other side.",
+     "Location": "Start on the left side of Potato Chip and traverse the entire rail.",
+     "Protection": "none"
+    },
+    "stars": 2.8,
+    "votes": 47,
+    "type": "Boulder, 25 ft (8 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 5,
+    "id": "113679909",
+    "url": "https://www.mountainproject.com/route/113679909/center",
+    "name": "Center",
+    "cls": "Boulder",
+    "grade": "V6-7",
+    "gradeline": "V6-7",
+    "sections": {
+     "Description": "The crimpiest line on the Beth Wald boulder climbs through small crimps just left of Potato Chips. Two obvious variations exist.  \n The V7 version starts on the same holds (a left-hand crimp and right-hand sidepull crimp) as Potato Chips, then moves immediately left into a small, left hand crimp. Center avoids all holds on Potato Chips after the start, following a line of sharp, but increasingly positive, crimps to the lip of the boulder.   \n A more direct, V9 variation starts from a crouch on a poor right-hand crimp and left-hand undercling (or crimp) and climbs straight into the line describe above.",
+     "Location": "The line immediately left of Potato Chips.",
+     "Protection": "1 crash pad."
+    },
+    "stars": 2.4,
+    "votes": 31,
+    "type": "Boulder, 10 ft (3 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 6,
+    "id": "116680131",
+    "url": "https://www.mountainproject.com/route/116680131/center-direct",
+    "name": "Center Direct",
+    "cls": "Boulder",
+    "grade": "V8",
+    "gradeline": "V8",
+    "sections": {
+     "Description": "Starts a couple feet to the left of Potato Chips utilizing a small right hand crimp and a left hand crimp or underling. Climb goes directly up the face eliminating holds on the right used for Potato Chips.",
+     "Protection": "1 Pad."
+    },
+    "stars": 2.0,
+    "votes": 7,
+    "type": "Boulder",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 7,
+    "id": "114236573",
+    "url": "https://www.mountainproject.com/route/114236573/potato-chips-low",
+    "name": "Potato Chips Low",
+    "cls": "Boulder",
+    "grade": "V3+",
+    "gradeline": "V3+",
+    "sections": {
+     "Description": "Start with opposing sidepulls. The left hand is a few feet left of the Potato Chips start crimps, and the right hand is just below. Adds a crimpy move or two to the normal line. Favors a smaller box.",
+     "Location": "Right side of the face, starting on the two lowest, positive sidepulls.",
+     "Protection": "One or two pads."
+    },
+    "stars": 2.6,
+    "votes": 139,
+    "type": "Boulder, 13 ft (4 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 8,
+    "id": "106650919",
+    "url": "https://www.mountainproject.com/route/106650919/potato-chips",
+    "name": "Potato Chips",
+    "cls": "Boulder",
+    "grade": "V2",
+    "gradeline": "V2",
+    "sections": {
+     "Description": "Overhanging and crimpy. Nothing too technical---nice and straight-forward climbing on good holds with a safe top-out and good landing.",
+     "Location": "Right of center, straight up.",
+     "Protection": "Crashpad"
+    },
+    "stars": 3.2,
+    "votes": 996,
+    "type": "Boulder, 12 ft (4 m)",
+    "fa": "Scott Gordon, Jon Martinet, and Randall Grandstaff, 1970s",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 9,
+    "id": "108439752",
+    "url": "https://www.mountainproject.com/route/108439752/right-lip-traverse",
+    "name": "Right Lip Traverse",
+    "cls": "Boulder",
+    "grade": "V2",
+    "gradeline": "V2",
+    "sections": {
+     "Description": "A fun warm up traverse on good, slopey rails.",
+     "Location": "Start on the right side of the boulder and traverse left, following the rails to the top.  Top out is the same as Poker Chips (v1).",
+     "Protection": "Two pads"
+    },
+    "stars": 2.4,
+    "votes": 47,
+    "type": "Boulder",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 10,
+    "id": "118057327",
+    "url": "https://www.mountainproject.com/route/118057327/stale-chips",
+    "name": "Stale Chips",
+    "cls": "Boulder",
+    "grade": "V4",
+    "gradeline": "V4",
+    "sections": {
+     "Description": "Super low matched sit start on the lowest (horizontal) rail with stretched out toe or heel to get yourself off the ground. Easy topout once you've latched the flake jugs that are also the start of Right Lip Traverse. Topping out via that route or just directly doesn't affect the grade.",
+     "Location": "Lowest rails to the right of Potato Chip.",
+     "Protection": "1-4 pads"
+    },
+    "stars": 2.2,
+    "votes": 46,
+    "type": "Boulder",
+    "fa": "Steve Wong, Nov 2019",
+    "photos": [],
+    "comments": []
+   }
+  ],
+  "children": []
+ },
+ "wave": {
+  "id": "113802231",
+  "name": "The Wave Boulder",
+  "lat": 36.15948,
+  "lng": -115.41463,
+  "sections": {
+   "Description": "Sun in the afternoon, short boulder near the Pearl boulder",
+   "Getting There": "Follow the trail a little bit past the Pearl boulder and head left to the Wave"
+  },
+  "photos": [],
+  "routes": [
+   {
+    "lr": 0,
+    "id": "113882435",
+    "url": "https://www.mountainproject.com/route/113882435/the-wave-left",
+    "name": "Wave Left, The",
+    "cls": "Boulder",
+    "grade": "V4-5",
+    "gradeline": "V4-5",
+    "sections": {
+     "Description": "Start as per The Wave and traverse the rail left. At the transition off the rail, stay low and move left only using the holds underneath the lip of the roof. Manage your way over to a good left slot and top out over the left side of the bulge.",
+     "Location": "Same start as The Wave on the large rail.",
+     "Protection": "Pads."
+    },
+    "stars": 2.5,
+    "votes": 39,
+    "type": "Boulder, 10 ft (3 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 1,
+    "id": "113802237",
+    "url": "https://www.mountainproject.com/route/113802237/the-wave",
+    "name": "Wave, The",
+    "cls": "Boulder",
+    "grade": "V3",
+    "gradeline": "V3",
+    "sections": {
+     "Description": "Start on the far right side of the slopey shelf with two hands and a heel on. Traverse right to left. Hit the crimp and throw for a jug at the transition. Climb to and up the arete, using slopey (some hidden jugs) holds and invisible feet (or gymnastic heel-hooks).",
+     "Location": "The main line on this boulder",
+     "Protection": "Crashpad and a spotter since there's a back-slapper boulder under the top-out transition."
+    },
+    "stars": 3.0,
+    "votes": 415,
+    "type": "Boulder, 15 ft (5 m)",
+    "fa": "Donny Hardin, Joe and Andrew Fulton 1993",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 2,
+    "id": "125563681",
+    "url": "https://www.mountainproject.com/route/125563681/the-wave-low",
+    "name": "Wave Low, The",
+    "cls": "Boulder",
+    "grade": "V3",
+    "gradeline": "V3",
+    "sections": {
+     "Description": "Start on the side pull under the wave. Go from the side pull into the wave start then climb the rest of the wave.",
+     "Protection": "Decent number of pads"
+    },
+    "stars": 2.3,
+    "votes": 8,
+    "type": "Boulder, 15 ft (5 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 3,
+    "id": "120512326",
+    "url": "https://www.mountainproject.com/route/120512326/right-exit",
+    "name": "Right Exit",
+    "cls": "Boulder",
+    "grade": "V2",
+    "gradeline": "V2",
+    "sections": {
+     "Description": "Start at the right of the shelf with both hands and right heel on. Traverse left working your way up the shelf until you get to the end and then climb straight up to top out.",
+     "Location": "Same start as The Wave.",
+     "Protection": "Couple of crash pads and at least one spotter. There is a boulder under the problem that can cause serious injury."
+    },
+    "stars": 2.4,
+    "votes": 56,
+    "type": "Boulder",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 4,
+    "id": "115962906",
+    "url": "https://www.mountainproject.com/route/115962906/wave-direct",
+    "name": "Wave Direct",
+    "cls": "Boulder",
+    "grade": "V3",
+    "gradeline": "V3",
+    "sections": {
+     "Description": "Start as for the wave but go straight up from the start via a mantle or a big move.",
+     "Location": "Start of the wave",
+     "Protection": "Pad"
+    },
+    "stars": 2.3,
+    "votes": 85,
+    "type": "Boulder, 10 ft (3 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 5,
+    "id": "123621594",
+    "url": "https://www.mountainproject.com/route/123621594/wave-direct-sit",
+    "name": "Wave Direct Sit",
+    "cls": "Boulder",
+    "grade": "V4",
+    "gradeline": "V4",
+    "sections": {
+     "Description": "Sit start on the side pull jug, go for the lip and finish as Wave Direct."
+    },
+    "stars": 2.4,
+    "votes": 7,
+    "type": "Boulder",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 7,
+    "id": "200417113",
+    "url": "https://www.mountainproject.com/route/200417113/the-wave-high",
+    "name": "Wave High, The",
+    "cls": "Boulder",
+    "grade": "V3",
+    "gradeline": "V3",
+    "sections": {
+     "Description": "Sit start low and right. Throw up a heel and traverse left on the upper lip above The Wave. Exit as for Right Exit at the dihedral.",
+     "Location": "Low and right next to the cactus on obvious patina nubbs to the right of the start for The Wave",
+     "Protection": "Pads"
+    },
+    "stars": 2.5,
+    "votes": 2,
+    "type": "Boulder",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 8,
+    "id": "200363210",
+    "url": "https://www.mountainproject.com/route/200363210/tortilla-mountain",
+    "name": "Tortilla Mountain",
+    "cls": "Boulder",
+    "grade": "V2-3",
+    "gradeline": "V2-3",
+    "sections": {
+     "Description": "Start on a decent foot jib and work your way up without using either of the shelves. Good holds are slightly far apart but there are many good tortilla nubs that can be used as intermediates. Avoid climbing too far left so you don’t fall on the cactus.",
+     "Location": "Immediately around to the right of the wave, to the right of the big cactus. Don’t put a pad on the cactus!!"
+    },
+    "stars": 2.0,
+    "votes": 1,
+    "type": "Boulder, 11 ft (3 m)",
+    "fa": "Andy Page, Jan 2025",
+    "photos": [],
+    "comments": []
+   }
+  ],
+  "children": []
+ },
+ "pearl": {
+  "id": "106056258",
+  "name": "The Pearl",
+  "lat": 36.15924,
+  "lng": -115.41487,
+  "sections": {
+   "Description": "The Pearl is a good-sized boulder with a classic line on the smooth, southeast face: The Pearl. The boulder is directly off the trail.\nThe climbing is predominantly on the northeast (little sun) and southeast (sun until mid-afternoon) faces.",
+   "Getting There": "Hike approximately 10 minutes east on the main trail which exits the parking lot's north east corner.  The main trail heads north for several hundred feet before meeting the main east west trail at The Cube. Turn east (right) and walk past the warm up boulders. The Pearl sits on the trail."
+  },
+  "photos": [],
+  "routes": [
+   {
+    "lr": 0,
+    "id": "107030493",
+    "url": "https://www.mountainproject.com/route/107030493/across-the-choss",
+    "name": "Across the Choss",
+    "cls": "Boulder",
+    "grade": "V1",
+    "gradeline": "V1",
+    "sections": {
+     "Description": "A casual warm-up route on The Pearl.",
+     "Location": "East side of The Pearl",
+     "Protection": "Pad"
+    },
+    "stars": 1.8,
+    "votes": 92,
+    "type": "Boulder, 15 ft (5 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 1,
+    "id": "106056281",
+    "url": "https://www.mountainproject.com/route/106056281/the-pearl",
+    "name": "Pearl, The",
+    "cls": "Boulder",
+    "grade": "V5",
+    "gradeline": "V5",
+    "sections": {
+     "Description": "The Pearl is the classic line on the boulder, and one of the most popular in all of Red Rock. It's popularity is mostly due to its obvious presence directly off the main trail in the most popular sector, Kraft. The face is slightly overhanging, and the start holds are small. The line is on the southeast face and gets sun until mid-afternoon.\nStart with a left hand pocket and right hand lower crimp. It's really only a move or two until you are home free. Descent is on the opposite side of the boulder.",
+     "Location": "Obvious line on the southeast face of the boulder with a notable pocket hold.",
+     "Protection": "1-2 pads."
+    },
+    "stars": 3.1,
+    "votes": 604,
+    "type": "Boulder",
+    "fa": "Randal Grandstaff, 1978",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 2,
+    "id": "107444907",
+    "url": "https://www.mountainproject.com/route/107444907/pearl-necklace",
+    "name": "Pearl Necklace",
+    "cls": "Boulder",
+    "grade": "V6-",
+    "gradeline": "V6-",
+    "sections": {
+     "Description": "Sit start to The Pearl on a lower left and right hand to add a couple moves into the stand. The problem has supposedly changed a bit over the years with erosion adding more foot options down low.",
+     "Location": "Sit start to The Pearl.",
+     "Protection": "1-2 pads."
+    },
+    "stars": 2.9,
+    "votes": 64,
+    "type": "Boulder",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 3,
+    "id": "106652005",
+    "url": "https://www.mountainproject.com/route/106652005/the-clam-bumper",
+    "name": "Clam Bumper, The",
+    "cls": "Boulder",
+    "grade": "V3",
+    "gradeline": "V3",
+    "sections": {
+     "Description": "Start standing on the ramp and use holds that seem to be all facing the wrong way to topout.  Given V4 in the Jenson guidebook, but if The Pearl is the standard V4, this is less.",
+     "Location": "Just to the right of The Pearl.",
+     "Protection": "Pad"
+    },
+    "stars": 2.3,
+    "votes": 195,
+    "type": "Boulder, 10 ft (3 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 4,
+    "id": "116980157",
+    "url": "https://www.mountainproject.com/route/116980157/clam-bumper-right",
+    "name": "Clam Bumper Right",
+    "cls": "Boulder",
+    "grade": "V0",
+    "gradeline": "V0",
+    "sections": {
+     "Description": "Start same as Clam Bumper, Go out left to the juggy crack, then move right to nice jugs and an easy top-out",
+     "Protection": "Crashpad and Spotter(s)"
+    },
+    "stars": 1.8,
+    "votes": 36,
+    "type": "Boulder, 10 ft (3 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 5,
+    "id": "126854254",
+    "url": "https://www.mountainproject.com/route/126854254/vajazzled",
+    "name": "Vajazzled",
+    "cls": "Boulder",
+    "grade": "V4-5",
+    "gradeline": "V4-5",
+    "sections": {
+     "Description": "When one move is not enough… Left to right traverse into “Jenna’s Jewelery.”  Makes use of the entire east face.",
+     "Location": "Start on jugs at the left side of the east face. Traverse right with a large shoulder move into the start of Jenna’s Jewelry, then dyno to the top."
+    },
+    "stars": 3.3,
+    "votes": 3,
+    "type": "Boulder, 12 ft (4 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 6,
+    "id": "202867946",
+    "url": "https://www.mountainproject.com/route/202867946/northeast-corner",
+    "name": "Northeast Corner",
+    "cls": "Boulder",
+    "grade": "V0",
+    "gradeline": "V0",
+    "sections": {
+     "Description": "Climb jugs up the northeast corner of the boulder.",
+     "Location": "The corner that separates the popular east face from the juggier north face.",
+     "Protection": "crash pad"
+    },
+    "stars": 2.5,
+    "votes": 2,
+    "type": "Boulder, 11 ft (3 m)",
+    "fa": "UK",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 7,
+    "id": "107030486",
+    "url": "https://www.mountainproject.com/route/107030486/six-pack",
+    "name": "Six Pack",
+    "cls": "Boulder",
+    "grade": "V0",
+    "gradeline": "V0",
+    "sections": {
+     "Description": "No Real Crux",
+     "Location": "North side of the Pearl Boulder",
+     "Protection": "Pad"
+    },
+    "stars": 2.2,
+    "votes": 199,
+    "type": "Boulder, 11 ft (3 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 8,
+    "id": "110224533",
+    "url": "https://www.mountainproject.com/route/110224533/northeast-face-center",
+    "name": "Northeast Face Center",
+    "cls": "Boulder",
+    "grade": "V1",
+    "gradeline": "V1",
+    "sections": {
+     "Description": "Climb the center face on very sharp but positive holds.",
+     "Location": "In the middle of the Northeast Face of The Pearl boulder.",
+     "Protection": "No pro needed."
+    },
+    "stars": 2.1,
+    "votes": 182,
+    "type": "Boulder, 10 ft (3 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 9,
+    "id": "110224675",
+    "url": "https://www.mountainproject.com/route/110224675/the-spreader",
+    "name": "Spreader, The",
+    "cls": "Boulder",
+    "grade": "V0",
+    "gradeline": "V0",
+    "sections": {
+     "Description": "Climb the juggy flake or lieback your way to the top. Alternatively, you can jam this things at the same grade but with increased pain and fun.",
+     "Location": "The obvious and chalked flake in the center of this boulder.",
+     "Protection": "No pro."
+    },
+    "stars": 2.4,
+    "votes": 212,
+    "type": "Boulder, 10 ft (3 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 10,
+    "id": "106652010",
+    "url": "https://www.mountainproject.com/route/106652010/jennas-jewelry",
+    "name": "Jenna's Jewelry",
+    "cls": "Boulder",
+    "grade": "V3-4",
+    "gradeline": "V3-4",
+    "sections": {
+     "Description": "Start with hands on good ledge, and dyno to lip. Can be done static but what fun is that. Given V4 in the Jenson guide but seems kinda soft.\nThere exists a fun eliminate dyno to the juggy, crown-shaped horn that is left of the start holds.",
+     "Location": "Around the corner and to the right of The Pearl and The Clam Bumper.",
+     "Protection": "Pad"
+    },
+    "stars": 2.6,
+    "votes": 348,
+    "type": "Boulder, 10 ft (3 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   }
+  ],
+  "children": []
+ },
+ "prowler": {
+  "id": "116107548",
+  "name": "The Prowler Boulder",
+  "lat": 36.15979,
+  "lng": -115.41618,
+  "sections": {
+   "Description": "Striking prow feature on a relatively small boulder. Sunny most of the day.",
+   "Getting There": "Obvious prow feature just uphill and left (northwest) of Angel Dyno."
+  },
+  "photos": [],
+  "routes": [
+   {
+    "lr": 0,
+    "id": "200870118",
+    "url": "https://www.mountainproject.com/route/200870118/the-spence",
+    "name": "Spence, The",
+    "cls": "Boulder",
+    "grade": "V1-2",
+    "gradeline": "V1-2",
+    "sections": {
+     "Description": "Exactly to the left of the prowler. Small match crimp start with a good jug over hang. Easy top out mantle. Hardest part about this climb is the start footholds. pretty light warm up for the prowler. Not really any crux just start on the crimp and go throughout the moves to topout.",
+     "Location": "around 2 feet to the left of the prowler",
+     "Protection": "pads, spotter"
+    },
+    "stars": 2.6,
+    "votes": 5,
+    "type": "Boulder, 6 ft (2 m)",
+    "fa": "Zach Holpuch",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 1,
+    "id": "116107567",
+    "url": "https://www.mountainproject.com/route/116107567/the-prowler",
+    "name": "Prowler, The",
+    "cls": "Boulder",
+    "grade": "V5",
+    "gradeline": "V5",
+    "sections": {
+     "Description": "Start crouched with left hand on the arête and right hand on the opposing crimp midway through the face. Toe-hooking the right arête is the most common way to establish at the start (see photos/videos). Core up and find your way to the tantalizing jugs above for an easy topout. Short, but unique and intense movement to establish and reach the jugs.",
+     "Location": "Obvious prow feature.",
+     "Protection": "One pad."
+    },
+    "stars": 2.9,
+    "votes": 117,
+    "type": "Boulder",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 2,
+    "id": "123478404",
+    "url": "https://www.mountainproject.com/route/123478404/halfpipe-surfer",
+    "name": "Halfpipe Surfer",
+    "cls": "Boulder",
+    "grade": "V1-2",
+    "gradeline": "V1-2",
+    "sections": {
+     "Description": "No hands allowed, give your skin a break and focus on your footwork! Start with a low left foot on a flat edge and kick the right foot up to the right face of the dihedral. With stemming and delicate smearing, work up to the top right of the dihedral face before making a big step to the large scoop.\nTry it, its fun!",
+     "Location": "The wave-looking boulder 10 feet to the right (east) of prowler.",
+     "Protection": "One or two pads and a spotter, in case you slip on the top."
+    },
+    "stars": 3.6,
+    "votes": 16,
+    "type": "Boulder, 10 ft (3 m)",
+    "fa": "Jared Lichtarge and Matt Wetmore, Nov 2022",
+    "photos": [],
+    "comments": []
+   }
+  ],
+  "children": []
+ },
+ "hound-dog": {
+  "id": "111338565",
+  "name": "Hound Dog Arete",
+  "lat": 36.15988,
+  "lng": -115.41696,
+  "sections": {
+   "Description": "Kraft Boulders",
+   "Getting There": "Look for three small boulders downhill from the $600 Boulder."
+  },
+  "photos": [],
+  "routes": [
+   {
+    "lr": 0,
+    "id": "122055516",
+    "url": "https://www.mountainproject.com/route/122055516/square-arete-low",
+    "name": "Square Arête Low",
+    "cls": "Boulder",
+    "grade": "V8-",
+    "gradeline": "V8-",
+    "sections": {
+     "Description": "The sit start to square arete. Use the crack/right sidepull handholds to start.\nPretty much a one-challenging-move type of climb.",
+     "Location": "grave start to square arete",
+     "Protection": "a pad and maybe a slider?"
+    },
+    "stars": 2.3,
+    "votes": 18,
+    "type": "Boulder, 4 ft (1 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 1,
+    "id": "121883189",
+    "url": "https://www.mountainproject.com/route/121883189/square-arete",
+    "name": "Square Arête",
+    "cls": "Boulder",
+    "grade": "V6",
+    "gradeline": "V6",
+    "sections": {
+     "Description": "A lowball problem with fun compression moves. Sit start rated as V9.",
+     "Location": "Start with left hand on left arete relative to the vertex, right hand undercling on the bottom of right arete."
+    },
+    "stars": 2.6,
+    "votes": 65,
+    "type": "Boulder, 6 ft (2 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 2,
+    "id": "121377194",
+    "url": "https://www.mountainproject.com/route/121377194/pink-voltage",
+    "name": "Pink Voltage",
+    "cls": "Boulder",
+    "grade": "V4-5",
+    "gradeline": "V4-5",
+    "sections": {
+     "Description": "Sit start with crimps; climb the face just right of square arête",
+     "Location": "Downhill from the $600 Boulder. Can be found just around the corner left of butterfly kiss",
+     "Protection": "Pads"
+    },
+    "stars": 2.1,
+    "votes": 62,
+    "type": "Boulder, 6 ft (2 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 3,
+    "id": "113852043",
+    "url": "https://www.mountainproject.com/route/113852043/hound-dog-arete",
+    "name": "Hound Dog Arete",
+    "cls": "Boulder",
+    "grade": "V3-4",
+    "gradeline": "V3-4",
+    "sections": {
+     "Description": "Start with right hand sidepull and left hand meat wrap. Climb the arete.",
+     "Protection": "Pads"
+    },
+    "stars": 1.9,
+    "votes": 28,
+    "type": "Boulder, 10 ft (3 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 4,
+    "id": "111338570",
+    "url": "https://www.mountainproject.com/route/111338570/butterfly-kiss",
+    "name": "Butterfly Kiss",
+    "cls": "Boulder",
+    "grade": "V3",
+    "gradeline": "V3",
+    "sections": {
+     "Description": "Start under the roof with hands on an undercling. Reach out left to a crimp around the lip.  Make a big move up and left (crux).  Top out.  Lowball with good movement.",
+     "Location": "Downhill from the $600 Boulder.",
+     "Protection": "Pads."
+    },
+    "stars": 3.1,
+    "votes": 210,
+    "type": "Boulder, 7 ft (2 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 5,
+    "id": "120213946",
+    "url": "https://www.mountainproject.com/route/120213946/crack-right",
+    "name": "Crack Right",
+    "cls": "Boulder",
+    "grade": "V1+",
+    "gradeline": "V1+",
+    "sections": {
+     "Description": "Sit start under the roof at the bottom of the crack or make it twice as fun by starting with feet in first. Bat hang and butt shimmy and then pull over the lip.",
+     "Location": "Downhill from the $600 Boulder."
+    },
+    "stars": 2.7,
+    "votes": 33,
+    "type": "Boulder, 7 ft (2 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 6,
+    "id": "120256456",
+    "url": "https://www.mountainproject.com/route/120256456/family-feud",
+    "name": "Family Feud",
+    "cls": "Boulder",
+    "grade": "V10",
+    "gradeline": "V10",
+    "sections": {
+     "Description": "Sit start on left hand crimp and right hand finger jug. With a left heel, move left hand to the shallow pinch and sort out the moves to the topout jugs.",
+     "Location": "To the right of hound dog arete.",
+     "Protection": "1-2 pads"
+    },
+    "stars": 1.9,
+    "votes": 9,
+    "type": "Boulder, 10 ft (3 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   }
+  ],
+  "children": []
+ },
+ "turtle-shell": {
+  "id": "107158774",
+  "name": "Turtle Shell",
+  "lat": 36.14334,
+  "lng": -115.42016,
+  "sections": {
+   "Description": "Large boulder perched on a hill with many quality problems on all sides. A few cave/roof problems come out of the east side of the boulder.",
+   "Getting There": "The obvious, largest boulder towards the southeast end of the cluster."
+  },
+  "photos": [],
+  "routes": [
+   {
+    "lr": 0,
+    "id": "113167615",
+    "url": "https://www.mountainproject.com/route/113167615/turtle-on-a-half-shell",
+    "name": "Turtle On A Half Shell",
+    "cls": "Boulder",
+    "grade": "V4",
+    "gradeline": "V4",
+    "sections": {
+     "Description": "Multiple starts possible. The book says to start on the huge horn jug on the outside of the cave (often used as a heel/toe hook for the end of The High Road). One could add a few moves by starting on The Low Road, or remove a few easy moves by starting on the obvious shelf down and right of a slanting crimp rail.\nEither way, move up and left through a slanting crimp rail and gain some bad crimps on the start of the slab. Aim for the amazing hueco jug before an easy but high top out.",
+     "Location": "Start somewhere left of the cave and traverse left until topping out via the huge hueco hold. If you touch anything on Monkey Wrench you've probably gone too far.",
+     "Protection": "Two pads, careful for the boulder behind the crux. More pads may be desired if traversing in from the cave."
+    },
+    "stars": 2.9,
+    "votes": 39,
+    "type": "Boulder",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 1,
+    "id": "123547796",
+    "url": "https://www.mountainproject.com/route/123547796/left-varnish",
+    "name": "Left Varnish",
+    "cls": "Boulder",
+    "grade": "V2-3",
+    "gradeline": "V2-3",
+    "sections": {
+     "Description": "Sit start on a good shelf (possible starting hold for Turtle On A Half Shell). Work out left to incut crimps as for Turtle On A Half Shell, but instead of trending up and left, move right to a positive crimp. It's possible to work back and finish left in the same hueco as for Turtle On A Half Shell, or continue moving right as for Jugs. Feels like a bit of a squeeze either way, but you'll touch a couple of different holds from either of those variations.",
+     "Location": "On the SE side of the Turtle Shell boulder.",
+     "Protection": "Two pads."
+    },
+    "stars": 2.3,
+    "votes": 8,
+    "type": "Boulder, 15 ft (5 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 2,
+    "id": "107158784",
+    "url": "https://www.mountainproject.com/route/107158784/jugs",
+    "name": "Jugs",
+    "cls": "Boulder",
+    "grade": "V1",
+    "gradeline": "V1",
+    "sections": {
+     "Description": "Use any number of good holds to ascend the face left of the major cave on the East side of the Red Springs Boulder",
+     "Location": "10 feet to the left of the cave problems.",
+     "Protection": "2 or more pads."
+    },
+    "stars": 2.2,
+    "votes": 33,
+    "type": "Boulder, 18 ft (5 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 3,
+    "id": "123535031",
+    "url": "https://www.mountainproject.com/route/123535031/tortoise-and-the-hare",
+    "name": "Tortoise And The Hare",
+    "cls": "Boulder",
+    "grade": "V8",
+    "gradeline": "V8",
+    "sections": {
+     "Description": "Sit start on the jug of “The Low Road”.\nTraverse left around the entire boulder, staying somewhat low, through the bottom section of “Turtle On A Half Shell”, “Monkey Wrench”, and “Cherry Garcia” in order to finish just above “Spring Break” on a high rail complex.\nMultiple V4+ cruxes and pretty pumpy\nBeta video featuring all angles of the climb:  youtu.be/tjulP8f3mm8\nBeta video of the uncut send from a distance: https://youtu.be/-bhYfHYo4Bw",
+     "Location": "Left side of the overhung tube on the Turtle Shell Boulder",
+     "Protection": "1 pad for each of the 2 cruxes is probably fine. Or get a friend to shuffle."
+    },
+    "stars": 2.0,
+    "votes": 1,
+    "type": "Boulder, 60 ft (18 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 4,
+    "id": "111776184",
+    "url": "https://www.mountainproject.com/route/111776184/the-low-road",
+    "name": "Low Road, The",
+    "cls": "Boulder",
+    "grade": "V2",
+    "gradeline": "V2",
+    "sections": {
+     "Description": "This lowball route climbs below the High Road, on the left side of the cave. SDS on a well chalked jug, and climb out of the cave on good holds. Top out.",
+     "Location": "Left side of cave, sit starting on a prominent and chalked jug",
+     "Protection": "1-2 pads - top out is OK but not trivial for the grade. Downclimb to the right of the cave can be a bit awkward."
+    },
+    "stars": 2.6,
+    "votes": 42,
+    "type": "Boulder, 12 ft (4 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 5,
+    "id": "107948839",
+    "url": "https://www.mountainproject.com/route/107948839/the-high-road",
+    "name": "High Road, The",
+    "cls": "Boulder",
+    "grade": "V7",
+    "gradeline": "V7",
+    "sections": {
+     "Description": "Sit start on big chalked sideways undercling type hold. Work out on the left side of the cave on a series of crimps and top out on jugs.",
+     "Location": "Starts in the back of the obvious cave feature of this boulder.",
+     "Protection": "A few pads in the cave would be nice."
+    },
+    "stars": 3.0,
+    "votes": 106,
+    "type": "Boulder, 25 ft (8 m)",
+    "fa": "Matt Kirk, 1996",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 6,
+    "id": "107948857",
+    "url": "https://www.mountainproject.com/route/107948857/spring-loaded",
+    "name": "Spring Loaded",
+    "cls": "Boulder",
+    "grade": "V8",
+    "gradeline": "V8",
+    "sections": {
+     "Description": "Start as on The High Road (V7), but move right across the cave at the obvious crimp rail to a large angular hold which is the start of Spring Board (V3). Top out on the right side of the cave as opposed to the left for The High Road.",
+     "Protection": "Pads for cave, and to protect the V3 finish."
+    },
+    "stars": 3.2,
+    "votes": 53,
+    "type": "Boulder, 25 ft (8 m)",
+    "fa": "Matt Kirk, 1996",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 7,
+    "id": "107158794",
+    "url": "https://www.mountainproject.com/route/107158794/spring-board",
+    "name": "Spring Board",
+    "cls": "Boulder",
+    "grade": "V3",
+    "gradeline": "V3",
+    "sections": {
+     "Description": "Sit start in the right side of cave using large jug feature. Move right on decent holds coming out of the cave to a large sloper. Move up and left on slopers and jugs to top out.",
+     "Location": "Right side of the cave.",
+     "Protection": "Multiple pads to protect the entire landing."
+    },
+    "stars": 2.6,
+    "votes": 53,
+    "type": "Boulder, 18 ft (5 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 8,
+    "id": "107453231",
+    "url": "https://www.mountainproject.com/route/107453231/spring-break",
+    "name": "Spring Break",
+    "cls": "Boulder",
+    "grade": "V3",
+    "gradeline": "V3",
+    "sections": {
+     "Description": "Spring Break starts on the north side of the Red Springs Boulder. Sit start using a good right hand and a positive left hand sidepull. Pull hard and move straight up to some marginal crimps. Top out!",
+     "Protection": "Pad"
+    },
+    "stars": 2.3,
+    "votes": 38,
+    "type": "Boulder",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 9,
+    "id": "200291652",
+    "url": "https://www.mountainproject.com/route/200291652/basketball-diaries",
+    "name": "Basketball Diaries",
+    "cls": "Boulder",
+    "grade": "V3",
+    "gradeline": "V3",
+    "sections": {
+     "Description": "Start matched around an obvious, heavily chalked pinch feature. Move up and slightly left using crimps or underclings to gain positive slopers at the angle change and top out above the bulge.\nAwkward movement on nice holds.",
+     "Location": "North corner of the boulder, easiest to identify by the heavily chalked pinch feature",
+     "Protection": "Two pads, watch out for the boulder behind."
+    },
+    "stars": 2.5,
+    "votes": 6,
+    "type": "Boulder",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 10,
+    "id": "107453235",
+    "url": "https://www.mountainproject.com/route/107453235/cherry-garcia",
+    "name": "Cherry Garcia",
+    "cls": "Boulder",
+    "grade": "V3",
+    "gradeline": "V3",
+    "sections": {
+     "Description": "Sit start using a good slot for both hands. Move straight up through some sloping holds. Get to the good rail over the bulge and make a committing mantle move up and over. Good movement.\nIt is possible to bail left (or even right) at the topout, but the problem tops out directly through the dark rock and much of the difficulty stems from the finish.",
+     "Protection": "Two pads.",
+     "Location": "Follows the line of big holds in a seam feature to the left of Monkey Wrench."
+    },
+    "stars": 2.9,
+    "votes": 111,
+    "type": "Boulder, 15 ft (5 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 11,
+    "id": "118074172",
+    "url": "https://www.mountainproject.com/route/118074172/smack-shabwack",
+    "name": "Smack Shabwack",
+    "cls": "Boulder",
+    "grade": "V5-6",
+    "gradeline": "V5-6",
+    "sections": {
+     "Description": "Start on the good shelf starting hold of Monkey Wrench and finish on Cherry Garcia by making a big move out left to a positive sidepull. Same first move as Monkey Wrench Left but with a less contrived finish taking the path of least resistance.",
+     "Location": "Start on Monkey Wrench and finish on Cherry Garcia.",
+     "Protection": "2-3 pads."
+    },
+    "stars": 3.2,
+    "votes": 11,
+    "type": "Boulder",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 12,
+    "id": "123688749",
+    "url": "https://www.mountainproject.com/route/123688749/monkey-wrench-left",
+    "name": "Monkey Wrench Left",
+    "cls": "Boulder",
+    "grade": "V8",
+    "gradeline": "V8",
+    "sections": {
+     "Description": "Start on the same rail as Monkey Wrench. Make a big move up left to a good sidepull before navigating small holds at the lip and a challenging top out through a sloping seam. Beta intensive.\nThis climb was originally given V6 in the guidebook but holds have obviously broken making it more in line with V8’s for the area.\nBeta video: https://youtube.com/shorts/QXAJSIHgfW0?feature=share",
+     "Location": "Center of the West side of the Turtle Shell boulder",
+     "Protection": "3-4 pads. The landing is stepped so be careful."
+    },
+    "stars": 2.2,
+    "votes": 5,
+    "type": "Boulder, 12 ft (4 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 13,
+    "id": "113749650",
+    "url": "https://www.mountainproject.com/route/113749650/monkey-trench",
+    "name": "Monkey Trench",
+    "cls": "Boulder",
+    "grade": "V9-",
+    "gradeline": "V9-",
+    "sections": {
+     "Description": "The low low for monkey wrench, starting on the undercling as for high road, but head the OTHER WAY and finish monkey wrench. DON'T DAB",
+     "Protection": "thin foam sleeping pad"
+    },
+    "stars": 2.6,
+    "votes": 52,
+    "type": "Boulder",
+    "fa": "Harry Larson",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 14,
+    "id": "107948862",
+    "url": "https://www.mountainproject.com/route/107948862/monkey-wrench",
+    "name": "Monkey Wrench",
+    "cls": "Boulder",
+    "grade": "V7-",
+    "gradeline": "V7-",
+    "sections": {
+     "Description": "Start on good rail to the right of Cherry Garcia and go up to the right. Really just two harder moves off small holds and the rest isn't bad.",
+     "Protection": "Two pads to be comfortable."
+    },
+    "stars": 3.1,
+    "votes": 276,
+    "type": "Boulder, 25 ft (8 m)",
+    "fa": "Matt Kirk, 1996",
+    "photos": [],
+    "comments": []
+   }
+  ],
+  "children": []
+ },
+ "sundial": {
+  "id": "106657531",
+  "name": "The Sundial",
+  "lat": 36.14331,
+  "lng": -115.42035,
+  "sections": {
+   "Description": "Boulder with obvious overhung black-varnished face about 12 feet tall. The face has some tags/scratches on it. Fuckers.",
+   "Getting There": "Walk up the hill to the boulder that looks like a sundial!"
+  },
+  "photos": [],
+  "routes": [
+   {
+    "lr": 0,
+    "id": "106657534",
+    "url": "https://www.mountainproject.com/route/106657534/sundial",
+    "name": "Sundial",
+    "cls": "Boulder",
+    "grade": "V0",
+    "gradeline": "V0",
+    "sections": {
+     "Description": "The left line on the face.",
+     "Protection": "None."
+    },
+    "stars": 1.7,
+    "votes": 43,
+    "type": "Boulder",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 1,
+    "id": "111776191",
+    "url": "https://www.mountainproject.com/route/111776191/showdown",
+    "name": "Showdown",
+    "cls": "Boulder",
+    "grade": "V3",
+    "gradeline": "V3",
+    "sections": {
+     "Description": "Start in the middle-right of the boulder with a good undercling for the right hand. Make a big reach up left to a crimp, adjust the feet, the continue up that weakness until you can top out.",
+     "Location": "Left of High Noon",
+     "Protection": "--"
+    },
+    "stars": 2.2,
+    "votes": 33,
+    "type": "Boulder, 8 ft (2 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 2,
+    "id": "111545775",
+    "url": "https://www.mountainproject.com/route/111545775/equinox",
+    "name": "Equinox",
+    "cls": "Boulder",
+    "grade": "V6",
+    "gradeline": "V6",
+    "sections": {
+     "Description": "Sit start as for High Noon but move left through face into crimp/pinch and finish going straight up on sundial on the left side of the boulder.",
+     "Location": "Sundial boulder",
+     "Protection": "Pad and ideally a spotter to protect your head from falling back onto the rock behind the left side of the climb."
+    },
+    "stars": 2.9,
+    "votes": 193,
+    "type": "Boulder, 8 ft (2 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 3,
+    "id": "106657537",
+    "url": "https://www.mountainproject.com/route/106657537/high-noon",
+    "name": "High Noon",
+    "cls": "Boulder",
+    "grade": "V2-3",
+    "gradeline": "V2-3",
+    "sections": {
+     "Description": "The right line on the face. Sit start. A nice climb for the grade.",
+     "Protection": "Crashpad, maybe."
+    },
+    "stars": 2.3,
+    "votes": 67,
+    "type": "Boulder, 12 ft (4 m)",
+    "fa": "unknown",
+    "photos": [],
+    "comments": []
+   }
+  ],
+  "children": []
+ },
+ "cirque-du-soleil": {
+  "id": "125717942",
+  "name": "Cirque Du Soleil Boulder",
+  "lat": 36.14772,
+  "lng": -115.42337,
+  "sections": {
+   "Description": "Beautiful standalone boulder with a very unique problem.",
+   "Getting There": "Approach as for Tsunami Boulder then blast straight up the hill for another 100 yards."
+  },
+  "photos": [],
+  "routes": [
+   {
+    "lr": 0,
+    "id": "127302403",
+    "url": "https://www.mountainproject.com/route/127302403/7-fingers",
+    "name": "7 Fingers",
+    "cls": "Boulder",
+    "grade": "V10-",
+    "gradeline": "V10-",
+    "sections": {
+     "Description": "Sit start as for Cirque Du Soleil, but climb underneath the boulder, trending left through toe hooks and compression to top out at the other side of the tunnel.\nBeta video: https://youtube.com/shorts/dhOINp5xYH4?si=fXthIj8CjoKZppGQ",
+     "Location": "Same as the Cirque Du Soleil boulder",
+     "Protection": "3 pads"
+    },
+    "stars": 3.2,
+    "votes": 11,
+    "type": "Boulder, 10 ft (3 m)",
+    "fa": "Josh Levin (October 2024)",
+    "photos": [],
+    "comments": []
+   },
+   {
+    "lr": 1,
+    "id": "116499097",
+    "url": "https://www.mountainproject.com/route/116499097/cirque-du-soleil",
+    "name": "Cirque Du Soleil",
+    "cls": "Boulder",
+    "grade": "V3",
+    "gradeline": "V3",
+    "sections": {
+     "Description": "Incredibly unique boulder! Begin in a sit start and mantle while doing 180 into a small sloping pod. Reach up to the lip and top out above.",
+     "Location": "Sit start on the obvious ramp feature",
+     "Protection": "One or two pads"
+    },
+    "stars": 3.6,
+    "votes": 157,
+    "type": "Boulder, 10 ft (3 m)",
+    "fa": "Dylan Demyanek, Jan 2019",
+    "photos": [],
+    "comments": []
+   }
+  ],
+  "children": []
+ },
+ "_kraft": {
+  "id": "105937608",
+  "name": "Kraft Boulders",
+  "sections": {
+   "Description": "The Kraft Boulders are located before the Red Rocks Visitors center outside of the Calico Basin residential area. Hundreds of problems from V0 and up! The very first boulder is The Cube and it is hard to miss considering its size. Kraft has become the most popular bouldering area in Red Rock due to its concentration of quality boulders, especially in the single-digit range.\nThe area is one of the lowest elevation sectors in Red Rock and is generally quite exposed to sun (and wind), making it a popular destination in the winter. The large variety of boulders allow you to climb in the shade or sun almost all day if you can be flexible about your choice of problem.\nIMPORTANT: Waste bags are provided by the Las Vegas Climbers Liaison Council in order to reduce human waste issues at the crags and boulders. Please feel free to take one, use as directed, and dispose of it in any trash receptacle. Please do not leave them lying around, and do not throw them in the toilets at the parking areas. The project was funded primarily by the American Alpine Club's Cornerstone Conservation Grant, with additional funding from the Access Fund and Mountain Gear. Please do your part to be a good steward of this amazing climbing area.\nThe sub-areas are ordered from left to right when approaching from the parking lot (west to east).",
+   "Getting There": "From Vegas, take highway 159 towards the Red Rock Canyon Visitor Center.\nTake the right turn onto Calico Basin Road before the visitor center. You'll wind through a small neighborhood. Stay on the main, paved road, taking a series of turns leading to the parking lot. The road dead ends and there is a parking lot on the left, the Kraft Mountain parking lot. Park here, or somewhere down the street if the lot is full. Be sure to avoid parts of the road that have driveways or no parking signs.\nTake the Kraft Mountain Loop trail, which is just behind the park sign (and where you see a dog poop bag holder) that leads to the boulders. There is a separate branch of the trail further down the parking lot that is more direct for accessing West Cluster."
+  },
+  "access": [
+   "Red Rock RAIN AND WET ROCK: The sandstone is fragile and is very easily damaged when wet. Details Holds rip off and climbs have been and will continue to be permanently damaged due to climbers not respecting this phenomenon. After a heavy storm, the rock will remain wet, sometimes for several days. PLEASE DO NOT CLIMB IN RED ROCKS during or after rain. A good rule of thumb is that if the ground near your climb is at all damp (and not powdery dry sand), then do not climb. There are many alternatives (limestone, granite, basalt, and plastic) nearby. HUMAN WASTE Human waste is one of the major issues plaguing Red Rocks. The Las Vegas Climbers Liaison Council and the AAC provides free \"wag bags\" in several locations (Black Velvet, First Pullout, Kraft Mtn/Bouldering, The Gallery, and The Black Corridor). These bags are designed so that you can pack your waste out - consider bringing one to be part of your kit (just like your rope and shoes and lunch) no matter where you go. Once used, please dispose of them properly (do not throw them in the toilets at the parking area).",
+   "Kraft Boulders parking Details When bouldering at Kraft, be sure to park along the paved road, and NOT on the private driveways!"
+  ]
+ },
+ "_redspring": {
+  "id": "106657528",
+  "name": "Red Spring Boulders",
+  "sections": {
+   "Description": "Smile at the tourists and picnickers as you crush the boulders. Good concentration of boulders across a number of grades which are generally easy to access, though some require a hike up the hill. The whole area is shaded in the afternoon as the sun moves behind the hillside.",
+   "Getting There": "Park at or near the Red Spring parking lot. See individual areas for approach details."
+  },
+  "access": [
+   "Red Rock RAIN AND WET ROCK: The sandstone is fragile and is very easily damaged when wet. Details Holds rip off and climbs have been and will continue to be permanently damaged due to climbers not respecting this phenomenon. After a heavy storm, the rock will remain wet, sometimes for several days. PLEASE DO NOT CLIMB IN RED ROCKS during or after rain. A good rule of thumb is that if the ground near your climb is at all damp (and not powdery dry sand), then do not climb. There are many alternatives (limestone, granite, basalt, and plastic) nearby. HUMAN WASTE Human waste is one of the major issues plaguing Red Rocks. The Las Vegas Climbers Liaison Council and the AAC provides free \"wag bags\" in several locations (Black Velvet, First Pullout, Kraft Mtn/Bouldering, The Gallery, and The Black Corridor). These bags are designed so that you can pack your waste out - consider bringing one to be part of your kit (just like your rope and shoes and lunch) no matter where you go. Once used, please dispose of them properly (do not throw them in the toilets at the parking area)."
+  ]
+ },
+ "_calico": {
+  "id": "108541423",
+  "name": "Calico Basin Boulders",
+  "sections": {
+   "Description": "Boulders that are most easily accessed via Calico Basin Road.\nSub-areas are sorted from south to north, roughly in order of appearance when driving.",
+   "Getting There": "Turn onto Calico Basin Road off of NV-159 and park at or near the Red Spring or Kraft Mountain parking lots depending on the bouldering area."
+  },
+  "access": [
+   "Red Rock RAIN AND WET ROCK: The sandstone is fragile and is very easily damaged when wet. Details Holds rip off and climbs have been and will continue to be permanently damaged due to climbers not respecting this phenomenon. After a heavy storm, the rock will remain wet, sometimes for several days. PLEASE DO NOT CLIMB IN RED ROCKS during or after rain. A good rule of thumb is that if the ground near your climb is at all damp (and not powdery dry sand), then do not climb. There are many alternatives (limestone, granite, basalt, and plastic) nearby. HUMAN WASTE Human waste is one of the major issues plaguing Red Rocks. The Las Vegas Climbers Liaison Council and the AAC provides free \"wag bags\" in several locations (Black Velvet, First Pullout, Kraft Mtn/Bouldering, The Gallery, and The Black Corridor). These bags are designed so that you can pack your waste out - consider bringing one to be part of your kit (just like your rope and shoes and lunch) no matter where you go. Once used, please dispose of them properly (do not throw them in the toilets at the parking area)."
+  ]
+ },
+ "_west": {
+  "id": "114986624",
+  "name": "West Cluster",
+  "sections": {
+   "Description": "Dense cluster to the west (left when walking in) of all of the main Kraft areas.",
+   "Getting There": "From the Kraft Mountain parking lot, take a trail on the westernmost end of the parking lot (or in the middle of the lot) heading northwest. This is the most direct way to the boulders. There is also a trail heading directly west from The Cube that is useful if coming from the other Kraft sectors."
+  },
+  "access": [
+   "Kraft Boulders parking Details When bouldering at Kraft, be sure to park along the paved road, and NOT on the private driveways!",
+   "Red Rock RAIN AND WET ROCK: The sandstone is fragile and is very easily damaged when wet. Details Holds rip off and climbs have been and will continue to be permanently damaged due to climbers not respecting this phenomenon. After a heavy storm, the rock will remain wet, sometimes for several days. PLEASE DO NOT CLIMB IN RED ROCKS during or after rain. A good rule of thumb is that if the ground near your climb is at all damp (and not powdery dry sand), then do not climb. There are many alternatives (limestone, granite, basalt, and plastic) nearby. HUMAN WASTE Human waste is one of the major issues plaguing Red Rocks. The Las Vegas Climbers Liaison Council and the AAC provides free \"wag bags\" in several locations (Black Velvet, First Pullout, Kraft Mtn/Bouldering, The Gallery, and The Black Corridor). These bags are designed so that you can pack your waste out - consider bringing one to be part of your kit (just like your rope and shoes and lunch) no matter where you go. Once used, please dispose of them properly (do not throw them in the toilets at the parking area)."
+  ]
+ },
+ "_main": {
+  "id": "123855477",
+  "name": "Main Area",
+  "sections": {
+   "Description": "Extremely dense cluster with boulders in every direction. One of the most popular bouldering areas in Red Rock.",
+   "Getting There": "Approach via the main trail from the east end of the Kraft Mountain parking lot. Take a right at the junction in front of The Cube and continue on the well-maintained trail for a few minutes. There is a signed trail on your left that will deposit you at the ??."
+  },
+  "access": [
+   "Kraft Boulders parking Details When bouldering at Kraft, be sure to park along the paved road, and NOT on the private driveways!",
+   "Red Rock RAIN AND WET ROCK: The sandstone is fragile and is very easily damaged when wet. Details Holds rip off and climbs have been and will continue to be permanently damaged due to climbers not respecting this phenomenon. After a heavy storm, the rock will remain wet, sometimes for several days. PLEASE DO NOT CLIMB IN RED ROCKS during or after rain. A good rule of thumb is that if the ground near your climb is at all damp (and not powdery dry sand), then do not climb. There are many alternatives (limestone, granite, basalt, and plastic) nearby. HUMAN WASTE Human waste is one of the major issues plaguing Red Rocks. The Las Vegas Climbers Liaison Council and the AAC provides free \"wag bags\" in several locations (Black Velvet, First Pullout, Kraft Mtn/Bouldering, The Gallery, and The Black Corridor). These bags are designed so that you can pack your waste out - consider bringing one to be part of your kit (just like your rope and shoes and lunch) no matter where you go. Once used, please dispose of them properly (do not throw them in the toilets at the parking area)."
+  ]
+ },
+ "_pearl": {
+  "id": "123855693",
+  "name": "The Pearl Area",
+  "sections": {
+   "Description": "Smaller cluster of boulders around the trailside classic, The Pearl.",
+   "Getting There": "Continue east on the main trail past Main Area for a few more minutes. The Pearl will appear on the left side of the trail."
+  },
+  "access": [
+   "Kraft Boulders parking Details When bouldering at Kraft, be sure to park along the paved road, and NOT on the private driveways!",
+   "Red Rock RAIN AND WET ROCK: The sandstone is fragile and is very easily damaged when wet. Details Holds rip off and climbs have been and will continue to be permanently damaged due to climbers not respecting this phenomenon. After a heavy storm, the rock will remain wet, sometimes for several days. PLEASE DO NOT CLIMB IN RED ROCKS during or after rain. A good rule of thumb is that if the ground near your climb is at all damp (and not powdery dry sand), then do not climb. There are many alternatives (limestone, granite, basalt, and plastic) nearby. HUMAN WASTE Human waste is one of the major issues plaguing Red Rocks. The Las Vegas Climbers Liaison Council and the AAC provides free \"wag bags\" in several locations (Black Velvet, First Pullout, Kraft Mtn/Bouldering, The Gallery, and The Black Corridor). These bags are designed so that you can pack your waste out - consider bringing one to be part of your kit (just like your rope and shoes and lunch) no matter where you go. Once used, please dispose of them properly (do not throw them in the toilets at the parking area)."
+  ]
+ },
+ "_east": {
+  "id": "123855862",
+  "name": "East Cluster",
+  "sections": {
+   "Description": "Scattered boulders starting from Bill's Boulder and ending at the ultra-popular Monkey Bar Boulder",
+   "Getting There": "Continue east on the main trail past The Pearl Area for a few more minutes."
+  },
+  "access": [
+   "Kraft Boulders parking Details When bouldering at Kraft, be sure to park along the paved road, and NOT on the private driveways!",
+   "Red Rock RAIN AND WET ROCK: The sandstone is fragile and is very easily damaged when wet. Details Holds rip off and climbs have been and will continue to be permanently damaged due to climbers not respecting this phenomenon. After a heavy storm, the rock will remain wet, sometimes for several days. PLEASE DO NOT CLIMB IN RED ROCKS during or after rain. A good rule of thumb is that if the ground near your climb is at all damp (and not powdery dry sand), then do not climb. There are many alternatives (limestone, granite, basalt, and plastic) nearby. HUMAN WASTE Human waste is one of the major issues plaguing Red Rocks. The Las Vegas Climbers Liaison Council and the AAC provides free \"wag bags\" in several locations (Black Velvet, First Pullout, Kraft Mtn/Bouldering, The Gallery, and The Black Corridor). These bags are designed so that you can pack your waste out - consider bringing one to be part of your kit (just like your rope and shoes and lunch) no matter where you go. Once used, please dispose of them properly (do not throw them in the toilets at the parking area)."
+  ]
+ },
+ "_rs_main": {
+  "id": "125621150",
+  "name": "Main Cluster",
+  "sections": {
+   "Description": "The cluster of boulders surrounding the popular Turtle Shell. This cluster is a candidate for one the the most easily accessible in all of Red Rock, being outside the scenic loop and having minimal approach.",
+   "Getting There": "Head left (southwest) from the Red Spring parking lot along a well-maintained trail. The boulders are on the hillside just to the right (west) of the trail after a few minutes of walking up a short hill."
+  },
+  "access": [
+   "Red Rock RAIN AND WET ROCK: The sandstone is fragile and is very easily damaged when wet. Details Holds rip off and climbs have been and will continue to be permanently damaged due to climbers not respecting this phenomenon. After a heavy storm, the rock will remain wet, sometimes for several days. PLEASE DO NOT CLIMB IN RED ROCKS during or after rain. A good rule of thumb is that if the ground near your climb is at all damp (and not powdery dry sand), then do not climb. There are many alternatives (limestone, granite, basalt, and plastic) nearby. HUMAN WASTE Human waste is one of the major issues plaguing Red Rocks. The Las Vegas Climbers Liaison Council and the AAC provides free \"wag bags\" in several locations (Black Velvet, First Pullout, Kraft Mtn/Bouldering, The Gallery, and The Black Corridor). These bags are designed so that you can pack your waste out - consider bringing one to be part of your kit (just like your rope and shoes and lunch) no matter where you go. Once used, please dispose of them properly (do not throw them in the toilets at the parking area)."
+  ]
+ },
+ "_rs_hill": {
+  "id": "200291782",
+  "name": "Hillside Boulders",
+  "sections": {
+   "Description": "Scattered throughout the hillside directly west of the parking lot are a number of quality boulders. This area is a little bit less dense than the Main Cluster, but it is easy enough to hop between boulders in this area with a bit of scrambling.\nThe most popular boulders in the area are Tsunami Boulder and Cirque Du Soleil Boulder and it can make for a nice outing to hit both of them.",
+   "Getting There": "Park in the Red Spring lot. Head out on well-traveled trails to the right (north) of the boardwalk and then scramble through the slabs. See individual areas for specific instructions."
+  },
+  "access": [
+   "Red Rock RAIN AND WET ROCK: The sandstone is fragile and is very easily damaged when wet. Details Holds rip off and climbs have been and will continue to be permanently damaged due to climbers not respecting this phenomenon. After a heavy storm, the rock will remain wet, sometimes for several days. PLEASE DO NOT CLIMB IN RED ROCKS during or after rain. A good rule of thumb is that if the ground near your climb is at all damp (and not powdery dry sand), then do not climb. There are many alternatives (limestone, granite, basalt, and plastic) nearby. HUMAN WASTE Human waste is one of the major issues plaguing Red Rocks. The Las Vegas Climbers Liaison Council and the AAC provides free \"wag bags\" in several locations (Black Velvet, First Pullout, Kraft Mtn/Bouldering, The Gallery, and The Black Corridor). These bags are designed so that you can pack your waste out - consider bringing one to be part of your kit (just like your rope and shoes and lunch) no matter where you go. Once used, please dispose of them properly (do not throw them in the toilets at the parking area)."
+  ]
+ }
+}

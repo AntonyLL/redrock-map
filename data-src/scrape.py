@@ -52,8 +52,23 @@ def route(r):
     r['photos']=photos(h)[:6]
     # comments
     r['comments']=[' '.join(txt(c).split())[:600] for c in re.findall(r'<div class="comment-body[^"]*">(.*?)</div>',h,re.S)][:8]
-ids={'stone-wall':'105820170','great-red-book':'105732120','black-corridor':'105732030','dantes-wall':'109868589','civilization-crag':'106686385','cactus-massacre':'114114376','classic-rock-wall':'122003508','watchtower':'202497801','upper-rift':'126660358'}
+GROUPS={
+ # sport crags on the Scenic Drive -> mp.json
+ 'mp':{'stone-wall':'105820170','great-red-book':'105732120','black-corridor':'105732030','dantes-wall':'109868589','civilization-crag':'106686385','cactus-massacre':'114114376','classic-rock-wall':'122003508','watchtower':'202497801','upper-rift':'126660358'},
+ # Calico Basin boulders -> mp_boulders.json
+ 'mp_boulders':{'sorange':'114000100','monkey-bar':'105937674','angel-dyno':'106378780','potato-chip':'105959400','wave':'113802231','pearl':'106056258','prowler':'116107548','hound-dog':'111338565','turtle-shell':'107158774','sundial':'106657531','cirque-du-soleil':'125717942'},
+}
+# parent pages read only for their directions and access notes (no recursion into children)
+PARENTS={'mp_boulders':{'_kraft':'105937608','_redspring':'106657528','_calico':'108541423','_west':'114986624','_main':'123855477','_pearl':'123855693','_east':'123855862','_rs_main':'125621150','_rs_hill':'200291782'}}
+def parent(aid):
+    h=get('https://www.mountainproject.com/area/%s'%aid)
+    a={'id':aid,'name':txt(re.search(r'<h1[^>]*>(.*?)</h1>',h,re.S).group(1)).split('\n')[0].strip(),'sections':sections(h)}
+    a['access']=[' '.join(txt(m).split()) for m in re.findall(r'Access Issue:\s*</span>(.*?)</div>\s*</div>',h,re.S)]
+    return a
+grp=sys.argv[1] if len(sys.argv)>1 else 'mp'
 out={}
-for k,v in ids.items():
+for k,v in GROUPS[grp].items():
     out[k]=area(v); print(k,out[k]['name'],out[k]['lat'],len(out[k]['routes']),[ (c['name'],len(c['routes'])) for c in out[k]['children']],list(out[k]['sections']),len(out[k]['photos']),flush=True)
-json.dump(out,open('mp.json','w'),indent=1,ensure_ascii=False)
+for k,v in PARENTS.get(grp,{}).items():
+    out[k]=parent(v); print(k,out[k]['name'],list(out[k]['sections']),len(out[k]['access']),flush=True)
+json.dump(out,open(grp+'.json','w'),indent=1,ensure_ascii=False)

@@ -5,11 +5,17 @@ import json, math, re, heapq, glob, os, html
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(ROOT, 'data-src')
 mp = json.load(open(os.path.join(SRC, 'mp.json')))
+mp.update(json.load(open(os.path.join(SRC, 'mp_boulders.json'))))
 osm = json.load(open(os.path.join(SRC, 'osm.json')))['elements']
 roads = json.load(open(os.path.join(SRC, 'roads.json')))['elements']
 
 P1 = {'key': 'p1', 'name': 'First Pullout（Calico I）', 'short': '第一停车点', 'lat': 36.14648, 'lng': -115.43165}
 P2 = {'key': 'p2', 'name': 'Second Pullout（Calico II）', 'short': '第二停车点', 'lat': 36.15182, 'lng': -115.43752}
+
+# Calico Basin lots: outside the Scenic Drive, reached by Calico Basin Road (no fee station)
+PK = {'key': 'pk', 'name': 'Kraft Mountain 停车场', 'short': 'Kraft 停车场', 'lat': 36.15680, 'lng': -115.42107, 'basin': True}
+PR = {'key': 'pr', 'name': 'Red Spring 停车场', 'short': 'Red Spring 停车场', 'lat': 36.14689, 'lng': -115.41875, 'basin': True}
+PULLS = [P1, P2, PK, PR]
 
 # ---------- crag config (Chinese notes are written from the Mountain Project texts) ----------
 CRAGS = [
@@ -40,6 +46,40 @@ CRAGS = [
  dict(key='great-red-book', pull='p2', zh='Great Red Book', walk='20–25 分钟',
       sun='朝西的大石板，中午以后暴晒。从停车场能看到，在 Hunter S. Thompson Dome 的右上方。',
       way='先走到 Black Corridor，穿过走廊后向右急转，上一条贴着 Hunter S. Thompson Dome 下方的斜坡；过了 Dome 和 Poser Crag 后向左上乱石坡，到岩壁脚下。注意：招牌线 Great Red Book 本身是 2 段的 5.8 传统攀，不是运动攀。'),
+ # ---- boulders (kind='boulder'): which problems are highlighted is decided in the page from the chosen V cap ----
+ dict(key='sorange', pull='pk', kind='boulder', zh='Sorange', walk='约 8 分钟',
+      sun='朝东南，上午有太阳。',
+      way='最直接：从停车场西端（或中段）那条朝西北的小路走进 West Cluster。也可以走主路，在停车场和 The Cube 之间找一条向左（西）的岔路一直走。看到一面干净岩面上有一道很明显的镁粉痕迹、朝东南，就是 Sorange。'),
+ dict(key='hound-dog', pull='pk', kind='boulder', zh='Hound Dog Arete', walk='约 9 分钟',
+      sun='',
+      way='先到 Main Area：从停车场东端走主路到 The Cube 前的路口右转（东），沿修好的步道走几分钟，左手有带路牌的岔路进石头堆。Hound Dog Arete 在 $600 Boulder 的下坡方向，是三块挨着的小石头。'),
+ dict(key='potato-chip', pull='pk', kind='boulder', zh='Potato Chip', walk='约 8 分钟',
+      sun='北面全天阴；背面晒到傍晚。',
+      way='在 Main Area 中段、紧靠主路的一侧（石头堆的南缘）。石头不小，北面是半月形的悬面，沿口有一排薯片一样的薄片。'),
+ dict(key='angel-dyno', pull='pk', kind='boulder', anchor='top', zh='Angel Dyno', walk='约 10 分钟',
+      sun='线都在南面，一直晒到傍晚太阳落到山后。',
+      way='在 Main Area 靠东的一头，是这片石头里最后几块之一，比 Bubble Butt Boulder 稍靠前。顶上是一块光滑的斜板，很好认。'),
+ dict(key='prowler', pull='pk', kind='boulder', zh='Prowler', walk='约 10 分钟',
+      sun='大半天都晒。',
+      way='紧挨 Angel Dyno，在它左上方（西北）坡上一点。石头不大，一条船头一样的尖棱很显眼。'),
+ dict(key='pearl', pull='pk', kind='boulder', anchor='top', zh='The Pearl', walk='约 10 分钟',
+      sun='线主要在东北面（几乎不晒）和东南面（晒到下午三点左右）。',
+      way='从停车场东北角的主路出发，先向北走一小段到 The Cube 前的东西向主路，右转（东），经过热身石头群继续走。The Pearl 就在路边左手，招牌线在光滑的东南面。'),
+ dict(key='wave', pull='pk', kind='boulder', zh='The Wave', walk='约 11 分钟',
+      sun='下午晒。',
+      way='沿主路过了 The Pearl 再走一点，向左拐就是。石头不高。'),
+ dict(key='monkey-bar', pull='pk', kind='boulder', zh='Monkey Bar', walk='约 20 分钟（约 1.3 公里，爬升 30 米）',
+      sun='',
+      way='从停车场东端沿主路向北朝 The Cube 走，快到时向右（东）转上 Kraft Mountain Loop Trail，一路经过左手边好几片石头，再走约 15 分钟。快到时小路分成两股，从石头两侧绕过。这是 Kraft 最有名的一块，天气好时基本都有人。'),
+ dict(key='turtle-shell', pull='pr', kind='boulder', anchor='left', zh='Turtle Shell', walk='约 6 分钟',
+      sun='整片 Red Spring 下午太阳转到山后就都阴了。',
+      way='从停车场向左（西南）沿修好的步道走几分钟，上一小段坡，石头群在步道右手（西）的山坡上。Turtle Shell 是这一片靠东南端最大的那块，四面都有线，东面有几条洞顶线。'),
+ dict(key='sundial', pull='pr', kind='boulder', anchor='right', zh='The Sundial', walk='约 6 分钟',
+      sun='整片 Red Spring 下午太阳转到山后就都阴了。',
+      way='和 Turtle Shell 同一片，在它西边十几米。上坡找一块像日晷的石头，正面是约 4 米高、带黑色岩漆的悬面。'),
+ dict(key='cirque-du-soleil', pull='pr', kind='boulder', zh='Cirque Du Soleil', walk='约 10 分钟',
+      sun='整片 Red Spring 下午太阳转到山后就都阴了。',
+      way='从停车场走木栈道右侧（北边）那条踩得很实的小路，朝 Cannibal Crag 方向向北。看到 Tsunami Boulder（一条悬出来的棱很显眼）后离开小路，上石板约 15 米到它跟前，再顺着山坡直上约 90 米。Cirque Du Soleil 是一块独立的石头。'),
 ]
 
 # ---------- grades ----------
@@ -57,6 +97,13 @@ def grade_num(g):
     else: sub = 1
     return n + sub / 4
 CAP = grade_num('5.10d')
+
+def v_num(g):
+    """V3 -> 3 ; ranges and +/- take the harder end (V4-5 -> 5, V5- -> 5) ; V-easy -> 0."""
+    if not g: return None
+    if re.match(r'V-?(easy|B)', g.strip(), re.I): return 0
+    m = re.match(r'V(\d+)(?:-(\d+))?', g.strip())
+    return int(m.group(2) or m.group(1)) if m else None
 
 def classify(r):
     t = (r.get('type') or '')
@@ -100,13 +147,16 @@ def feet(t):
     m = re.search(r'(\d+) ft', t or '')
     return int(m.group(1)) if m else None
 
-def build_sector(a):
+def build_sector(a, kind):
     rs = []
     for r in a['routes']:
-        tier, why, pitches, gn = classify(r)
+        if kind == 'boulder':   # tier is filled in by the page from the chosen cap
+            tier, why, pitches, gn = None, '', 1, None
+        else:
+            tier, why, pitches, gn = classify(r)
         s = r['sections']
         rs.append({
-            'id': r['id'], 'n': r['name'], 'g': r['grade'], 'gn': gn, 't': (r.get('type') or '').split(',')[0],
+            'id': r['id'], 'n': r['name'], 'g': r['grade'], 'gn': gn, 'vn': v_num(r['grade']) if kind == 'boulder' else None, 't': (r.get('type') or '').split(',')[0],
             'type': r.get('type'), 'ft': feet(r.get('type')), 'p': pitches,
             's': r.get('stars'), 'v': r.get('votes') or 0, 'tier': tier, 'why': why,
             'desc': s.get('Description', ''), 'loc': s.get('Location', ''), 'pro': s.get('Protection', ''),
@@ -165,7 +215,7 @@ def path_to(prev, s, t):
 FOOT = {'path', 'footway', 'steps', 'track', 'pedestrian', 'bridleway', 'service'}
 TG, TP = graph(osm, FOOT)
 foot_from = {}
-for P in (P1, P2):
+for P in PULLS:
     s = nearest(TP, TG, (P['lat'], P['lng']))
     foot_from[P['key']] = (s,) + dijkstra(TG, s)
 
@@ -182,11 +232,14 @@ def approach(pull, target):
 out_crags = []
 for cfg in CRAGS:
     a = mp[cfg['key']]
-    sectors = [build_sector(x) for x in leaves(a)]
+    kind = cfg.get('kind', 'sport')
+    if not glob.glob(os.path.join(SRC, 'cache', 'area_%s*' % a['id'])):
+        raise SystemExit('data-src/cache 里没有 %s 的页面，照片会全部丢掉。先在 data-src 里跑 scrape.py（两组都跑）把页面抓回来再生成。' % cfg['key'])
+    sectors = [build_sector(x, kind) for x in leaves(a)]
     allr = [r for s in sectors for r in s['routes']]
     lat, lng = a['lat'], a['lng']
     ap = approach(cfg['pull'], (lat, lng))
-    c = dict(cfg)
+    c = dict(cfg); c['kind'] = kind
     c.update({'name': a['name'], 'lat': lat, 'lng': lng, 'url': 'https://www.mountainproject.com/area/%s' % a['id'],
               'desc': a['sections'].get('Description', ''), 'get': a['sections'].get('Getting There', ''),
               'ph': photo_list(a['id'], 'area')[:10], 'sectors': sectors, 'approach': ap,
@@ -233,6 +286,15 @@ if ent_nodes:
     drv['out'] = {'line': best[0], 'm': best[1]} if best else None
     print('out', best and best[1])
     drv['entrance'] = [E[1], E[0]]
+# Calico Basin: turn off SR-159 onto Calico Basin Road, then to the two lots
+cb = set(n for e in merged if e.get('tags', {}).get('name') == 'Calico Basin Road' for n in e['nodes']) & hw
+print('calico basin junction', [RP[n] for n in cb])
+if cb:
+    J = RP[next(iter(cb))]
+    drv['junction'] = [J[1], J[0]]
+    for k, P in (('cbr', PR), ('cbk', PK)):
+        r = drive(J, (P['lat'], P['lng'])); drv[k] = {'line': r[0], 'm': r[1]} if r else None
+        print(k, r and r[1], r and hav((r[0][-1][1], r[0][-1][0]), (P['lat'], P['lng'])))
 
 # ---------- overlays ----------
 def feats(elements, pred, props):
@@ -260,7 +322,7 @@ for e in osm:
     if e['type'] == 'node' and t.get('amenity') == 'toilets':
         marks.append({'n': '厕所', 'lat': e['lat'], 'lng': e['lon'], 'k': 'wc'})
 
-data = {'built': __import__('datetime').date.today().isoformat(), 'pullouts': [P1, P2], 'crags': out_crags,
+data = {'built': __import__('datetime').date.today().isoformat(), 'pullouts': PULLS, 'crags': out_crags,
         'drive': drv, 'trails': trails, 'roads': roadfc, 'marks': marks}
 js = 'window.DATA=' + json.dumps(data, ensure_ascii=False, separators=(',', ':')) + ';'
 open(os.path.join(ROOT, 'site', 'data.js'), 'w').write(js)

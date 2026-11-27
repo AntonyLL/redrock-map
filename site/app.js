@@ -10,6 +10,38 @@ const CRAG = Object.fromEntries(D.crags.map(c => [c.key, c]));
 const walkShort = c => c.walk.replace(/^约\s*/, '').replace(/（.*$/, '').replace(/\s*分钟/, ' 分钟');
 const walkMin = c => { const m = (walkShort(c).match(/\d+/g) || []).map(Number); return m.length ? Math.max(...m) : null; };
 const TIER = { pick: '首选', good: '同级可刷', warm: '热身', out: '不在范围' };
+const isB = c => c.kind === 'boulder';
+const noun = c => isB(c) ? '石头' : '岩壁';
+
+/* Boulders: which problems are highlighted follows the chosen V cap (kept on this phone).
+   首选 = 不超过上限且约三星以上（至少 5 票）；同级可刷 = 上限和低一级；热身 = 更低；其余不在范围。 */
+let VCAP = 4;
+try { const v = localStorage.getItem('rr-vcap'); if (v !== null && +v >= 0 && +v <= 12) VCAP = +v; } catch (e) {}
+function applyCap() {
+  for (const c of D.crags) {
+    if (!isB(c)) continue;
+    const all = c.sectors.flatMap(x => x.routes);
+    for (const r of all) {
+      const over = r.vn == null || r.vn > VCAP;
+      r.tier = over ? 'out' : (r.s != null && r.s >= 2.75 && r.v >= 5) ? 'pick' : r.vn >= VCAP - 1 ? 'good' : 'warm';
+      r.why = r.vn == null ? '难度不明' : over ? '超出 V' + VCAP : '';
+    }
+    c.count = Object.fromEntries(['pick', 'good', 'warm', 'out'].map(t => [t, all.filter(r => r.tier === t).length]));
+  }
+}
+applyCap();
+function setCap(v) {
+  VCAP = Math.max(0, Math.min(12, v));
+  try { localStorage.setItem('rr-vcap', VCAP); } catch (e) {}
+  applyCap(); renderChips(); renderCard();
+}
+function capBox(after) {
+  const d = el('div', 'cap', `<span>我的抱石上限</span><button aria-label="降一级">−</button><b>V${VCAP}</b><button aria-label="升一级">+</button>`);
+  const [dn, up] = d.querySelectorAll('button');
+  dn.disabled = VCAP <= 0; up.disabled = VCAP >= 12;
+  dn.onclick = () => { setCap(VCAP - 1); after(); }; up.onclick = () => { setCap(VCAP + 1); after(); };
+  return d;
+}
 
 /* ---------------- tiles ---------------- */
 const SRC = {
@@ -22,9 +54,11 @@ const BOX = { // [south, west, north, east]
   mid: [36.128, -115.447, 36.166, -115.414],
   c1: [36.1432, -115.4330, 36.1485, -115.4225],
   c2: [36.1508, -115.4392, 36.1580, -115.4332],
+  ck: [36.1560, -115.4262, 36.1625, -115.4098], // Kraft boulders
+  cr: [36.1425, -115.4245, 36.1485, -115.4180], // Red Spring boulders
 };
 const PLAN = [
-  ['sat', 'big', 10, 15], ['sat', 'mid', 16, 18], ['sat', 'c1', 19, 19], ['sat', 'c2', 19, 19],
+  ['sat', 'big', 10, 15], ['sat', 'mid', 16, 18], ['sat', 'c1', 19, 19], ['sat', 'c2', 19, 19], ['sat', 'ck', 19, 19], ['sat', 'cr', 19, 19],
   ['topo', 'big', 10, 14], ['topo', 'mid', 15, 16],
   ['dem', 'big', 10, 14],
 ];
@@ -46,7 +80,7 @@ function photoUrls() {
     c.ph.forEach(p => out.add(p.u));
     for (const s of c.sectors) {
       s.ph.forEach(p => out.add(p.u));
-      for (const r of s.routes) if (r.tier !== 'out') r.ph.slice(0, 2).forEach(p => out.add(p.u));
+      for (const r of s.routes) if (isB(c) || r.tier !== 'out') r.ph.slice(0, 2).forEach(p => out.add(p.u));
     }
   }
   return [...out];
@@ -57,7 +91,7 @@ const TILE_CACHE = 'rr-data-v1';
 const lineFC = feats => ({ type: 'FeatureCollection', features: feats });
 const line = (coords, props) => ({ type: 'Feature', properties: props || {}, geometry: { type: 'LineString', coordinates: coords } });
 const approachFC = lineFC(D.crags.flatMap(c => [line(c.approach.trail, { key: c.key, kind: 'trail' }), line(c.approach.off, { key: c.key, kind: 'off' })]));
-const driveFC = lineFC(['in1', 'in2', 'out'].filter(k => D.drive[k]).map(k => line(D.drive[k].line, { leg: k })));
+const driveFC = lineFC(['in1', 'in2', 'out', 'cbr', 'cbk'].filter(k => D.drive[k]).map(k => line(D.drive[k].line, { leg: k })));
 
 const map = new maplibregl.Map({
   container: 'map',
@@ -98,15 +132,16 @@ map.addControl(new maplibregl.ScaleControl({ unit: 'metric' }), 'bottom-left');
 
 /* markers */
 const cragMarkers = {};
-function mk(cls, text, lngLat, onClick) {
+function mk(cls, text, lngLat, onClick, anchor) {
   const e = el('div', 'mk ' + cls, esc(text));
   if (onClick) e.addEventListener('click', ev => { ev.stopPropagation(); onClick(); });
-  return new maplibregl.Marker({ element: e, anchor: 'bottom' }).setLngLat(lngLat).addTo(map);
+  return new maplibregl.Marker({ element: e, anchor: anchor || 'bottom' }).setLngLat(lngLat).addTo(map);
 }
 D.marks.forEach(m => mk(m.k === 'wc' ? 'wc ref' : 'ref', m.n, [m.lng, m.lat]));
-D.crags.forEach(c => { cragMarkers[c.key] = mk('', c.zh, [c.lng, c.lat], () => selectCrag(c.key)); });
+D.crags.forEach(c => { cragMarkers[c.key] = mk('', c.zh, [c.lng, c.lat], () => selectCrag(c.key), c.anchor); });
 D.pullouts.forEach(p => mk('pull', 'P ' + p.short, [p.lng, p.lat], () => setView(p.key)));
 if (D.drive.entrance) mk('gate', '入口 / 收费站方向', D.drive.entrance, () => setView('drive'));
+if (D.drive.junction) mk('gate', 'Calico Basin 路口（抱石）', D.drive.junction, () => setView('drive'));
 // one-way arrows along the way in
 (function arrows() {
   const pts = [].concat(D.drive.in1 ? D.drive.in1.line : [], D.drive.in2 ? D.drive.in2.line : []);
@@ -147,18 +182,22 @@ function circle(c, r) {
 /* ---------------- state ---------------- */
 const S = { view: 'drive', crag: null, d3: false, base: 'sat', me: null, heading: null, follow: false, filter: 'all', sector: 0 };
 
+function markTab(v) {
+  document.querySelectorAll('#tabs button').forEach(b => b.classList.toggle('on', b.dataset.view === v));
+  const on = $('#tabs .on'); if (on) on.scrollIntoView({ inline: 'center', block: 'nearest' });
+}
 function setView(v) {
   S.view = v; S.crag = null;
-  document.querySelectorAll('#tabs button').forEach(b => b.classList.toggle('on', b.dataset.view === v));
+  markTab(v);
   renderChips(); highlight(); renderCard();
   if (v === 'drive') {
-    fit([D.drive.entrance, [PULL.p1.lng, PULL.p1.lat], [PULL.p2.lng, PULL.p2.lat]], 15);
+    fit([D.drive.entrance, D.drive.junction].filter(Boolean).concat(D.pullouts.map(p => [p.lng, p.lat])), 15);
   } else {
     const p = PULL[v];
     fit([[p.lng, p.lat]].concat(D.crags.filter(c => c.pull === v).map(c => [c.lng, c.lat])), 17);
   }
 }
-function pad() { return { top: 150, bottom: Math.min(innerHeight * 0.46, 330), left: 30, right: 70 }; }
+function pad() { return { top: 150, bottom: Math.min(innerHeight * 0.46, 330), left: 70, right: 70 }; }
 function fit(pts, maxZoom, focus) {
   const b = new maplibregl.LngLatBounds(pts[0], pts[0]); pts.forEach(p => b.extend(p));
   if (!S.d3) { map.fitBounds(b, { padding: pad(), maxZoom: maxZoom || 18, pitch: 0, bearing: 0, duration: 700 }); return; }
@@ -192,7 +231,7 @@ function tiltUp(focus) {
 function selectCrag(key) {
   const c = CRAG[key];
   S.view = c.pull; S.crag = key; S.sector = 0; S.filter = 'all';
-  document.querySelectorAll('#tabs button').forEach(b => b.classList.toggle('on', b.dataset.view === c.pull));
+  markTab(c.pull);
   renderChips(); highlight(); renderCard();
   const p = PULL[c.pull];
   fit([[p.lng, p.lat], [c.lng, c.lat]].concat(c.approach.trail), 18.5, [c.lng, c.lat]);
@@ -206,7 +245,7 @@ function highlight() {
     const e = cragMarkers[k].getElement();
     e.classList.toggle('on', k === S.crag);
     e.style.zIndex = k === S.crag ? 3 : 1;
-    e.style.display = (S.view === 'drive' || CRAG[k].pull === S.view) ? '' : 'none';
+    e.style.display = CRAG[k].pull === S.view ? '' : 'none';
   }
 }
 function renderChips() {
@@ -214,6 +253,7 @@ function renderChips() {
   if (S.view === 'drive') {
     const b = el('button', 'chip', '进园须知与离线下载'); b.onclick = openInfo; box.appendChild(b);
     const b2 = el('button', 'chip', '今天爬什么'); b2.onclick = () => openInfo('picks'); box.appendChild(b2);
+    const b3 = el('button', 'chip', '抱石摸什么'); b3.onclick = () => openInfo('bpicks'); box.appendChild(b3);
     return;
   }
   D.crags.filter(c => c.pull === S.view).forEach(c => {
@@ -225,12 +265,12 @@ function renderChips() {
 
 /* ---------------- bottom card ---------------- */
 function gpsLine(c) {
-  if (!S.me) return '<div class="gps">点右边“定位”显示你离岩壁多远</div>';
+  if (!S.me) return `<div class="gps">点右边“定位”显示你离${noun(c)}多远</div>`;
   const d = dist(S.me, [c.lng, c.lat]), br = bearing(S.me, [c.lng, c.lat]);
-  if (d < 40) return '<div class="gps near">你已在岩壁附近（定位误差内）· 点“找线”</div>';
+  if (d < 40) return `<div class="gps near">你已在${noun(c)}附近（定位误差内）· 点“找线”</div>`;
   const total = c.approach.trail_m + c.approach.off_m, wm = walkMin(c);
   const left = wm && d < total * 1.3 ? `，大约还要 ${Math.max(1, Math.round(wm * Math.min(1, d / total)))} 分钟` : '';
-  return `<div class="gps">岩壁在你的${compass(br)}方向，直线 ${fmtM(d)}${left}</div>`;
+  return `<div class="gps">${noun(c)}在你的${compass(br)}方向，直线 ${fmtM(d)}${left}</div>`;
 }
 function renderCard() {
   const card = $('#card'); card.hidden = false;
@@ -239,13 +279,14 @@ function renderCard() {
     card.innerHTML = `<h3>开车进园</h3>
       <div class="way">从 Charleston Blvd（159 号公路）一路向西，右转进 Scenic Drive 过收费站。<b>进门后约 ${a} 公里是第一停车点，再往前 ${b} 公里是第二停车点</b>（黄线）。</div>
       <div class="warn">全程单行道：开过第一停车点就不能掉头。两个都去的话先停第一个。离开要把整圈开完，从第二停车点到出口还有约 ${o} 公里（灰色虚线）。</div>
+      ${D.drive.cbk ? `<div class="way"><b>抱石走另一条路：</b>从城里过来，在到 Scenic Drive 入口之前先右转进 Calico Basin Road，不过收费站。约 ${(D.drive.cbr.m / 1000).toFixed(1)} 公里到 Red Spring 停车场，约 ${(D.drive.cbk.m / 1000).toFixed(1)} 公里开到路尽头是 Kraft 停车场。</div>` : ''}
       <div class="row"><button class="btn ghost slim" id="cInfo">须知与离线下载</button><button class="btn slim" id="cP1">看第一停车点</button></div>`;
     $('#cInfo').onclick = () => openInfo(); $('#cP1').onclick = () => setView('p1');
     return;
   }
   if (!S.crag) {
     const p = PULL[S.view];
-    card.innerHTML = `<h3>${esc(p.name)}</h3><div class="sub">点岩壁看走法和线路 · 黑底数字是步行时间</div><ul class="list">` +
+    card.innerHTML = `<h3>${esc(p.name)}</h3><div class="sub">点${p.basin ? '石头' : '岩壁'}看走法和线路 · 黑底数字是步行时间</div>${p.key === 'pk' ? '<div class="warn" style="margin:0 0 6px">停车场满了就停在铺装路的路边，不要停在住户的车道口和有禁停牌的地方。</div>' : ''}<ul class="list">` +
       D.crags.filter(c => c.pull === S.view).map(c => `<li data-k="${c.key}"><b>${esc(c.zh)}</b><span class="etaS">${esc(walkShort(c))}</span><span class="badge pick">★${c.count.pick}</span><span class="badge good">同级 ${c.count.good}</span></li>`).join('') + '</ul>';
     card.querySelectorAll('li').forEach(li => li.onclick = () => selectCrag(li.dataset.k));
     return;
@@ -257,7 +298,7 @@ function renderCard() {
     <div class="badges"><span class="badge pick">★ 首选 ${c.count.pick}</span><span class="badge good">同级可刷 ${c.count.good}</span><span class="badge warm">热身 ${c.count.warm}</span><span class="badge out">不在范围 ${c.count.out}</span></div>
     ${gpsLine(c)}
     <div class="row"><button class="btn" id="cFind">找线 ›</button><button class="btn ghost" id="cWay">走法</button></div>
-    <div id="cWayBox" hidden><div class="way">${esc(c.way)}</div><div class="way"><b>日晒：</b>${esc(c.sun)}</div>${offNote}
+    <div id="cWayBox" hidden><div class="way">${esc(c.way)}</div>${c.sun ? `<div class="way"><b>日晒：</b>${esc(c.sun)}</div>` : ''}${offNote}
       <details><summary class="src">Mountain Project 英文原文</summary><pre class="en">${esc(c.get)}</pre></details></div>`;
   $('#cFind').onclick = () => openPanel(c.key);
   $('#cWay').onclick = () => { const b = $('#cWayBox'); b.hidden = !b.hidden; };
@@ -293,7 +334,7 @@ function neighbours(sec, i) {
   }
   return out;
 }
-function routeCard(sec, r, i) {
+function routeCard(sec, r, i, boulder) {
   const tags = [];
   if (r.p > 1) tags.push(`<span class="tag alert">${r.p} 段</span>`);
   if (r.why) tags.push(`<span class="tag${/传统|混合/.test(r.why) ? ' alert' : ''}">${esc(r.why)}</span>`);
@@ -305,8 +346,8 @@ function routeCard(sec, r, i) {
       <span class="nm"><b>${r.tier === 'pick' ? '★ ' : ''}${esc(r.n)}</b><span>${TIER[r.tier]} · ${starStr(r)}${r.ft ? ' · ' + r.ft + ' 英尺' : ''}</span></span>
       <span class="gr">${esc(r.g || '?')}<span>${esc(r.t || '')}</span></span></summary>
     <div class="body">${tags.join('')}
-      ${nb.length ? `<div class="next">挂完这条不用挪地方，可以顺刷：${nb.join('；')}</div>` : ''}
-      ${r.pro ? `<h5>保护 / 挂片</h5><p>${esc(r.pro)}</p>` : ''}
+      ${nb.length ? `<div class="next">${boulder ? '垫子不用搬远，旁边可以顺刷' : '挂完这条不用挪地方，可以顺刷'}：${nb.join('；')}</div>` : ''}
+      ${r.pro ? `<h5>${boulder ? '垫子 / 保护' : '保护 / 挂片'}</h5><p>${esc(r.pro)}</p>` : ''}
       ${r.loc ? `<h5>位置</h5><p>${esc(r.loc)}</p>` : ''}
       ${r.desc ? `<h5>描述</h5><p>${esc(r.desc)}</p>` : ''}
       ${r.ph.length ? '<div class="phs">' + r.ph.map(p => `<img loading="lazy" src="${esc(p.u)}" data-c="${esc(p.c)}" alt="">`).join('') + '</div>' : ''}
@@ -328,12 +369,15 @@ function openPanel(key) {
   }
   const sec = c.sectors[S.sector];
   if (c.sectors.length > 1 && (sec.desc || sec.get)) body.appendChild(el('div', 'secnote', esc(sec.get || '') + (sec.desc ? '<br>' + esc(sec.desc) : '')));
-  body.appendChild(el('div', 'secnote', '下图按面向岩壁<b>从左到右</b>排列，线的高矮按线路长度画，不是照片。点一条线跳到它的卡片。'));
+  if (isB(c)) body.appendChild(capBox(() => openPanel(key)));
+  body.appendChild(el('div', 'secnote', isB(c) ? '下图按 Mountain Project 上<b>从左到右</b>（绕着石头走）的顺序排列，不是照片。点一条线跳到它的卡片。' : '下图按面向岩壁<b>从左到右</b>排列，线的高矮按线路长度画，不是照片。点一条线跳到它的卡片。'));
   const topo = el('div', 'topo', topoSVG(sec)); body.appendChild(topo);
-  body.appendChild(el('div', 'legend', '<span><i class="pick"></i>★ 首选（运动攀 ≤10d，约三星及以上）</span><span><i></i>同级可刷（5.9–10d）</span><span><i class="warm"></i>热身（≤5.8）</span><span><i class="out"></i>不在范围（超 10d / 传统 / 顶绳）</span>'));
+  body.appendChild(el('div', 'legend', isB(c)
+    ? `<span><i class="pick"></i>★ 首选（≤V${VCAP}，约三星及以上）</span><span><i></i>同级可刷（${VCAP > 0 ? 'V' + (VCAP - 1) + '–' : ''}V${VCAP}）</span>${VCAP > 1 ? `<span><i class="warm"></i>热身（≤V${VCAP - 2}）</span>` : ''}<span><i class="out"></i>不在范围（超 V${VCAP}）</span>`
+    : '<span><i class="pick"></i>★ 首选（运动攀 ≤10d，约三星及以上）</span><span><i></i>同级可刷（5.9–10d）</span><span><i class="warm"></i>热身（≤5.8）</span><span><i class="out"></i>不在范围（超 10d / 传统 / 顶绳）</span>'));
   const ph = (sec.ph.length ? sec.ph : c.ph);
   if (ph.length) {
-    body.appendChild(el('div', 'secnote', '岩壁照片（部分带有网友画的线，点开放大）：'));
+    body.appendChild(el('div', 'secnote', noun(c) + '照片（部分带有网友画的线，点开放大）：'));
     body.appendChild(el('div', 'phs', ph.map(p => `<img loading="lazy" src="${esc(p.u)}" data-c="${esc(p.c)}" alt="">`).join('')));
   }
   const fl = el('div', 'filters');
@@ -344,7 +388,7 @@ function openPanel(key) {
   sec.routes.forEach((r, i) => {
     if (S.filter === 'can' && r.tier === 'out') return;
     if (S.filter === 'pick' && r.tier !== 'pick') return;
-    body.appendChild(routeCard(sec, r, i));
+    body.appendChild(routeCard(sec, r, i, isB(c)));
   });
   body.appendChild(el('div', 'src', `线路资料、星级和照片来自 <a href="${esc(sec.url)}" target="_blank" rel="noopener">Mountain Project</a>，照片版权归各拍摄者。整理于 ${esc(D.built)}。`));
   topo.querySelectorAll('g[data-i]').forEach(g => g.addEventListener('click', () => {
@@ -366,15 +410,16 @@ $('#lightClose').onclick = () => { $('#light').hidden = true; };
 /* ---------------- info / offline ---------------- */
 const isStandalone = navigator.standalone === true || matchMedia('(display-mode: standalone)').matches;
 const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent);
-function topPicks() {
+function topPicks(boulder) {
   const rows = [];
-  for (const c of D.crags) for (const s of c.sectors) s.routes.forEach((r, i) => { if (r.tier === 'pick') rows.push({ c, s, r, i }); });
+  for (const c of D.crags) if (isB(c) === boulder) for (const s of c.sectors) s.routes.forEach((r, i) => { if (r.tier === 'pick') rows.push({ c, s, r, i }); });
   rows.sort((a, b) => (b.r.s - a.r.s) || (b.r.v - a.r.v));
   return rows;
 }
+const pickLi = (x, n) => `<li data-n="${n}"><b>★ ${esc(x.r.n)}</b> ${esc(x.r.g)} · ${starStr(x.r)}<br><span class="src">${esc(x.c.zh)}${x.c.sectors.length > 1 ? ' · ' + esc(x.s.name) : ''} · ${esc(PULL[x.c.pull].short)} · 左起第 ${x.i + 1} 条</span></li>`;
 function openInfo(focus) {
   const b = $('#infoBody');
-  const picks = topPicks();
+  const picks = topPicks(false), bpicks = topPicks(true);
   b.innerHTML = `
   <div class="box" id="offBox">
     <h3 style="margin-top:0">离线数据</h3>
@@ -382,7 +427,7 @@ function openInfo(focus) {
     <p id="offState">正在检查…</p>
     <div class="bar"><i id="offBar"></i></div>
     <div class="row"><button class="btn" id="offGo">下载离线数据</button></div>
-    <p class="src">包含卫星图、地形图、三维地形和岩壁照片，约 80–100 MB，请在 Wi-Fi 下进行。下完后开飞行模式再打开一次，确认地图和照片都在。</p>
+    <p class="src">包含卫星图、地形图、三维地形和岩壁照片，约 90–110 MB，请在 Wi-Fi 下进行。下完后开飞行模式再打开一次，确认地图和照片都在。</p>
   </div>
   <div class="box"><h3 style="margin-top:0">进园</h3><ul>
     <li><b>10 月到次年 5 月，8:00–17:00 之间入园要在 recreation.gov 预约时段</b>；8:00 前入园不用预约。Scenic Drive 早上 6:00 开门。</li>
@@ -391,6 +436,13 @@ function openInfo(focus) {
     <li>第二停车点车位少，周末和假日一早就满。</li>
     <li>冬季关门早，天黑前（11 月底日落约 16:30）回到车上并开出环线。</li>
   </ul></div>
+  <div class="box"><h3 style="margin-top:0">抱石（Calico Basin）</h3><ul>
+    <li>Kraft 和 Red Spring 都在 Scenic Drive 外面，走 Calico Basin Road 进去，<b>不过收费站，不用预约</b>。</li>
+    <li>Kraft 停车场在路的尽头，位子不多；满了停铺装路的路边，<b>不要停在住户车道口和禁停牌处</b>。</li>
+    <li>Red Spring 是野餐区，网上查到冬季（11 月到 2 月）开放到 17:00 左右，以现场牌子为准。</li>
+    <li>Kraft 海拔低、很晒也招风，适合冬天；换着面爬，全天都能找到阴面或阳面。</li>
+    <li>星级和难度来自网友；落地区和下石头的路线到现场先看好。</li>
+  </ul></div>
   <div class="box"><h3 style="margin-top:0">岩石与安全</h3><ul>
     <li><b>雨后砂岩不能爬</b>：湿的砂岩很脆，岩点会断。下过雨至少等 24–72 小时，地面下面的沙子还是湿的就别爬。</li>
     <li>地图上的蓝点在窄走廊里（Black Corridor、The Rift）会漂，最后几十米按文字和照片认路。</li>
@@ -398,17 +450,24 @@ function openInfo(focus) {
   </ul></div>
   <div class="box" id="picksBox"><h3 style="margin-top:0">今天爬什么（运动攀 ≤5.10d 的首选线）</h3>
     <p class="src">按 Mountain Project 星级从高到低。点一条直接打开它所在的岩壁。</p>
-    <ul class="list">${picks.map((x, n) => `<li data-n="${n}"><b>★ ${esc(x.r.n)}</b> ${esc(x.r.g)} · ${starStr(x.r)}<br><span class="src">${esc(x.c.zh)}${x.c.sectors.length > 1 ? ' · ' + esc(x.s.name) : ''} · ${esc(PULL[x.c.pull].short)} · 左起第 ${x.i + 1} 条</span></li>`).join('')}</ul></div>
+    <ul class="list">${picks.map(pickLi).join('')}</ul></div>
+  <div class="box" id="bpicksBox"><h3 style="margin-top:0">抱石摸什么（不超过 V${VCAP} 的首选线）</h3>
+    <div id="capSlot"></div>
+    <p class="src">按 Mountain Project 星级从高到低。点一条直接打开它所在的石头。</p>
+    <ul class="list">${bpicks.map(pickLi).join('') || '<li>这个上限以内没有约三星以上的线，把上限调高一级看看。</li>'}</ul></div>
   <p class="src">底图：Esri World Imagery、USGS Topo、USGS 3DEP 高程；道路与小路 © OpenStreetMap 贡献者；线路资料来自 Mountain Project。仅供个人使用。数据整理于 ${esc(D.built)}。</p>`;
-  b.querySelectorAll('#picksBox li').forEach(li => li.onclick = () => {
-    const x = picks[+li.dataset.n]; $('#info').hidden = true; selectCrag(x.c.key);
+  const wire = (sel, list) => b.querySelectorAll(sel + ' li[data-n]').forEach(li => li.onclick = () => {
+    const x = list[+li.dataset.n]; $('#info').hidden = true; selectCrag(x.c.key);
     S.sector = x.c.sectors.indexOf(x.s); openPanel(x.c.key);
     const d = $('#r' + x.r.id); if (d) { d.open = true; d.scrollIntoView({ block: 'center' }); }
   });
+  wire('#picksBox', picks); wire('#bpicksBox', bpicks);
+  $('#capSlot').appendChild(capBox(() => openInfo('bpicks')));
   $('#offGo').onclick = download;
   $('#info').hidden = false;
   checkOffline();
   if (focus === 'picks') $('#picksBox').scrollIntoView();
+  else if (focus === 'bpicks') $('#bpicksBox').scrollIntoView();
   else b.scrollTop = 0;
 }
 $('#infoBack').onclick = () => { $('#info').hidden = true; };
