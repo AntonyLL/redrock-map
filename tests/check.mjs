@@ -58,4 +58,5 @@ assert.ok(/body\.wide \.mk\.b:not\(\.on\) \.l\{display:none\}/.test(readFileSync
 // 关地形只能走 flatThenTilt()/flat3dOff()：别处直接 setTerrain(null) 会让地图库的镜头高度卡在 0，再开三维就是空白
 assert.equal((app.match(/setTerrain\(null\)/g) || []).length, 3, 'setTerrain(null) 只应出现在 flatThenTilt、tiltUp 的重试和 flat3dOff 里');
 assert.ok(!/easeTo\(\{[^}]*pitch/.test(app), '不要用动画改俯仰角，按 tiltUp() 的做法用 jumpTo');
+assert.ok(/function flatThenTilt\(center, zoom\) \{\n  center = maplibregl\.LngLat\.convert\(center\)\.toArray\(\)/.test(app), 'flatThenTilt 要先把 center 统一成 [lng, lat]，否则高程图的网址会算成 NaN');
 console.log('ok', D.crags.length, 'crags', total, 'routes', btotal, 'boulder problems');

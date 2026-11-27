@@ -231,6 +231,7 @@ function goTo(center, zoom) {
 let tiltSeq = 0;
 const want = { zoom: 16, center: null };
 function flatThenTilt(center, zoom) {
+  center = maplibregl.LngLat.convert(center).toArray(); // callers pass either [lng, lat] or a LngLat
   const bearing = map.getBearing();
   map.stop(); map._elevationFreeze = false; map.setTerrain(null);
   map.jumpTo({ center, zoom, bearing, pitch: 0 });
