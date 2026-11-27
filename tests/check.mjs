@@ -53,4 +53,6 @@ assert.ok(readFileSync('site/style.css', 'utf8').includes('[hidden]{display:none
 assert.ok(!/fitBounds\([^)]*pitch: S\.d3/.test(app) && /function tiltUp/.test(app), '三维下不要直接 fitBounds 带倾角，改用 fit()');
 assert.ok(/function applyCap\(\)/.test(app) && /r\.vn > VCAP/.test(app), '页面里必须保留按上限给抱石线分档的 applyCap');
 for (const p of D.pullouts) assert.ok(readFileSync('site/index.html', 'utf8').includes(`data-view="${p.key}"`), '顶部缺少标签：' + p.key);
+// 抱石互相只隔十几米：拉远时必须缩成编号圆点，否则标记叠在一起会点错石头
+assert.ok(/body\.wide \.mk\.b:not\(\.on\) \.l\{display:none\}/.test(readFileSync('site/style.css', 'utf8')) && /classList\.toggle\('wide'/.test(app), '抱石标记拉远时要缩成编号圆点');
 console.log('ok', D.crags.length, 'crags', total, 'routes', btotal, 'boulder problems');

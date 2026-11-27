@@ -140,10 +140,17 @@ function mk(cls, text, lngLat, onClick, anchor) {
   return new maplibregl.Marker({ element: e, anchor: anchor || 'bottom' }).setLngLat(lngLat).addTo(map);
 }
 D.marks.forEach(m => mk(m.k === 'wc' ? 'wc ref' : 'ref', m.n, [m.lng, m.lat]));
-D.crags.forEach(c => { cragMarkers[c.key] = mk('', c.zh, [c.lng, c.lat], () => selectCrag(c.key), c.anchor); });
+// Boulders sit a few metres apart: zoomed out they show as numbered dots (same numbers as the list), names appear when zoomed in.
+const NUM = {};
+D.pullouts.forEach(p => D.crags.filter(c => c.pull === p.key && isB(c)).forEach((c, i) => { NUM[c.key] = i + 1; }));
+const numTag = c => NUM[c.key] ? `<i class="no">${NUM[c.key]}</i>` : '';
+D.crags.forEach(c => {
+  const m = cragMarkers[c.key] = mk(isB(c) ? 'b' : '', c.zh, [c.lng, c.lat], () => selectCrag(c.key), c.anchor);
+  if (isB(c)) m.getElement().innerHTML = `<i class="no">${NUM[c.key]}</i><span class="l">${esc(c.zh)}</span>`;
+});
 D.pullouts.forEach(p => mk('pull', 'P ' + p.short, [p.lng, p.lat], () => setView(p.key)));
 if (D.drive.entrance) mk('gate', '入口 / 收费站方向', D.drive.entrance, () => setView('drive'));
-if (D.drive.junction) mk('gate', 'Calico Basin 路口（抱石）', D.drive.junction, () => setView('drive'));
+if (D.drive.junction) mk('gate', 'Calico Basin 路口（抱石）', D.drive.junction, () => setView('drive'), 'right');
 // one-way arrows along the way in
 (function arrows() {
   const pts = [].concat(D.drive.in1 ? D.drive.in1.line : [], D.drive.in2 ? D.drive.in2.line : []);
@@ -156,7 +163,8 @@ if (D.drive.junction) mk('gate', 'Calico Basin 路口（抱石）', D.drive.junc
     }
   }
 })();
-map.on('zoom', () => document.body.classList.toggle('far', map.getZoom() < 16.6));
+map.on('zoom', () => { document.body.classList.toggle('far', map.getZoom() < 16.6); document.body.classList.toggle('wide', map.getZoom() < 17.6); });
+document.body.classList.add('wide');
 document.body.classList.add('far');
 
 /* ---------------- geo helpers ---------------- */
@@ -283,7 +291,7 @@ function renderChips() {
     return;
   }
   D.crags.filter(c => c.pull === S.view).forEach(c => {
-    const b = el('button', 'chip' + (c.key === S.crag ? ' on' : ''), `${esc(c.zh)} <span class="t">${esc(walkShort(c))}</span> <small>★${c.count.pick}</small>`);
+    const b = el('button', 'chip' + (c.key === S.crag ? ' on' : ''), `${numTag(c)}${esc(c.zh)} <span class="t">${esc(walkShort(c))}</span> <small>★${c.count.pick}</small>`);
     b.onclick = () => selectCrag(c.key); box.appendChild(b);
   });
   const on = $('#chips .on'); if (on) on.scrollIntoView({ inline: 'center', block: 'nearest' });
@@ -312,8 +320,8 @@ function renderCard() {
   }
   if (!S.crag) {
     const p = PULL[S.view];
-    card.innerHTML = `<h3>${esc(p.name)}</h3><div class="sub">点${p.basin ? '石头' : '岩壁'}看走法和线路 · 黑底数字是步行时间</div>${p.key === 'pk' ? '<div class="warn" style="margin:0 0 6px">停车场满了就停在铺装路的路边，不要停在住户的车道口和有禁停牌的地方。</div>' : ''}<ul class="list">` +
-      D.crags.filter(c => c.pull === S.view).map(c => `<li data-k="${c.key}"><b>${esc(c.zh)}</b><span class="etaS">${esc(walkShort(c))}</span><span class="badge pick">★${c.count.pick}</span><span class="badge good">同级 ${c.count.good}</span></li>`).join('') + '</ul>';
+    card.innerHTML = `<h3>${esc(p.name)}</h3><div class="sub">${p.basin ? '点石头看走法和线路，编号和地图上的圆点对应' : '点岩壁看走法和线路'} · 黑底数字是步行时间</div>${p.key === 'pk' ? '<div class="warn" style="margin:0 0 6px">停车场满了就停在铺装路的路边，不要停在住户的车道口和有禁停牌的地方。</div>' : ''}<ul class="list">` +
+      D.crags.filter(c => c.pull === S.view).map(c => `<li data-k="${c.key}">${numTag(c)}<b>${esc(c.zh)}</b><span class="etaS">${esc(walkShort(c))}</span><span class="badge pick">★${c.count.pick}</span><span class="badge good">同级 ${c.count.good}</span></li>`).join('') + '</ul>';
     card.querySelectorAll('li').forEach(li => li.onclick = () => selectCrag(li.dataset.k));
     return;
   }
