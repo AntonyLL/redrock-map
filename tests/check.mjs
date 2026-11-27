@@ -34,4 +34,6 @@ for (const h of ['server.arcgisonline.com', 'basemap.nationalmap.gov', 's3.amazo
 assert.ok(/TILE_CACHE = 'rr-data-v1'/.test(app) && /DATA = 'rr-data-v1'/.test(sw), '页面和离线脚本的缓存名必须一致');
 // 用 hidden 属性收起的面板不能被样式里的 display 盖掉，否则会挡住整页
 assert.ok(readFileSync('site/style.css', 'utf8').includes('[hidden]{display:none!important}'), '样式里必须保留 [hidden]{display:none!important}');
+// 三维下换地方必须走 fit()/tiltUp()：先平着跳过去、等高程到位再倾斜。带地形直接做动画会让镜头掉到地面以下。
+assert.ok(!/fitBounds\([^)]*pitch: S\.d3/.test(app) && /function tiltUp/.test(app), '三维下不要直接 fitBounds 带倾角，改用 fit()');
 console.log('ok', D.crags.length, 'crags', total, 'routes');

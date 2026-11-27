@@ -159,9 +159,35 @@ function setView(v) {
   }
 }
 function pad() { return { top: 150, bottom: Math.min(innerHeight * 0.46, 330), left: 30, right: 70 }; }
-function fit(pts, maxZoom) {
+function fit(pts, maxZoom, focus) {
   const b = new maplibregl.LngLatBounds(pts[0], pts[0]); pts.forEach(p => b.extend(p));
-  map.fitBounds(b, { padding: pad(), maxZoom: maxZoom || 18, pitch: S.d3 ? 62 : 0, bearing: S.d3 ? map.getBearing() : 0, duration: 700 });
+  if (!S.d3) { map.fitBounds(b, { padding: pad(), maxZoom: maxZoom || 18, pitch: 0, bearing: 0, duration: 700 }); return; }
+  // In 3D, never animate into a place whose elevation tiles are not loaded yet: the camera ends up under
+  // the terrain and the map turns to stripes or goes blank. Jump there flat, then tilt once elevation is in.
+  const bearing = map.getBearing();
+  map.stop(); map.setTerrain(null);
+  const cam = map.cameraForBounds(b, { padding: pad(), maxZoom: maxZoom || 18, bearing });
+  map.jumpTo({ center: cam.center, zoom: cam.zoom, bearing, pitch: 0 });
+  tiltUp(focus);
+}
+function goTo(center, zoom) {
+  if (!S.d3) { map.easeTo({ center, zoom }); return; }
+  const bearing = map.getBearing();
+  map.stop(); map.setTerrain(null); map.jumpTo({ center, zoom, bearing, pitch: 0 }); tiltUp(center);
+}
+let tiltSeq = 0;
+function tiltUp(focus) {
+  const seq = ++tiltSeq, btn = $('#btn3d');
+  btn.classList.add('busy');
+  map.setTerrain({ source: 'dem', exaggeration: 1 });
+  let done = false;
+  const go = () => {
+    if (done || seq !== tiltSeq || !S.d3) return; done = true; btn.classList.remove('busy');
+    const o = { pitch: 60, duration: 800 };
+    if (focus) { o.center = focus; o.zoom = Math.max(map.getZoom(), 16.6); o.padding = { top: 120, bottom: Math.min(innerHeight * 0.4, 300), left: 0, right: 0 }; }
+    map.easeTo(o);
+  };
+  map.once('idle', go); setTimeout(go, 4000);
 }
 function selectCrag(key) {
   const c = CRAG[key];
@@ -169,7 +195,7 @@ function selectCrag(key) {
   document.querySelectorAll('#tabs button').forEach(b => b.classList.toggle('on', b.dataset.view === c.pull));
   renderChips(); highlight(); renderCard();
   const p = PULL[c.pull];
-  fit([[p.lng, p.lat], [c.lng, c.lat]].concat(c.approach.trail), 18.5);
+  fit([[p.lng, p.lat], [c.lng, c.lat]].concat(c.approach.trail), 18.5, [c.lng, c.lat]);
 }
 function highlight() {
   const f = ['==', ['get', 'key'], S.crag || ''];
@@ -429,7 +455,7 @@ function toast(t) { const e = $('#toast'); e.textContent = t; e.hidden = false; 
 let meMarker = null, watchId = null, wake = null;
 function startGPS() {
   if (!navigator.geolocation) { toast('这台设备不支持定位'); return; }
-  if (watchId != null) { if (S.me) map.easeTo({ center: S.me, zoom: Math.max(map.getZoom(), 17) }); else toast('正在等定位，没有信号时第一次可能要一分钟'); return; }
+  if (watchId != null) { if (S.me) goTo(S.me, Math.max(map.getZoom(), 17)); else toast('正在等定位，没有信号时第一次可能要一分钟'); return; }
   $('#btnMe').classList.add('busy');
   watchId = navigator.geolocation.watchPosition(pos => {
     const first = !S.me;
@@ -441,7 +467,7 @@ function startGPS() {
     map.getSource('acc').setData(lineFC([circle(S.me, Math.min(pos.coords.accuracy || 0, 300))]));
     $('#btnMe').classList.remove('busy'); $('#btnMe').classList.add('on');
     const inBox = S.me[1] > BOX.big[0] && S.me[1] < BOX.big[2] && S.me[0] > BOX.big[1] && S.me[0] < BOX.big[3];
-    if (first) { if (inBox) map.easeTo({ center: S.me, zoom: Math.max(map.getZoom(), 16) }); else toast('已定位，但你现在不在 Red Rock 范围内，到了以后蓝点会出现在地图上'); }
+    if (first) { if (inBox) goTo(S.me, Math.max(map.getZoom(), 16)); else toast('已定位，但你现在不在 Red Rock 范围内，到了以后蓝点会出现在地图上'); }
     else if (S.follow && inBox) map.easeTo({ center: S.me, duration: 500 });
     if (S.crag && !$('#card').hidden) { const g = $('#card .gps'); if (g) g.outerHTML = gpsLine(CRAG[S.crag]); }
   }, err => {
@@ -478,7 +504,7 @@ async function toggleFollow() {
   window.addEventListener('deviceorientation', onOrient, true);
   S.follow = true; $('#btnLook').classList.add('on');
   startGPS();
-  if (S.me) map.easeTo({ center: S.me, zoom: Math.max(map.getZoom(), 17), pitch: S.d3 ? 72 : 0 });
+  if (S.me) goTo(S.me, Math.max(map.getZoom(), 17));
   toast('地图会跟着手机转：举起手机，屏幕上方就是你面对的方向');
 }
 $('#btnLook').hidden = false;
@@ -490,17 +516,11 @@ $('#btn3d').onclick = () => {
   $('#btn3d').textContent = S.d3 ? '2D' : '3D';
   $('#btn3d').classList.toggle('on', S.d3);
   if (S.d3) {
-    // Tilt only after the elevation tiles for this view have arrived; tilting earlier leaves the camera
-    // at sea level under the terrain and the map goes blank.
-    $('#btn3d').classList.add('busy');
-    map.setTerrain({ source: 'dem', exaggeration: 1 });
-    let done = false;
-    const go = () => { if (done || !S.d3) return; done = true; $('#btn3d').classList.remove('busy'); map.easeTo({ pitch: 60, duration: 800 }); };
-    map.once('idle', go); setTimeout(go, 4000);
+    tiltUp(S.crag ? [CRAG[S.crag].lng, CRAG[S.crag].lat] : null);
     toast('三维：两指上下拖改变俯仰，两指旋转换方向');
   } else {
-    $('#btn3d').classList.remove('busy');
-    map.easeTo({ pitch: 0, bearing: 0, duration: 600 });
+    tiltSeq++; $('#btn3d').classList.remove('busy');
+    map.easeTo({ pitch: 0, bearing: 0, padding: { top: 0, bottom: 0, left: 0, right: 0 }, duration: 600 });
     map.once('moveend', () => { if (!S.d3) map.setTerrain(null); });
   }
 };
