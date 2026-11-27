@@ -235,7 +235,31 @@ function flatThenTilt(center, zoom) {
   map.stop(); map._elevationFreeze = false; map.setTerrain(null);
   map.jumpTo({ center, zoom, bearing, pitch: 0 });
   want.zoom = zoom; want.center = center;
-  tiltUp(false);
+  const seq = ++tiltSeq;
+  $('#btn3d').classList.add('busy');
+  // Have the elevation tiles around the target on the phone first. Without this the quick jumps cancel
+  // elevation downloads that are still running and the terrain keeps holes (blank patches) there.
+  ensureDem(center).then(() => { if (seq === tiltSeq && S.d3) tiltUp(false); });
+}
+function demUrlsAround(c) {
+  const out = [];
+  for (let z = 10; z <= 14; z++) {
+    const x = lon2x(c[0], z), y = lat2y(c[1], z), r = z >= 13 ? 1 : 0;
+    for (let dx = -r; dx <= r; dx++) for (let dy = -r; dy <= r; dy++) out.push(SRC.dem(z, x + dx, y + dy));
+  }
+  return out;
+}
+async function ensureDem(c) {
+  if (!('caches' in window)) return;
+  try {
+    const cache = await caches.open(TILE_CACHE);
+    const jobs = demUrlsAround(c).map(async u => {
+      if (await cache.match(u)) return;
+      const r = await fetch(u, { mode: 'cors', credentials: 'omit' });
+      if (r.ok) await cache.put(u, r);
+    });
+    await Promise.race([Promise.allSettled(jobs), new Promise(res => setTimeout(res, 7000))]);
+  } catch (e) { errs.push('dem-prefetch: ' + e.message); }
 }
 function groundHeight() {
   try {
@@ -260,7 +284,7 @@ function tiltUp(retried) {
       setTimeout(() => {
         if (seq !== tiltSeq || !S.d3) return;
         const el = map.transform.elevation || 0;
-        if (map.getPitch() >= 50 && el > 300) { setTimeout(() => { if (seq === tiltSeq) reloadBase(); }, 900); setTimeout(() => { if (seq === tiltSeq) redrawTerrain(); }, 3000); return; }
+        if (map.getPitch() >= 50 && el > 300) { [400, 1500, 3000].forEach(ms => setTimeout(() => { if (seq === tiltSeq) redrawTerrain(); }, ms)); return; }
         errs.push('tilt-failed p=' + map.getPitch().toFixed(1) + ' z=' + map.getZoom().toFixed(2) + ' el=' + Math.round(el) + (retried ? ' (retry)' : ''));
         if (retried) { flat3dOff('这里的三维地形没有显示出来，已切回二维'); return; }
         map.stop(); map._elevationFreeze = false; map.setTerrain(null);
@@ -281,17 +305,6 @@ function redrawTerrain() {
   if (!S.d3 || !map.terrain) return;
   try { map.terrain.tileManager.freeRtt(); } catch (e) {}
   map.triggerRepaint();
-}
-/* The flat-then-tilt jumps cancel satellite tiles that are still downloading, and the library does not ask
-   for them again until the view changes: blank patches next to the crag. Ask again once the tilt is done. */
-function reloadBase() {
-  if (!S.d3) return;
-  const id = S.base === 'sat' ? 'sat' : 'topo';
-  try {
-    const tm = map.style.tileManagers && map.style.tileManagers[id];
-    if (tm && tm.reload) tm.reload(); else map.getSource(id).setTiles([SRC[id]('{z}', '{x}', '{y}')]);
-  } catch (e) { errs.push('reload: ' + e.message); }
-  setTimeout(redrawTerrain, 800);
 }
 map.on('movestart', () => { rttFresh = false; });
 map.on('idle', () => { if (S.d3 && !rttFresh) { rttFresh = true; redrawTerrain(); } });
