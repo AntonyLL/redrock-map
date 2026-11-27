@@ -227,8 +227,10 @@ function flatThenTilt(center, zoom) {
   const bearing = map.getBearing();
   map.stop(); map.setTerrain(null);
   map.jumpTo({ center, zoom, bearing, pitch: 0 });
+  want.zoom = zoom;
   tiltUp();
 }
+const want = { zoom: 16 };
 function groundKnown() {
   try {
     if (!map.isSourceLoaded('dem')) return false;
@@ -237,7 +239,7 @@ function groundKnown() {
     return h > 300; // the whole area lies above 1000 m; 0 means "not loaded yet"
   } catch (e) { return map.isSourceLoaded('dem'); }
 }
-function tiltUp() {
+function tiltUp(retried) {
   const seq = ++tiltSeq, btn = $('#btn3d'), t0 = Date.now();
   btn.classList.add('busy');
   map.setTerrain({ source: 'dem', exaggeration: 1 });
@@ -248,7 +250,13 @@ function tiltUp() {
       map.easeTo({ pitch: 60, duration: 800 });
       map.once('moveend', () => setTimeout(() => {
         if (seq !== tiltSeq || !S.d3 || map.isMoving()) return;
-        if (map.getPitch() < 50) { errs.push('tilt-failed p=' + map.getPitch().toFixed(1)); flat3dOff('这里的三维地形没有显示出来，已切回二维'); }
+        if (map.getPitch() >= 50) return;
+        errs.push('tilt-failed p=' + map.getPitch().toFixed(1) + ' z=' + map.getZoom().toFixed(2) + ' el=' + Math.round(map.transform.elevation || 0) + (retried ? ' (retry)' : ''));
+        if (retried) { flat3dOff('这里的三维地形没有显示出来，已切回二维'); return; }
+        // One more go from a clean flat state at the zoom we meant to have.
+        const c = map.getCenter().toArray(), b = map.getBearing();
+        map.stop(); map.setTerrain(null); map.jumpTo({ center: c, zoom: want.zoom, bearing: b, pitch: 0 });
+        setTimeout(() => { if (seq === tiltSeq && S.d3) tiltUp(true); }, 300);
       }, 400));
     } else if (Date.now() - t0 > 9000) {
       errs.push('dem-timeout'); flat3dOff('地形数据没有加载到，先用二维（联网或下载离线数据后再试）');
