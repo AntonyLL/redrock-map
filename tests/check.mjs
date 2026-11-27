@@ -31,4 +31,6 @@ const sw = readFileSync('site/sw.js', 'utf8'), app = readFileSync('site/app.js',
 for (const h of ['server.arcgisonline.com', 'basemap.nationalmap.gov', 's3.amazonaws.com', 'mountainproject.com'])
   assert.ok(sw.includes(h) && (app.includes(h) || readFileSync('site/data.js', 'utf8').includes(h)), '离线缓存域名与页面用到的不一致：' + h);
 assert.ok(/TILE_CACHE = 'rr-data-v1'/.test(app) && /DATA = 'rr-data-v1'/.test(sw), '页面和离线脚本的缓存名必须一致');
+// 用 hidden 属性收起的面板不能被样式里的 display 盖掉，否则会挡住整页
+assert.ok(readFileSync('site/style.css', 'utf8').includes('[hidden]{display:none!important}'), '样式里必须保留 [hidden]{display:none!important}');
 console.log('ok', D.crags.length, 'crags', total, 'routes');

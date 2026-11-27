@@ -30,11 +30,14 @@ self.addEventListener('fetch', e => {
     return;
   }
   if (url.origin === location.origin) {
+    // Fresh copy when the network answers within 2.5 s, otherwise the saved copy (no signal in the park).
     e.respondWith(caches.open(SHELL).then(async c => {
       const hit = await c.match(req, { ignoreSearch: true });
-      const net = fetch(req).then(r => { if (r.ok) c.put(req, r.clone()); return r; }).catch(() => null);
-      if (hit) { e.waitUntil(net); return hit; }
-      return (await net) || new Response('离线，且这个文件还没有保存。', { status: 504 });
+      const net = fetch(req, { cache: 'no-cache' }).then(r => { if (r.ok) c.put(req, r.clone()); return r.ok ? r : null; }).catch(() => null);
+      if (!hit) return (await net) || new Response('离线，且这个文件还没有保存。', { status: 504 });
+      e.waitUntil(net);
+      const fresh = await Promise.race([net, new Promise(res => setTimeout(() => res(null), 2500))]);
+      return fresh || hit;
     }));
   }
 });

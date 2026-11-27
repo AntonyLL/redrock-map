@@ -18,8 +18,8 @@ const SRC = {
 const BOX = { // [south, west, north, east]
   big: [36.08, -115.52, 36.19, -115.38],
   mid: [36.126, -115.447, 36.161, -115.413],
-  calico: [36.1425, -115.442, 36.1595, -115.4215],
-  c1: [36.1438, -115.4328, 36.1480, -115.4232],
+  calico: [36.1395, -115.4445, 36.1610, -115.4170],
+  c1: [36.1432, -115.4330, 36.1485, -115.4225],
   c2: [36.1508, -115.4392, 36.1580, -115.4332],
 };
 const PLAN = [
@@ -480,7 +480,6 @@ async function toggleFollow() {
 }
 $('#btnLook').hidden = false;
 $('#btnLook').onclick = toggleFollow;
-map.on('dragstart', () => { if (S.follow && false) S.follow = false; });
 
 /* ---------------- 2D / 3D / base ---------------- */
 $('#btn3d').onclick = () => {
