@@ -260,7 +260,7 @@ function tiltUp(retried) {
       setTimeout(() => {
         if (seq !== tiltSeq || !S.d3) return;
         const el = map.transform.elevation || 0;
-        if (map.getPitch() >= 50 && el > 300) return;
+        if (map.getPitch() >= 50 && el > 300) { [300, 1200, 2600].forEach(ms => setTimeout(() => { if (seq === tiltSeq) redrawTerrain(); }, ms)); return; }
         errs.push('tilt-failed p=' + map.getPitch().toFixed(1) + ' z=' + map.getZoom().toFixed(2) + ' el=' + Math.round(el) + (retried ? ' (retry)' : ''));
         if (retried) { flat3dOff('这里的三维地形没有显示出来，已切回二维'); return; }
         map.stop(); map._elevationFreeze = false; map.setTerrain(null);
@@ -273,6 +273,17 @@ function tiltUp(retried) {
   };
   setTimeout(tick, 200);
 }
+/* In 3D the satellite layer is drawn onto the terrain through cached textures. After the jump-based moves
+   above, some of those textures were left showing blank patches although the tiles had arrived. Redraw them
+   once whenever the map settles. */
+let rttFresh = false;
+function redrawTerrain() {
+  if (!S.d3 || !map.terrain) return;
+  try { map.terrain.tileManager.freeRtt(); } catch (e) {}
+  map.triggerRepaint();
+}
+map.on('movestart', () => { rttFresh = false; });
+map.on('idle', () => { if (S.d3 && !rttFresh) { rttFresh = true; redrawTerrain(); } });
 function flat3dOff(msg) {
   tiltSeq++; S.d3 = false;
   const btn = $('#btn3d'); btn.classList.remove('busy', 'on'); btn.textContent = '3D';
