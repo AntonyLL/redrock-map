@@ -219,55 +219,64 @@ function goTo(center, zoom) {
   if (!S.d3) { map.easeTo({ center, zoom }); return; }
   flatThenTilt(center, zoom);
 }
-/* 3D camera moves. Animating with terrain on into a place whose elevation tiles are not loaded leaves the
-   camera under the ground (blank map or stripes). So: terrain off, jump there flat, terrain on, wait until
-   the elevation under the centre is really known, and only then tilt. */
+/* 3D camera moves.
+   Two traps in the map library, both found by testing:
+   1. Animating with terrain on into a place whose elevation tiles are not loaded leaves the camera under the
+      ground (blank map or stripes).
+   2. After terrain has been switched off once, switching it on again does not refresh by itself: elevation
+      tiles are not requested and the camera's ground height stays 0 until a jumpTo. An animated tilt from
+      that state stops halfway with a blank map.
+   So every 3D move is: terrain off, jump there flat, terrain on, nudge the map, wait until the ground height
+   under the centre is really known, write it into the camera, and only then jump (not animate) to the tilt. */
 let tiltSeq = 0;
+const want = { zoom: 16, center: null };
 function flatThenTilt(center, zoom) {
   const bearing = map.getBearing();
-  map.stop(); map.setTerrain(null);
+  map.stop(); map._elevationFreeze = false; map.setTerrain(null);
   map.jumpTo({ center, zoom, bearing, pitch: 0 });
-  want.zoom = zoom;
-  tiltUp();
+  want.zoom = zoom; want.center = center;
+  tiltUp(false);
 }
-const want = { zoom: 16 };
-function groundKnown() {
+function groundHeight() {
   try {
-    if (!map.isSourceLoaded('dem')) return false;
-    const t = map.terrain, c = map.getCenter();
-    const h = t && t.getElevationForLngLatZoom ? t.getElevationForLngLatZoom(c, map.transform.tileZoom) : 1000;
-    return h > 300; // the whole area lies above 1000 m; 0 means "not loaded yet"
-  } catch (e) { return map.isSourceLoaded('dem'); }
+    const t = map.terrain;
+    return t ? t.getElevationForLngLatZoom(map.getCenter(), map.transform.tileZoom) : 0;
+  } catch (e) { return 0; }
 }
 function tiltUp(retried) {
   const seq = ++tiltSeq, btn = $('#btn3d'), t0 = Date.now();
   btn.classList.add('busy');
+  map._elevationFreeze = false;
   map.setTerrain({ source: 'dem', exaggeration: 1 });
+  map.jumpTo({ center: want.center, zoom: want.zoom });
   const tick = () => {
     if (seq !== tiltSeq || !S.d3) return;
-    if (groundKnown()) {
+    const h = groundHeight();
+    if (h > 300) { // the whole area lies above 1000 m; 0 means "not loaded yet"
       btn.classList.remove('busy');
-      map.easeTo({ pitch: 60, duration: 800 });
-      map.once('moveend', () => setTimeout(() => {
-        if (seq !== tiltSeq || !S.d3 || map.isMoving()) return;
-        if (map.getPitch() >= 50) return;
-        errs.push('tilt-failed p=' + map.getPitch().toFixed(1) + ' z=' + map.getZoom().toFixed(2) + ' el=' + Math.round(map.transform.elevation || 0) + (retried ? ' (retry)' : ''));
+      map._elevationFreeze = false;
+      try { map.transform.setElevation(h); } catch (e) {}
+      map.jumpTo({ center: want.center, zoom: want.zoom, pitch: 60 });
+      setTimeout(() => {
+        if (seq !== tiltSeq || !S.d3) return;
+        const el = map.transform.elevation || 0;
+        if (map.getPitch() >= 50 && el > 300) return;
+        errs.push('tilt-failed p=' + map.getPitch().toFixed(1) + ' z=' + map.getZoom().toFixed(2) + ' el=' + Math.round(el) + (retried ? ' (retry)' : ''));
         if (retried) { flat3dOff('这里的三维地形没有显示出来，已切回二维'); return; }
-        // One more go from a clean flat state at the zoom we meant to have.
-        const c = map.getCenter().toArray(), b = map.getBearing();
-        map.stop(); map.setTerrain(null); map.jumpTo({ center: c, zoom: want.zoom, bearing: b, pitch: 0 });
+        map.stop(); map._elevationFreeze = false; map.setTerrain(null);
+        map.jumpTo({ center: want.center, zoom: want.zoom, pitch: 0 });
         setTimeout(() => { if (seq === tiltSeq && S.d3) tiltUp(true); }, 300);
-      }, 400));
+      }, 700);
     } else if (Date.now() - t0 > 9000) {
       errs.push('dem-timeout'); flat3dOff('地形数据没有加载到，先用二维（联网或下载离线数据后再试）');
-    } else setTimeout(tick, 200);
+    } else { map.triggerRepaint(); setTimeout(tick, 200); }
   };
   setTimeout(tick, 200);
 }
 function flat3dOff(msg) {
   tiltSeq++; S.d3 = false;
   const btn = $('#btn3d'); btn.classList.remove('busy', 'on'); btn.textContent = '3D';
-  map.stop(); map.setTerrain(null); map.jumpTo({ pitch: 0, bearing: 0 });
+  map.stop(); map._elevationFreeze = false; map.setTerrain(null); map.jumpTo({ pitch: 0, bearing: 0 });
   if (msg) toast(msg);
 }
 function selectCrag(key) {
@@ -621,9 +630,7 @@ $('#btn3d').onclick = () => {
     flatThenTilt(c, S.crag ? Math.max(map.getZoom(), 16.6) : map.getZoom());
     toast('三维：两指上下拖改变俯仰，两指旋转换方向');
   } else {
-    tiltSeq++; $('#btn3d').classList.remove('busy');
-    map.stop(); map.easeTo({ pitch: 0, bearing: 0, duration: 600 });
-    map.once('moveend', () => { if (!S.d3) map.setTerrain(null); });
+    flat3dOff();
   }
 };
 $('#btnBase').onclick = () => {

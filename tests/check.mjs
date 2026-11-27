@@ -55,4 +55,7 @@ assert.ok(/function applyCap\(\)/.test(app) && /r\.vn > VCAP/.test(app), '页面
 for (const p of D.pullouts) assert.ok(readFileSync('site/index.html', 'utf8').includes(`data-view="${p.key}"`), '顶部缺少标签：' + p.key);
 // 抱石互相只隔十几米：拉远时必须缩成编号圆点，否则标记叠在一起会点错石头
 assert.ok(/body\.wide \.mk\.b:not\(\.on\) \.l\{display:none\}/.test(readFileSync('site/style.css', 'utf8')) && /classList\.toggle\('wide'/.test(app), '抱石标记拉远时要缩成编号圆点');
+// 关地形只能走 flatThenTilt()/flat3dOff()：别处直接 setTerrain(null) 会让地图库的镜头高度卡在 0，再开三维就是空白
+assert.equal((app.match(/setTerrain\(null\)/g) || []).length, 3, 'setTerrain(null) 只应出现在 flatThenTilt、tiltUp 的重试和 flat3dOff 里');
+assert.ok(!/easeTo\(\{[^}]*pitch/.test(app), '不要用动画改俯仰角，按 tiltUp() 的做法用 jumpTo');
 console.log('ok', D.crags.length, 'crags', total, 'routes', btotal, 'boulder problems');
